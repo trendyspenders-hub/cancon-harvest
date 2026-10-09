@@ -5,7 +5,7 @@ uploads for 17,030 Canadian artists listed in `artists.txt`.
 
 ## What's here
 
-- `harvest_topic_local.py` — the harvester (requires `yt-dlp`: `pip3 install yt-dlp`)
+- `harvest_topic_local.py` — the harvester (requires `pip3 install yt-dlp ytmusicapi`)
 - `artists.txt` — one artist per line, priority-sorted (francophone/Spanish first,
   then acts with no tracks in the player, then the rest)
 - `tracks_local.jsonl` — results accumulate here (created on first run)
@@ -22,21 +22,27 @@ python3 harvest_topic_local.py artists.txt 10
 
 ## Behaviour rules
 
-- The script is **resumable**: artists already present in `tracks_local.jsonl`
-  or `harvest_done.jsonl` are skipped — including ones that found nothing.
-  Re-running the same command continues where it stopped. Failed searches
-  aren't logged, so they're retried.
+- The script is **resumable**: artists logged in `harvest_done.jsonl` with
+  `"albums": true` are skipped — including ones that found nothing. Older log
+  lines (from before album support) are re-run; a track already in
+  `tracks_local.jsonl` for that artist is never written twice. Failed lookups
+  aren't logged, so they're retried; 5 failures in a row pauses 10 minutes.
 - `harvest_done.jsonl` records one line per artist searched:
-  `{artist, source: topic|verified|none, channel, kept}`.
+  `{artist, source: topic|verified|ytmusic|none, channel, kept, releases, albums}`.
 - Each line of output is one video: `{yt, title, artist, album, year, …}`.
-- An artist's own `… - Topic` channel is preferred. If there is none, the
-  script falls back to their **verified** artist channel (verified badge AND
-  channel name equals the artist, or starts with "<artist> ", or is
-  "<artist>VEVO"; only the single best-matching channel is kept). Never fan
-  uploads or unverified same-name lookalikes.
+- Finding the artist, in order: their own `… - Topic` channel; else their
+  **verified** artist channel (verified badge AND channel name equals the
+  artist, or starts with "<artist> ", or is "<artist>VEVO"); else a YouTube
+  Music artist page whose name equals the artist exactly (`source: ytmusic` —
+  the least certain match, worth spot-checking for generic names). Only the
+  single best-matching channel is kept. Never fan uploads.
+- **Albums**: every album, EP and single on that artist's YouTube Music page is
+  harvested in full (via `ytmusicapi`), with `album` and `year` filled in. Up to
+  N (`10`) channel videos are kept too, with `album: ""`. yt-dlp can't open
+  album playlists (`OLAK5uy_…` → HTTP 400 as of 2026.08), hence ytmusicapi.
 - Be polite: the built-in 1s spacing between artists stays. Don't parallelise
   against YouTube; if requests start failing, stop and wait before resuming.
-- `10` (max videos per artist) can be raised to 25 for deeper catalogs.
+- `10` caps channel videos only — album tracks are never capped.
 
 ## When the user asks for status
 

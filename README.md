@@ -14,7 +14,7 @@ anywhere with normal internet access (laptop, VPS, GitHub Actions runner).
 ## Run
 
 ```bash
-pip install yt-dlp
+pip install yt-dlp ytmusicapi
 python3 harvest_topic_local.py artists.txt 10   # 10 = max videos kept per artist
 ```
 
