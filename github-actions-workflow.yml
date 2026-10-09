@@ -1,0 +1,30 @@
+# Save as: .github/workflows/harvest.yml  in any repo you own
+# (put harvest_topic_local.py and artists.txt at the repo root too)
+#
+# Runs the Topic-channel scrape on GitHub's runners (YouTube reachable there),
+# commits tracks_local.jsonl back to the repo. Nightly + manual trigger.
+# Resumable: the committed jsonl is the skip-list, so each run continues
+# where the last one stopped.
+name: Topic harvest
+on:
+  schedule: [{ cron: "17 5 * * *" }]   # nightly
+  workflow_dispatch: {}                 # manual "Run workflow" button
+
+jobs:
+  harvest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330                # ~5.5h cap per run, then commits progress
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install yt-dlp
+      - name: Harvest (continue from committed progress)
+        run: timeout --signal=INT 19500 python3 harvest_topic_local.py artists.txt 10 || true
+      - name: Commit progress
+        run: |
+          git config user.email "harvest@users.noreply.github.com"
+          git config user.name "topic-harvest-bot"
+          git add tracks_local.jsonl
+          git diff --cached --quiet || git commit -m "topic harvest $(date -u +%F' %H:%M')"
+          git push

@@ -1,0 +1,5 @@
+test.txt
+batch*.txt
+*.orig
+__pycache__/
+.DS_Store
