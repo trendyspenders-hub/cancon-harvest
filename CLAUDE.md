@@ -172,6 +172,21 @@ the Year nominees/winners. Each page's own legend is kept with every number.
   the named province; no province -> only a dominant city (≥100k and 10× any
   namesake); vague regions left blank. Re-run after a new catalog export.
 
+## FEATURES Part 2 data
+
+- `albums_local.jsonl` — covers + track order; written by
+  `harvest_topic_local.py` (log `"album_meta": true`) and by
+  `backfill_explicit.py` for older artists (only albums containing a track
+  already harvested for that artist).
+- `python3 harvest_wiki.py bios` — Wikipedia summaries EN/FR for artists with
+  a Wikidata ID -> `bios_local.jsonl` (CC BY-SA: site must credit + link).
+  Re-run occasionally as links grow.
+- `python3 harvest_wiki.py awards` — Polaris (+ Heritage) and JUNO Album of
+  the Year from Wikipedia tables -> `awards_local.jsonl`. Album = the italic
+  part of each entry. `note` keeps things like "rescinded in 2025". Run yearly.
+- `python3 harvest_derived.py` — `pregame_local.jsonl` + `lineage_local.jsonl`
+  from events/tracks/geo/charts. No network; `push-results.sh` runs it.
+
 ## Schedule (background loop on this Mac)
 
 launchd can't be used while the repo lives in `~/Downloads`: macOS privacy

@@ -199,6 +199,138 @@ All files refresh on GitHub hourly (harvest machine schedule).
 
 ---
 
+# Part 2 — Make it a destination (F15–F28)
+
+Recommended order: **F15 covers → F21 Pre-game → F22 Battle of the
+Provinces**, then the rest.
+
+| New file | What's in it |
+|---|---|
+| `albums_local.jsonl` | One line per album: `{artist, album, type, year, browse_id, playlist_id, cover, tracks: [{n, yt, title}]}` — official YouTube Music cover (544px) + track order |
+| `bios_local.jsonl` | `{artist, qid, lang: en\|fr, title, extract, url, license}` — Wikipedia summaries, **CC BY-SA 4.0: credit Wikipedia + link `url`** |
+| `awards_local.jsonl` | `{award, year, result: winner\|shortlist\|nominee, artist, album, on_list, note, source_url}` — Polaris 2006–, Polaris Heritage, JUNO Album of the Year 1975– |
+| `pregame_local.jsonl` | Per upcoming show: lineup artists in rotation + up to 30 track IDs |
+| `lineage_local.jsonl` | Per town (3+ artists): artists ordered by first year, each with best chart hit |
+
+## Look & feel
+
+### F15 — Real album covers + crate-digging view (M) ★
+- **What:** use `albums_local.jsonl` `cover` everywhere a track or album
+  appears (player, Discover, artist pages, share cards); fall back to the
+  YouTube thumbnail. New **Crate** view: a horizontally flippable bin of album
+  covers (drag / arrow keys), filterable by the existing dials; tap = play.
+- **Rules:** lazy-load covers, `width`/`height` set (no layout shift), `alt` =
+  "Album cover: {album} by {artist}".
+- **Done when:** every track from a harvested album shows its real cover.
+
+### F16 — Full-album mode (S)
+- **What:** "▶ Play the album" on album cards and artist pages — plays
+  `tracks` in `n` order, then returns to the station. Show the tracklist with
+  the current song highlighted.
+- **Data:** `albums_local.jsonl` (`tracks` already ordered; skip track IDs that
+  fail verification).
+- **Done when:** *Blue* (if present) plays track 1 → last in order.
+
+### F17 — Café / TV mode (S)
+- **What:** `/tv` — full-screen Now Playing: big cover, title/artist in display
+  type, a QR code to the track's page, "CanCon Radio" bug, next-up strip.
+  Auto-hides controls; cast-friendly; stays awake (Wake Lock API).
+- **Rules:** the YouTube player stays visible ≥ 200×200 (e.g. as the "cover"
+  panel while playing).
+- **Done when:** it runs for an hour on a TV without interaction.
+
+## Stories & depth
+
+### F18 — Story behind the artist (S)
+- **What:** on artist pages, the Wikipedia summary in the interface language
+  (fall back to the other), with **"From Wikipedia — CC BY-SA"** and a "Read
+  more" link to `url`. Optional DJ line (F4) may quote ≤ 1 sentence.
+- **Rules:** show the text as-is; never paraphrase into new claims.
+- **Done when:** artists with a bio show it with attribution; others show nothing.
+
+### F19 — Polaris & JUNO stations and badges (S)
+- **What:** presets "Polaris Shortlists", "Polaris Winners", "Heritage
+  Classics", "JUNO Album of the Year"; badges on albums/artists:
+  `POLARIS 2012 SHORTLIST`, `JUNO ALBUM OF THE YEAR 1999`. Match album titles to
+  `albums_local.jsonl` (exact, case/accents ignored) to play the actual album.
+- **Rules:** show `note` when present (e.g. "rescinded in 2025") next to the
+  badge — never hide it.
+- **Done when:** "Polaris Shortlists" plays tracks from shortlisted albums only.
+
+### F20 — Hometown lineage (S)
+- **What:** on town pages and artist pages: "From Winnipeg: The Guess Who →
+  … → Boy Golden", a timeline ordered by `since`, each with its top hit;
+  "Play the lineage" station (oldest → newest).
+- **Data:** `lineage_local.jsonl` (towns with 3+ artists in rotation).
+- **Done when:** a town page shows its timeline and plays it in order.
+
+## Live & community
+
+### F21 — Pre-game the show (S) ★
+- **What:** on each upcoming show (F9): "Pre-game: tracks from tonight's
+  lineup" one-tap station + ticket link. Home strip: "Tonight in {city}".
+- **Data:** `pregame_local.jsonl` (`tracks` = shuffled lineup tracks).
+- **Rules:** ticket link = provider `url`, credited.
+- **Done when:** a show with 2 lineup artists in rotation plays both.
+
+### F22 — Battle of the Provinces (M) ★
+- **What:** a seasonal bracket: each province/territory's best song (seeded by
+  chart peaks + listener plays), head-to-head rounds over 4 weeks; each round
+  is its own station; results page + share cards.
+- **Tech:** votes need a backend (one vote per device per matchup, rate
+  limits, basic bot protection). Show vote counts only after voting.
+- **Done when:** a full bracket runs end to end with a winner page.
+
+### F23 — Request line (M)
+- **What:** listeners request a track (search the catalogue), with optional
+  first name + city; popular requests get weighted into rotation within the
+  hour; "Requested by Sam in Moncton" on the player and in the DJ intro (F4).
+- **Rules:** moderation for names (profanity filter, length limit); requests
+  only for tracks already in the catalogue.
+- **Done when:** a request appears in rotation and is credited on air.
+
+## Discovery tricks
+
+### F24 — "Describe a vibe" (M)
+- **What:** a search box: "rainy Sunday in Halifax", "cottage dock, 90s" →
+  sets the dials (era, mood, region, genre, language, chart) and starts.
+- **Rules:** an AI model may only output a **dial setting** from the existing
+  options (strict JSON schema); it never writes facts, titles, or track IDs.
+  Show the chosen dials so listeners can tweak them.
+- **Done when:** 10 test prompts produce sensible, valid dial settings.
+
+### F25 — Canadiana presets (S)
+- **What:** curated stations with personality: *Snow Day*, *Cottage Dock*,
+  *Long Weekend*, *Drive-Thru Double-Double*, *Hockey Night*, *Kitchen Party
+  Last Call*.
+- **Rules:** curated by the owner (a list of track IDs per preset, editable in
+  an admin file) — label them "Curated".
+- **Done when:** each preset has ≥ 40 tracks and plays.
+
+### F26 — Support the artist (S)
+- **What:** a visible "Support {artist}" button in the player and on artist
+  pages → Bandcamp (preferred), else official site / store, from
+  `links_local.jsonl`. A "Bandcamp Friday" banner on those days.
+- **Done when:** artists with a Bandcamp link show the button.
+
+## Growth
+
+### F27 — Song of the Day (S)
+- **What:** a daily pick (deep cut or anniversary) with a generated share
+  card (cover, title/artist, one sourced fact: chart peak, award, or
+  hometown) sized for Instagram story (1080×1920), square, and X; page
+  `/today` with prev/next; RSS feed. Auto-posting to social accounts is
+  optional and needs the owner's accounts/keys.
+- **Done when:** `/today` updates daily and the card downloads.
+
+### F28 — Easter eggs (S)
+- **What:** hidden stations: type **"much"** on the dial → *MuchMusic
+  Countdown* (90s charted hits), **"degrassi"** → teen-drama-era tracks,
+  ↑↑↓↓←→←→BA → *Golden Era*. Subtle toast: "You found a secret station."
+- **Done when:** each trigger works on desktop and mobile (via the search box).
+
+---
+
 ## Final checklist (per feature)
 - [ ] EN + FR strings
 - [ ] Keyboard + screen reader pass; reduced-motion respected

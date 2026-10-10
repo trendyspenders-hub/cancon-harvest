@@ -87,6 +87,18 @@ def releases(ytm, channel_id):
             seen.add(r["browseId"]); uniq.append(r)
     return uniq
 
+def album_record(name, rel, album):
+    """One line of albums_local.jsonl: official cover + track order (full-album mode)."""
+    thumbs = sorted(album.get("thumbnails") or [], key=lambda t: t.get("width", 0))
+    year = album.get("year") or rel.get("year")
+    return {"artist": name, "album": album.get("title") or rel.get("title") or "",
+            "type": album.get("type") or rel.get("type"),
+            "year": int(year) if str(year or "").isdigit() else None,
+            "browse_id": rel.get("browseId"), "playlist_id": album.get("audioPlaylistId"),
+            "cover": thumbs[-1]["url"] if thumbs else None,
+            "tracks": [{"n": t.get("trackNumber"), "yt": t["videoId"], "title": t.get("title")}
+                       for t in album.get("tracks") or [] if t.get("videoId") and t.get("isAvailable", True)]}
+
 def row(yt, title, name, album="", year=None):
     return {"yt": yt, "title": title or "", "artist": name, "album": album, "year": year,
             "dgenres": [], "location": "", "genre_tags": "", "act_type": ""}
@@ -124,6 +136,7 @@ def main():
     out = open(out_path, "a", encoding="utf-8")
     log = open(log_path, "a", encoding="utf-8")
     flags_out = open(os.path.join(here, "explicit_local.jsonl"), "a", encoding="utf-8")
+    albums_out = open(os.path.join(here, "albums_local.jsonl"), "a", encoding="utf-8")
     fails = 0
     for i, name in enumerate(todo):
         key = name.lower()
@@ -132,9 +145,11 @@ def main():
                 source, channel, cid, videos = find_channel(ydl, ytm, name, max_per, key in strict)
             rows = [row(e.get("id"), e.get("title"), name) for e in videos[:max_per]]
             flags = {}  # videoId -> YouTube Music "explicit" badge (album tracks only)
+            albums = []  # albums_local.jsonl lines
             rels = releases(ytm, cid) if cid else []
             for r in rels:
                 album = ytm.get_album(r["browseId"])
+                albums.append(album_record(name, r, album))
                 year = album.get("year") or r.get("year")
                 year = int(year) if str(year or "").isdigit() else None
                 for t in album.get("tracks") or []:
@@ -162,8 +177,12 @@ def main():
         for vid, ex in flags.items():
             flags_out.write(json.dumps({"yt": vid, "explicit": ex}) + "\n")
         flags_out.flush()
+        for a in albums:
+            albums_out.write(json.dumps(a, ensure_ascii=False) + "\n")
+        albums_out.flush()
         log.write(json.dumps({"artist": name, "source": source, "channel": channel, "channel_id": cid,
-                              "kept": kept, "releases": len(rels), "albums": True, "explicit": True}) + "\n")
+                              "kept": kept, "releases": len(rels), "albums": True, "explicit": True,
+                              "album_meta": True}) + "\n")
         log.flush()
         if i % 10 == 0:
             print(f"{time.strftime('%H:%M:%S')} [{i}/{len(todo)}] {name} | +{kept} tracks, {len(rels)} releases ({source})", flush=True)

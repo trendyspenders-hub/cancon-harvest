@@ -1,18 +1,21 @@
 #!/usr/bin/env python3
-"""Explicit flags for artists harvested before harvest_topic_local.py recorded
-them (log lines without "explicit": true).
+"""Backfill for artists harvested before harvest_topic_local.py recorded
+explicit flags and album metadata (log lines without "album_meta": true):
+
+  explicit_local.jsonl  {yt, explicit}        — Clean mode
+  albums_local.jsonl    one line per album     — covers + track order
 
 Finds the artist's YouTube Music page (logged channel_id, else an exact-name
-artist search on the logged channel name), reads each album's "explicit"
-badge, and writes ONLY videoIds already in tracks_local.jsonl for that artist —
-so a wrong page can never add or mislabel anything else.
+artist search on the logged channel name). Writes ONLY flags for videoIds
+already in tracks_local.jsonl for that artist, and ONLY albums containing at
+least one of those videoIds — so a wrong page can never add anything.
 
 Run AFTER the main harvest (don't hit YouTube from two processes at once).
 Usage:   python3 backfill_explicit.py
-Output:  appends to explicit_local.jsonl  {yt, explicit}
 Resume:  explicit_backfill_done.jsonl
 """
 import json, os, re, time
+from harvest_topic_local import album_record
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 
@@ -29,13 +32,14 @@ def main():
     done_p = os.path.join(HERE, "explicit_backfill_done.jsonl")
     done = {json.loads(l)["artist"].lower() for l in open(done_p, encoding="utf-8")} if os.path.exists(done_p) else set()
     todo = [d for k, d in latest.items()
-            if not d.get("explicit") and d.get("releases") and d.get("channel") and k not in done]
-    print(f"explicit backfill: {len(todo)} artists", flush=True)
-    out = open(os.path.join(HERE, "explicit_local.jsonl"), "a", encoding="utf-8")
+            if not d.get("album_meta") and d.get("releases") and d.get("channel") and k not in done]
+    print(f"album/explicit backfill: {len(todo)} artists", flush=True)
+    flags_out = open(os.path.join(HERE, "explicit_local.jsonl"), "a", encoding="utf-8")
+    albums_out = open(os.path.join(HERE, "albums_local.jsonl"), "a", encoding="utf-8")
     log = open(done_p, "a", encoding="utf-8")
     fails = 0
     for i, d in enumerate(todo):
-        name, wanted, n = d["artist"], mine.get(d["artist"].lower(), set()), 0
+        name, wanted, n, na = d["artist"], mine.get(d["artist"].lower(), set()), 0, 0
         try:
             cid = d.get("channel_id")
             if not cid:
@@ -44,26 +48,31 @@ def main():
                             if (r.get("artist") or "").strip().lower() == target and r.get("browseId")), None)
             if cid:
                 art = ytm.get_artist(cid)
-                albums = []
+                rels = []
                 for sec in ("albums", "singles"):
                     s = art.get(sec) or {}
-                    albums += ytm.get_artist_albums(s["browseId"], s["params"], limit=None) if s.get("params") and s.get("browseId") else (s.get("results") or [])
-                for a in {a["browseId"]: a for a in albums if a.get("browseId")}.values():
-                    for t in ytm.get_album(a["browseId"]).get("tracks") or []:
-                        v = t.get("videoId")
-                        if v in wanted and t.get("isExplicit") is not None:
-                            out.write(json.dumps({"yt": v, "explicit": bool(t["isExplicit"])}) + "\n"); n += 1
+                    rels += ytm.get_artist_albums(s["browseId"], s["params"], limit=None) if s.get("params") and s.get("browseId") else (s.get("results") or [])
+                for r in {r["browseId"]: r for r in rels if r.get("browseId")}.values():
+                    album = ytm.get_album(r["browseId"])
+                    rec = album_record(name, r, album)
+                    if any(t["yt"] in wanted for t in rec["tracks"]):
+                        albums_out.write(json.dumps(rec, ensure_ascii=False) + "\n"); na += 1
+                    if not d.get("explicit"):
+                        for t in album.get("tracks") or []:
+                            v = t.get("videoId")
+                            if v in wanted and t.get("isExplicit") is not None:
+                                flags_out.write(json.dumps({"yt": v, "explicit": bool(t["isExplicit"])}) + "\n"); n += 1
                     time.sleep(0.3)
-                out.flush()
+                flags_out.flush(); albums_out.flush()
         except KeyError:
-            pass  # no YouTube Music artist page — nothing to flag
+            pass  # no YouTube Music artist page — nothing to add
         except Exception as ex:
             print(f"  !! {name}: {ex}", flush=True); fails += 1
             time.sleep(600 if fails >= 5 else 2); fails = 0 if fails >= 5 else fails
             continue
         fails = 0
-        log.write(json.dumps({"artist": name, "flagged": n}) + "\n"); log.flush()
-        if i % 25 == 0: print(f"{time.strftime('%H:%M:%S')} [{i}/{len(todo)}] {name} | {n} flagged", flush=True)
+        log.write(json.dumps({"artist": name, "flagged": n, "albums": na}) + "\n"); log.flush()
+        if i % 25 == 0: print(f"{time.strftime('%H:%M:%S')} [{i}/{len(todo)}] {name} | {na} albums, {n} flagged", flush=True)
         time.sleep(1)
     print("DONE")
 
