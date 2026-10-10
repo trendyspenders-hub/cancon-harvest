@@ -13,6 +13,10 @@ Stage 2  musicbrainz  per artist, 1 request/second (MusicBrainz rule): exact
 Setup:   no extra packages (stdlib only)
 Usage:   python3 harvest_links.py wikidata
          python3 harvest_links.py musicbrainz [artists.txt]
+         python3 harvest_links.py relations   # backfill, after musicbrainz finishes
+Also:    relations_local.jsonl — band memberships / collaborations / aliases
+         (musical relationships only): {artist, mbid, type, direction, other,
+          other_mbid, begin, end, ended}
 Output:  links_local.jsonl — one line per artist per source:
          {artist, source, id, spotify, apple_music, soundcloud, bandcamp,
           deezer, tidal, website}   (missing = absent key)
@@ -106,6 +110,59 @@ def classify(url):
     if h in ("tidal.com", "listen.tidal.com") and "/artist/" in url: return "tidal"
     return None
 
+REL = os.path.join(HERE, "relations_local.jsonl")
+# Musical relationships only — marriages, partners, family etc. are left out on purpose.
+REL_TYPES = {"member of band", "collaboration", "subgroup", "is person", "founder"}
+
+def write_relations(f, name, mbid, art):
+    n = 0
+    for r in (art or {}).get("relations", []):
+        if r.get("target-type") != "artist" or r.get("type") not in REL_TYPES: continue
+        other = r.get("artist") or {}
+        write(f, {"artist": name, "mbid": mbid, "type": r["type"], "direction": r.get("direction"),
+                  "other": other.get("name"), "other_mbid": other.get("id"),
+                  "begin": r.get("begin"), "end": r.get("end"), "ended": r.get("ended")})
+        n += 1
+    f.flush()
+    return n
+
+def find_mbid(name):
+    q = urllib.parse.quote(f'artist:"{name}" AND country:CA')
+    res = get_json(f"https://musicbrainz.org/ws/2/artist?query={q}&fmt=json&limit=10")
+    time.sleep(1.1)
+    exact = [a for a in (res or {}).get("artists", [])
+             if a.get("country") == "CA" and (norm(a.get("name")) == norm(name)
+                or any(norm(al.get("name")) == norm(name) for al in a.get("aliases") or []))]
+    return ("ambiguous", None) if len(exact) > 1 else (("found", exact[0]["id"]) if exact else ("none", None))
+
+def relations():
+    """Backfill band memberships for artists looked up before relations were
+    recorded. Run AFTER the musicbrainz stage finishes (1 req/s total)."""
+    mbids = {}
+    for line in open(OUT, encoding="utf-8"):
+        d = json.loads(line)
+        if d.get("source") == "musicbrainz": mbids[norm(d["artist"])] = d["id"]
+    have = {norm(json.loads(l)["artist"]) for l in open(REL, encoding="utf-8")} if os.path.exists(REL) else set()
+    todo = []
+    for line in open(DONE, encoding="utf-8"):
+        d = json.loads(line)
+        if d.get("status") in ("linked", "no-links") and not d.get("rels") and norm(d["artist"]) not in have:
+            todo.append(d)
+    print(f"relations backfill: {len(todo)} artists", flush=True)
+    f, n_total = open(REL, "a", encoding="utf-8"), 0
+    for i, d in enumerate(todo):
+        name = d["artist"]
+        try:
+            mbid = d.get("mbid") or mbids.get(norm(name)) or find_mbid(name)[1]
+            if not mbid: continue
+            art = get_json(f"https://musicbrainz.org/ws/2/artist/{mbid}?inc=artist-rels&fmt=json")
+            time.sleep(1.1)
+            n_total += write_relations(f, name, mbid, art)
+        except Exception as ex:
+            print(f"  !! {name}: {ex}", flush=True); time.sleep(10)
+        if i % 100 == 0: print(f"{time.strftime('%H:%M:%S')} [{i}/{len(todo)}] {name} | {n_total} relations", flush=True)
+    print("DONE")
+
 def musicbrainz(names_file):
     names = artist_names(names_file)
     done = set()
@@ -116,22 +173,18 @@ def musicbrainz(names_file):
     todo = [n for n in names if norm(n) not in done]
     print(f"musicbrainz: {len(todo)} artists queued ({len(done)} done)", flush=True)
     out, log = open(OUT, "a", encoding="utf-8"), open(DONE, "a", encoding="utf-8")
+    rel = open(REL, "a", encoding="utf-8")
     found = 0
     for i, name in enumerate(todo):
-        status = "none"
+        status, mbid = "none", None
         try:
-            q = urllib.parse.quote(f'artist:"{name}" AND country:CA')
-            res = get_json(f"https://musicbrainz.org/ws/2/artist?query={q}&fmt=json&limit=10")
-            time.sleep(1.1)
-            exact = [a for a in (res or {}).get("artists", [])
-                     if a.get("country") == "CA" and (norm(a.get("name")) == norm(name)
-                        or any(norm(al.get("name")) == norm(name) for al in a.get("aliases") or []))]
-            if len(exact) > 1:
+            found_status, mbid = find_mbid(name)
+            if found_status == "ambiguous":
                 status = "ambiguous"
-            elif exact:
-                mbid = exact[0]["id"]
-                art = get_json(f"https://musicbrainz.org/ws/2/artist/{mbid}?inc=url-rels&fmt=json")
+            elif mbid:
+                art = get_json(f"https://musicbrainz.org/ws/2/artist/{mbid}?inc=url-rels+artist-rels&fmt=json")
                 time.sleep(1.1)
+                write_relations(rel, name, mbid, art)
                 rec = {"artist": name, "source": "musicbrainz", "id": mbid}
                 for r in (art or {}).get("relations", []):
                     u = (r.get("url") or {}).get("resource", "")
@@ -145,7 +198,7 @@ def musicbrainz(names_file):
             print(f"  !! {name}: {ex}", flush=True)
             time.sleep(10)
             continue  # not logged -> retried next run
-        log.write(json.dumps({"artist": name, "status": status}, ensure_ascii=False) + "\n"); log.flush()
+        log.write(json.dumps({"artist": name, "status": status, "mbid": mbid, "rels": True}, ensure_ascii=False) + "\n"); log.flush()
         if i % 100 == 0:
             print(f"{time.strftime('%H:%M:%S')} [{i}/{len(todo)}] {name} | {status} | {found} linked", flush=True)
     print("DONE")
@@ -154,4 +207,5 @@ if __name__ == "__main__":
     stage = sys.argv[1] if len(sys.argv) > 1 else ""
     if stage == "wikidata": wikidata()
     elif stage == "musicbrainz": musicbrainz(sys.argv[2] if len(sys.argv) > 2 else os.path.join(HERE, "artists.txt"))
+    elif stage == "relations": relations()
     else: print(__doc__)

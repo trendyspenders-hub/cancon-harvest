@@ -151,6 +151,35 @@ the Year nominees/winners. Each page's own legend is kept with every number.
 - Run daily when keys exist; `push-results.sh` pushes `events_local.jsonl`.
 - Site must link the provider's own ticket URL and credit the provider.
 
+## Feature data (FEATURES.md)
+
+- **Clean mode** — `explicit_local.jsonl` `{yt, explicit}` from YouTube Music's
+  explicit badge (album tracks only; music videos have no flag = unknown).
+  Written by `harvest_topic_local.py` for new artists (log lines carry
+  `"explicit": true` and `channel_id`); `backfill_explicit.py` covers artists
+  harvested earlier — run it only AFTER the main harvest (never two processes
+  against YouTube). It only flags videoIds already in `tracks_local.jsonl`.
+- **Family trees** — `relations_local.jsonl` `{artist, mbid, type, direction,
+  other, other_mbid, begin, end, ended}`. Musical relationships only (member of
+  band, collaboration, subgroup, is person, founder) — marriages/partners/family
+  are deliberately excluded. Collected in the same MusicBrainz request as links;
+  `python3 harvest_links.py relations` backfills earlier artists — only after
+  the musicbrainz stage finishes (1 request/second total).
+- **Map** (Road Trip, Near You) — `python3 harvest_geo.py [catalog.csv]` ->
+  `geo_local.jsonl` `{artist, location, lat, lon, precision: town|province,
+  place, province, geonameid, source}`. Offline from the GeoNames Canada dump
+  in `geonames/` (git-ignored; CC BY 4.0 — credit GeoNames). Towns only inside
+  the named province; no province -> only a dominant city (≥100k and 10× any
+  namesake); vague regions left blank. Re-run after a new catalog export.
+
+## Schedule (launchd, this Mac)
+
+- `com.cancon.push` — `push-results.sh` every hour.
+- `com.cancon.daily` — `run-daily.sh` at 06:00: concerts (if
+  `TICKETMASTER_API_KEY` is in `.env`) then push.
+- Plists in `~/Library/LaunchAgents/`; logs `push.log`, `daily.log` here.
+  Stop: `launchctl bootout gui/$(id -u)/com.cancon.push` (and `.daily`).
+
 ## Adding artists
 
 `artists.txt` is read once at start. To add artists from a new site export

@@ -123,6 +123,7 @@ def main():
     ytm = YTMusic()
     out = open(out_path, "a", encoding="utf-8")
     log = open(log_path, "a", encoding="utf-8")
+    flags_out = open(os.path.join(here, "explicit_local.jsonl"), "a", encoding="utf-8")
     fails = 0
     for i, name in enumerate(todo):
         key = name.lower()
@@ -130,6 +131,7 @@ def main():
             with YoutubeDL({"quiet": True, "extract_flat": True, "ignoreerrors": True}) as ydl:
                 source, channel, cid, videos = find_channel(ydl, ytm, name, max_per, key in strict)
             rows = [row(e.get("id"), e.get("title"), name) for e in videos[:max_per]]
+            flags = {}  # videoId -> YouTube Music "explicit" badge (album tracks only)
             rels = releases(ytm, cid) if cid else []
             for r in rels:
                 album = ytm.get_album(r["browseId"])
@@ -138,6 +140,7 @@ def main():
                 for t in album.get("tracks") or []:
                     if t.get("videoId") and t.get("isAvailable", True):
                         rows.append(row(t["videoId"], t.get("title"), name, album.get("title") or r.get("title") or "", year))
+                        if t.get("isExplicit") is not None: flags[t["videoId"]] = bool(t["isExplicit"])
                 time.sleep(0.3)
         except Exception as ex:
             print(f"  !! {name}: {ex}", flush=True)
@@ -156,8 +159,11 @@ def main():
             have.add((key, r["yt"]))
             out.write(json.dumps(r) + "\n"); kept += 1
         out.flush()
-        log.write(json.dumps({"artist": name, "source": source, "channel": channel,
-                              "kept": kept, "releases": len(rels), "albums": True}) + "\n")
+        for vid, ex in flags.items():
+            flags_out.write(json.dumps({"yt": vid, "explicit": ex}) + "\n")
+        flags_out.flush()
+        log.write(json.dumps({"artist": name, "source": source, "channel": channel, "channel_id": cid,
+                              "kept": kept, "releases": len(rels), "albums": True, "explicit": True}) + "\n")
         log.flush()
         if i % 10 == 0:
             print(f"{time.strftime('%H:%M:%S')} [{i}/{len(todo)}] {name} | +{kept} tracks, {len(rels)} releases ({source})", flush=True)

@@ -22,8 +22,13 @@ rest in any order.
 | `tracks_discogs.jsonl` | Opt-in archival videos (BRIEF 3.7) |
 | `charts_tracks.jsonl` | `peak, year_end, chart, ckoi_year_end, juno, us_*` per track (BRIEF 3.8) |
 | `links_local.jsonl` | Spotify / Apple / Bandcamp / SoundCloud / website; MusicBrainz `id` |
-| `events_local.jsonl` | Upcoming concerts (F9), rebuilt daily |
+| `events_local.jsonl` | Upcoming concerts (F9), rebuilt daily (Ticketmaster) |
+| `explicit_local.jsonl` | `{yt, explicit}` — Clean mode (F11). Missing = unknown |
+| `relations_local.jsonl` | Band memberships / collaborations (F7), MusicBrainz |
+| `geo_local.jsonl` | `{artist, lat, lon, precision: town\|province, place, province}` — Road Trip (F5), Near You (F8). Credit "GeoNames" |
 | Directory (site) | artist `location`, region, era, genres, act type, sources |
+
+All files refresh on GitHub hourly (harvest machine schedule).
 
 ---
 
