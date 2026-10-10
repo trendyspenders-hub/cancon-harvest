@@ -1,383 +1,377 @@
 [
  {
-  "yt": "5jkturOF1Ik",
+  "yt": "5WkwdYsg-3Y",
+  "artist": "El Gordo",
+  "title": "Parar",
+  "album": "El Segundo Disco de el Gordo",
+  "year": 2011,
+  "place": "Elie",
+  "province": "Manitoba"
+ },
+ {
+  "yt": "_WB0kYmgW5o",
+  "artist": "Crystal",
+  "title": "彼女のオートバイ、彼の島",
+  "album": "In A Cocktail Glass",
+  "year": 2024,
+  "place": "Edmonton",
+  "province": "Alberta"
+ },
+ {
+  "yt": "Fcc-39JFLWI",
+  "artist": "DVBBS",
+  "title": "Leave The World Behind",
+  "album": "SLEEP",
+  "year": 2021,
+  "place": "Orangeville",
+  "province": "Ontario",
+  "basis": "formed in"
+ },
+ {
+  "yt": "ESf3tTIYu0Q",
+  "artist": "Eamon McGrath",
+  "title": "Radiator",
+  "album": "Death & Taxes",
+  "year": 2022,
+  "place": "Edmonton",
+  "province": "Alberta",
+  "basis": "born in"
+ },
+ {
+  "yt": "M5n_mXnH9eM",
+  "artist": "Jill Barber",
+  "title": "Goodnight Sweetheart",
+  "album": "For All Time",
+  "year": 2006,
+  "place": "Port Credit",
+  "province": "Ontario",
+  "basis": "born in"
+ },
+ {
+  "yt": "gk6A-I4tSdo",
+  "artist": "Concrete Mob",
+  "title": "Welcome Back",
+  "album": "Once Upon A Time In Chicago",
+  "year": 2004,
+  "place": "Toronto",
+  "province": "Ontario"
+ },
+ {
+  "yt": "wMWkNvePo6k",
+  "artist": "Beyries",
+  "title": "Soldier (Extended Version)",
+  "album": "Landing",
+  "year": 2017,
+  "place": "Montréal",
+  "province": "Quebec"
+ },
+ {
+  "yt": "AzJAVsGDkLQ",
+  "artist": "BAMBII",
+  "title": "WICKED GYAL",
+  "album": "WICKED GYAL",
+  "year": 2023,
+  "place": "Toronto",
+  "province": "Ontario"
+ },
+ {
+  "yt": "AnXBMXT8BmA",
+  "artist": "Crystal",
+  "title": "Tarde",
+  "album": "Sentimientos de Mexico",
+  "year": 2003,
+  "place": "Edmonton",
+  "province": "Alberta"
+ },
+ {
+  "yt": "ZFbFUK-cQnw",
+  "artist": "James Cotton",
+  "title": "Rocket 88 (Live)",
+  "album": "Late Night Blues (Live at The New Penelope Café - 1967)",
+  "year": 1978,
+  "place": "Maple Ridge",
+  "province": "British Columbia"
+ },
+ {
+  "yt": "CPSb-tTCaEc",
+  "artist": "Jesse Roper",
+  "title": "Daisy Wake Up",
+  "album": "Daisy Wake Up",
+  "year": 2026,
+  "place": "Victoria",
+  "province": "British Columbia"
+ },
+ {
+  "yt": "3FGWM98HhLQ",
+  "artist": "Carson",
+  "title": "Dirty Dream Maker",
+  "album": "The Wilful Pursuit Of Ignorance",
+  "place": "Saskatoon",
+  "province": "Saskatchewan"
+ },
+ {
+  "yt": "bIEv8cM2iUg",
+  "artist": "Brett Stewart",
+  "title": "Carol of the Bells",
+  "album": "O Holy Night",
+  "year": 2012,
+  "place": "East Lloydminster",
+  "province": "Saskatchewan"
+ },
+ {
+  "yt": "blcMLk5Id2k",
+  "artist": "Don Amero",
+  "title": "All We Should Make at Christmas",
+  "album": "All We Should Make at Christmas",
+  "year": 2024,
+  "place": "Winnipeg",
+  "province": "Manitoba",
+  "basis": "born in"
+ },
+ {
+  "yt": "Fvc_2401-7s",
+  "artist": "DVBBS",
+  "title": "Tsunami (Gabry Ponte Remix)",
+  "album": "Tsunami (Gabry Ponte Remix)",
+  "year": 2023,
+  "place": "Orangeville",
+  "province": "Ontario",
+  "basis": "formed in"
+ },
+ {
+  "yt": "t9zYgu_TfiI",
   "artist": "Chilly Gonzales",
-  "title": "Myth Me",
-  "album": "Chambers",
+  "title": "Joy Of Thinking",
+  "album": "Z",
+  "year": 2003,
+  "place": "Montreal",
+  "province": "Quebec",
+  "basis": "born in"
+ },
+ {
+  "yt": "OUqH6AXyueM",
+  "artist": "Hatiras",
+  "title": "Tribute (Original Vocal Mix)",
+  "album": "Tribute",
+  "year": 2008,
+  "place": "Toronto",
+  "province": "Ontario"
+ },
+ {
+  "yt": "JuguikAjxn4",
+  "artist": "Devin Townsend",
+  "title": "By Your Command",
+  "album": "Ziltoid the Omniscient",
+  "year": 2007,
+  "place": "New Westminster",
+  "province": "British Columbia",
+  "basis": "born in"
+ },
+ {
+  "yt": "hDyV5s1wyuw",
+  "artist": "Glenn Buhr",
+  "title": "Red she dances",
+  "album": "Glenn Buhr Songbook, Vol. 1",
+  "year": 2025,
+  "place": "Winnipeg",
+  "province": "Manitoba"
+ },
+ {
+  "yt": "TweSnMKt5ls",
+  "artist": "Barbara Hannigan",
+  "title": "Chants de Terre et de Ciel: No. 5, Minuit pile et face (pour la mort)",
+  "album": "Messiaen",
+  "year": 2024,
+  "place": "Waverley",
+  "province": "Nova Scotia",
+  "basis": "born in"
+ },
+ {
+  "yt": "67kJNvLA3Zc",
+  "artist": "Gregory Charles",
+  "title": "La face cachée du soleil : Kopernic",
+  "album": "Piano Renaissance – Appassionato (version courte)",
+  "year": 2023,
+  "place": "Montreal",
+  "province": "Quebec",
+  "basis": "born in"
+ },
+ {
+  "yt": "3zCYTsFNWYI",
+  "artist": "Galt MacDermot",
+  "title": "I Believe",
+  "album": "Nell Carter Sings the Gospel",
   "year": 2015,
   "place": "Montreal",
   "province": "Quebec",
   "basis": "born in"
  },
  {
-  "yt": "H19gaj6T3Jc",
-  "artist": "James",
-  "title": "Drake-push up",
-  "album": "New",
+  "yt": "PRBkRkBx1-Y",
+  "artist": "Expiry Date",
+  "title": "It's okay man",
+  "album": "Essence 2",
   "year": 2024,
-  "place": "Calgary",
-  "province": "Alberta"
+  "place": "Saskatoon",
+  "province": "Saskatchewan"
  },
  {
-  "yt": "BGnyCr95b98",
-  "artist": "I Am Robot and Proud",
-  "title": "Bird at Sunrise",
-  "album": "Bird at Sunrise",
-  "year": 2025,
-  "place": "Toronto",
-  "province": "Ontario"
- },
- {
-  "yt": "8b2Jta1GKJU",
-  "artist": "Howard Shore",
-  "title": "Mystic River (feat. Holger Groschopp)",
-  "album": "Cinéma - Soundtrack Masters",
-  "year": 2025,
-  "place": "Toronto",
-  "province": "Ontario",
-  "basis": "born in"
- },
- {
-  "yt": "mxmfl2P6ivc",
-  "artist": "James Ehnes",
-  "title": "44 Duos for 2 Violins, Sz. 98: No. 16, Burlesque",
-  "album": "Bartók: Chamber Works for Violin, Vol. 3",
-  "year": 2014,
-  "place": "Brandon",
-  "province": "Manitoba",
-  "basis": "born in"
- },
- {
-  "yt": "AxCXBMBq7x4",
-  "artist": "83",
-  "title": "J'fais ce que j'peux",
-  "album": "Hip hop 102",
-  "year": 2009,
-  "place": "Lévis",
-  "province": "Quebec"
- },
- {
-  "yt": "ARCjDBB-pHk",
-  "artist": "Alvin",
-  "title": "Rudolph, the Red-Nosed Reindeer",
-  "album": "Frosty the Snowman (The Christmas Songs)",
-  "year": 2014,
-  "place": "Richmond",
-  "province": "British Columbia"
- },
- {
-  "yt": "TCylw78T7YQ",
-  "artist": "Catherine Durand",
-  "title": "Entre Tes Murs",
-  "album": "Catherine Durand",
-  "year": 2001,
-  "place": "Montréal",
-  "province": "Quebec"
- },
- {
-  "yt": "ePu-s4IT0Bo",
-  "artist": "Howard Shore",
-  "title": "A Ghost In the Station",
-  "album": "Hugo Original Score",
-  "year": 2011,
-  "place": "Toronto",
-  "province": "Ontario",
-  "basis": "born in"
- },
- {
-  "yt": "tvYPQtKZ8gQ",
-  "artist": "Front Line Assembly",
-  "title": "Social Enemy",
-  "album": "Fallout",
-  "year": 2007,
-  "place": "Vancouver",
-  "province": "British Columbia",
-  "basis": "formed in"
- },
- {
-  "yt": "Ez489lA8LjA",
-  "artist": "Furies",
-  "title": "Unleash the Furies",
-  "album": "Fortune's Gate",
-  "year": 2020,
-  "place": "Vancouver",
-  "province": "British Columbia"
- },
- {
-  "yt": "sgyP9CIOYmM",
-  "artist": "elemental",
-  "title": "Neustrašivi",
-  "album": "U Redu Je",
-  "year": 2013,
+  "yt": "dKgaV70lAvg",
+  "artist": "carlito",
+  "title": "Mulher dos Meus Sonhos",
+  "album": "Classe A",
+  "year": 2008,
   "place": "Victoria",
   "province": "British Columbia"
  },
  {
-  "yt": "vzTnkUnTfoA",
-  "artist": "Dani Black",
-  "title": "Você Sorrindo (Ao Vivo)",
-  "album": "FREQUÊNCIA RARA (Ao Vivo)",
-  "year": 2020,
-  "place": "Vancouver",
-  "province": "British Columbia"
+  "yt": "1LmfX3DBGBk",
+  "artist": "Johnny J",
+  "title": "Tango from Kitchen",
+  "album": "Trappan (Original Musiken)",
+  "year": 2016,
+  "place": "Regina",
+  "province": "Saskatchewan"
  },
  {
-  "yt": "CXPxbABbnbs",
-  "artist": "Five Alarm Funk",
-  "title": "Journey to the Center of the Earth",
-  "album": "Heavy Set Champs",
-  "year": 2023,
-  "place": "Vancouver",
-  "province": "British Columbia"
- },
- {
-  "yt": "UBs4MbkMUbo",
-  "artist": "Bruno Pelletier",
-  "title": "Jusqu'à la dernière femme",
-  "album": "Microphonium",
-  "year": 2009,
-  "place": "Charlesbourg",
-  "province": "Quebec",
-  "basis": "born in"
- },
- {
-  "yt": "d_9jKyLOCjU",
-  "artist": "Glenn Gould",
-  "title": "He's Going to Play Quizz Games With You",
-  "album": "Recording Glenn Gould's Goldberg Variations - Track-by-Track by Producer Richard Einhorn",
-  "year": 2022,
-  "place": "Toronto",
-  "province": "Ontario",
-  "basis": "born in"
- },
- {
-  "yt": "I4q82CKry2Y",
-  "artist": "Glenn Gould",
-  "title": "The Art of the Fugue, BWV 1080: Contrapunctus IX à 4 alla duodecima",
-  "album": "Glenn Gould at the Cinema (International Version)",
-  "year": 1999,
-  "place": "Toronto",
-  "province": "Ontario",
-  "basis": "born in"
- },
- {
-  "yt": "Prsh2y-BoVE",
-  "artist": "Glenn Gould",
-  "title": "Concerto No. 24 for Piano and Orchestra in C Minor, K491: I. Cadenza J.n. Hummel, Allegro",
-  "album": "Mozart, Vol. 5 : Concertos K491",
-  "year": 2012,
-  "place": "Toronto",
-  "province": "Ontario",
-  "basis": "born in"
- },
- {
-  "yt": "WWrY7aZlCtE",
-  "artist": "Burton Cummings",
-  "title": "Got To Find Another Way",
-  "album": "My Own Way To Rock",
-  "year": 1997,
-  "place": "Winnipeg",
-  "province": "Manitoba",
-  "basis": "born in",
-  "awards": [
-   {
-    "award": "JUNO Album of the Year",
-    "year": 1978,
-    "result": "nominee"
-   }
-  ]
- },
- {
-  "yt": "8DnQkFm6W0w",
-  "artist": "Beatrice Deer",
-  "title": "Tasiulaurluk (Isuarsivik Anthem)",
-  "album": "Tasiulaurluk (Isuarsivik Anthem)",
-  "year": 2023,
+  "yt": "40tYhpmZO20",
+  "artist": "Catherine Durand",
+  "title": "Du beau dans le néant",
+  "album": "La pluie entre nous",
+  "year": 2016,
   "place": "Montréal",
   "province": "Quebec"
  },
  {
-  "yt": "8tKmlllriVM",
-  "artist": "Donald",
-  "title": "Do Better (Live)",
-  "album": "Red Mic Xperience (Live In Carnival City)",
-  "year": 2017,
+  "yt": "mSe5tpSCEJ8",
+  "artist": "FUUDGE",
+  "title": "Capricorne",
+  "album": "Déplogué au Grand Théâtre de Québec",
+  "year": 2021,
+  "place": "Montréal",
+  "province": "Quebec"
+ },
+ {
+  "yt": "lAZudF4WVRM",
+  "artist": "Jabber",
+  "title": "Welcome to Bit-land",
+  "album": "Bop to the Bits",
+  "year": 2025,
+  "place": "Vancouver",
+  "province": "British Columbia"
+ },
+ {
+  "yt": "TNagd5hdSvw",
+  "artist": "Edguy",
+  "title": "When a Hero Cries",
+  "album": "Kingdom of Madness",
+  "year": 1997,
   "place": "Winnipeg",
   "province": "Manitoba"
  },
  {
-  "yt": "xKWTgfCQS5I",
-  "artist": "David Usher",
-  "title": "Final Thoughts And The Last Day On Earth",
-  "album": "Little Songs",
-  "year": 1998,
-  "place": "Montreal",
-  "province": "Quebec",
-  "basis": "formed in"
- },
- {
-  "yt": "Ios14czasRw",
+  "yt": "6mADWARppnM",
   "artist": "Crystal",
-  "title": "All Comes Back to You",
-  "album": "Sings the Best of Tina Charles",
-  "year": 2016,
+  "title": "Einmal Sunn, einmal Reg'n",
+  "album": "Crystal - Du bist jeden Herzschlag wert",
+  "year": 1905,
   "place": "Edmonton",
   "province": "Alberta"
  },
  {
-  "yt": "7Pf-ZHQbKoo",
-  "artist": "James Ehnes",
-  "title": "Havanaise (Camille Saint-Saëns)",
-  "album": "French Showpieces (Concert Francais)",
-  "year": 2001,
-  "place": "Brandon",
+  "yt": "WYkmRHXuMjI",
+  "artist": "Alvin",
+  "title": "The Little Dog",
+  "album": "Remastered Classics, Vol. 251, David Seville and the Chipmunks",
+  "year": 2022,
+  "place": "Richmond",
+  "province": "British Columbia"
+ },
+ {
+  "yt": "CguUxdp8Mcw",
+  "artist": "Don Amero",
+  "title": "Falling Shouldn't Feel That Way (Acoustic Version)",
+  "album": "Refined (Acoustic Version)",
+  "year": 2015,
+  "place": "Winnipeg",
   "province": "Manitoba",
   "basis": "born in"
  },
  {
-  "yt": "vJocbYTJmLs",
-  "artist": "espeonite",
-  "title": "For The Spy Who Never Loves",
-  "album": "For The Spy Who Never Loves",
-  "year": 2024,
-  "place": "Calgary",
-  "province": "Alberta"
- },
- {
-  "yt": "dyCAMYcWIds",
-  "artist": "Brad Johner",
-  "title": "She Looks a Lot Like You",
-  "album": "Free",
-  "year": 2003,
-  "place": "Saskatoon",
-  "province": "Saskatchewan"
- },
- {
-  "yt": "Qvm_YWsjGr4",
-  "artist": "archangel",
-  "title": "Ipanema",
-  "album": "Heartstrings EP",
-  "year": 2023,
-  "place": "Elk Point",
-  "province": "Alberta"
- },
- {
-  "yt": "-brTPoafgNU",
-  "artist": "CAT PISS",
-  "title": "PRESCRIPTION",
-  "album": "CAT PISS",
+  "yt": "piP-3E2yp30",
+  "artist": "ForeverForgotten",
+  "title": "flowers (slowed)",
+  "album": "cassette 1 (slowed)",
   "year": 2025,
-  "place": "Calgary",
-  "province": "Alberta"
- },
- {
-  "yt": "3pQ_AqC6ZN4",
-  "artist": "A Fine Line",
-  "title": "Interlude",
-  "album": "Playing Circles",
-  "year": 2006,
-  "place": "Saskatoon",
-  "province": "Saskatchewan"
- },
- {
-  "yt": "-G_AxC0Jft8",
-  "artist": "Gregg Smith",
-  "title": "Beautiful Dreamer",
-  "album": "The Great Sentimental Age: American Choral Works, Vol. 2",
-  "year": 1974,
-  "place": "Prince Albert",
-  "province": "Saskatchewan"
- },
- {
-  "yt": "vrbZxUFouGI",
-  "artist": "Acoustic Soul",
-  "title": "Forever Is All I'll Wait",
-  "album": "Acoustic Soul EP Release Pacific University",
-  "year": 1999,
-  "place": "Red Deer",
-  "province": "Alberta"
- },
- {
-  "yt": "iPEJsiS--Y4",
-  "artist": "Cassidy Mann",
-  "title": "Tropical Sour Candy (Golden Hour Version)",
-  "album": "Tropical Sour Candy / Fine (Golden Hour Versions)",
-  "year": 2023,
   "place": "Winnipeg",
   "province": "Manitoba"
  },
  {
-  "yt": "KL3g0mLS_w0",
-  "artist": "Chantal Kreviazuk",
-  "title": "Vicious",
-  "album": "Hard Sail",
-  "year": 2016,
-  "place": "Winnipeg",
-  "province": "Manitoba",
-  "basis": "born in"
+  "yt": "-fVT4AcF0LE",
+  "artist": "BigSteve",
+  "title": "My Instrument",
+  "album": "My Instrument",
+  "year": 2026,
+  "place": "Medicine Hat",
+  "province": "Alberta"
  },
  {
-  "yt": "lRWIT6xHops",
-  "artist": "Bridges",
-  "title": "Six Shades Of Blue",
-  "album": "Six Shades Of Blue",
-  "year": 2021,
+  "yt": "J5f3Vs1DlgM",
+  "artist": "Crystal",
+  "title": "Fújja El A Szél (Orchestral Version)",
+  "album": "Fújja el a szél",
+  "year": 2013,
+  "place": "Edmonton",
+  "province": "Alberta"
+ },
+ {
+  "yt": "95HjGgeAeeg",
+  "artist": "Joey Stylez",
+  "title": "100 Dabs",
+  "album": "#Greymagic",
+  "year": 2016,
   "place": "Saskatoon",
   "province": "Saskatchewan"
  },
  {
-  "yt": "i9dTAX_QD5A",
+  "yt": "peNHSe6mIWw",
   "artist": "Blank Banshee",
-  "title": "Pegasus",
+  "title": "Lost Angles",
   "album": "4D",
   "year": 2023,
   "place": "Saint John",
   "province": "New Brunswick"
  },
  {
-  "yt": "5qoq5WI8UG4",
-  "artist": "HarveyDent",
-  "title": "Hey Kid",
-  "album": "4Life",
-  "year": 2024,
-  "place": "Saskatoon",
+  "yt": "E1i8ZDp0kqw",
+  "artist": "DirtyRock",
+  "title": "Call Me The Doctor",
+  "album": "Call Me The Doctor",
+  "year": 2013,
+  "place": "Regina",
   "province": "Saskatchewan"
  },
  {
-  "yt": "DX_JSH7jId4",
-  "artist": "Barbara Hannigan",
-  "title": "Les Illuminations, Op. 18: I. Fanfare, J'ai seul la clef",
-  "album": "Britten",
-  "year": 2012,
-  "place": "Waverley",
-  "province": "Nova Scotia",
-  "basis": "born in"
- },
- {
-  "yt": "XlZpF5SafPU",
-  "artist": "Annihilator",
-  "title": "In The Blood (Acoustic)",
-  "album": "Triple Threat",
-  "year": 2017,
-  "place": "Choiceland",
-  "province": "Saskatchewan"
- },
- {
-  "yt": "19heNwYp6qA",
-  "artist": "Angelo Spinazzola",
-  "title": "Green Eggs & Jam (Angelina)",
-  "album": "No-Thing",
-  "year": 1999,
-  "place": "Baddeck",
-  "province": "Nova Scotia"
- },
- {
-  "yt": "W06ZtKw6elE",
-  "artist": "Alanna Matty",
-  "title": "Only Option",
-  "album": "This Past Year",
-  "year": 2019,
+  "yt": "LX6rHFbPfA0",
+  "artist": "Al Tuck",
+  "title": "Six Strings, Nine Lives",
+  "album": "My Blues Away",
+  "year": 2010,
   "place": "Halifax",
   "province": "Nova Scotia"
+ },
+ {
+  "yt": "bkddl8SygXI",
+  "artist": "Patrick Watson",
+  "title": "Tracy's Waters",
+  "album": "Wooden Arms",
+  "year": 2009,
+  "awards": [
+   {
+    "award": "Polaris Music Prize",
+    "year": 2009,
+    "result": "shortlist"
+   }
+  ]
  }
 ]
