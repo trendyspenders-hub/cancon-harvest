@@ -6,8 +6,12 @@ uploads for 20,862 Canadian artists listed in `artists.txt`.
 ## What's here
 
 - `harvest_topic_local.py` — the harvester (requires `pip3 install yt-dlp ytmusicapi`)
-- `artists.txt` — one artist per line, priority-sorted (francophone/Spanish first,
-  then acts with no tracks in the player, then the rest)
+- `artists.txt` — one artist per line. First the 15,155 artists in
+  `canadian_music_discovery_catalog-7.csv` (the user's final list, kept in the
+  original priority order: francophone/Spanish, then acts with no tracks in the
+  player, then the rest), then 5,707 older live-directory names not in
+  catalog-7 — lower confidence, some aren't musicians (e.g. photographers,
+  actors), harvested last
 - `tracks_local.jsonl` — results accumulate here (created on first run)
 
 ## Commands
