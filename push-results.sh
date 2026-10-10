@@ -9,6 +9,7 @@ git add tracks_local.jsonl
 [ -f harvest_done.jsonl ] && git add harvest_done.jsonl   # resume state
 for f in links_local.jsonl links_done.jsonl; do [ -f "$f" ] && git add "$f"; done   # streaming links
 for f in tracks_discogs.jsonl discogs_done.jsonl; do [ -f "$f" ] && git add "$f"; done   # Discogs pass
+[ -f events_local.jsonl ] && git add events_local.jsonl   # upcoming concerts (no keys inside)
 [ -f charts_local.jsonl ] && python3 harvest_charts.py match >/dev/null   # re-link charts to new tracks
 for f in charts_local.jsonl charts_tracks.jsonl; do [ -f "$f" ] && git add "$f"; done   # chart history
 

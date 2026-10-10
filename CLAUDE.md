@@ -136,6 +136,21 @@ the Year nominees/winners. Each page's own legend is kept with every number.
   magazine scans (worldradiohistory.com, 1,748 issues) have a text layer but
   multi-column OCR — a possible later project with layout-aware parsing.
 
+## Concerts (`harvest_events.py`)
+
+- **Keys live only in `.env`** (git-ignored; this repo is PUBLIC — never
+  commit, print, or push a key):
+  `TICKETMASTER_API_KEY=...` and, if ever approved, `BANDSINTOWN_APP_ID=...`
+- `python3 harvest_events.py ticketmaster [months]` — every upcoming music
+  event in Canada, province × month windows (auto-split past the 1,000-result
+  paging cap), ~100–300 calls of the 5,000/day free quota; keeps events whose
+  lineup has an artist on the list (exact name; dropped if Ticketmaster's
+  MusicBrainz ID disagrees with ours). Rebuilds `events_local.jsonl`.
+- `python3 harvest_events.py bandsintown` — per artist in rotation, 1 req/s.
+  Bandsintown keys are NOT self-serve: approval via API@bandsintown.com.
+- Run daily when keys exist; `push-results.sh` pushes `events_local.jsonl`.
+- Site must link the provider's own ticket URL and credit the provider.
+
 ## Adding artists
 
 `artists.txt` is read once at start. To add artists from a new site export

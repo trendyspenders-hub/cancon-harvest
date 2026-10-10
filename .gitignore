@@ -3,3 +3,7 @@ batch*.txt
 *.orig
 __pycache__/
 .DS_Store
+.env
+.claude/
+*.log
+*.before-*

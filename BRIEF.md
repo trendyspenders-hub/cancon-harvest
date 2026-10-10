@@ -404,6 +404,16 @@ own domain/host; see 5.5.)*
 
 ---
 
+## Phase 8½ — Signature features → see `FEATURES.md`
+
+Fourteen features with full specs: Higher or Lower game, Guess the Year,
+Listening Passport + Wrapped, **AI DJ** (template-only, never invented facts),
+**Road Trip Mode**, alarm, band family trees, Near You, **Playing live near
+you** (concerts, `events_local.jsonl`), year pages, Clean mode, listening
+parties, open data page, and "What is CanCon?". Start after Phases 0–2.
+
+---
+
 ## Phase 9 — Owner notes (not a build task)
 
 - **Funding:** FACTOR, Canada Council for the Arts, and provincial music
