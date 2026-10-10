@@ -37,7 +37,8 @@ python3 harvest_topic_local.py artists.txt 10
 - Finding the artist, in order: their own Topic channel (named exactly
   `<artist> - Topic`); else their
   **verified** artist channel (verified badge AND channel name equals the
-  artist, or starts with "<artist> ", or is "<artist>VEVO"); else a YouTube
+  artist — extra words allowed only if they are boilerplate like "Official",
+  "Music", "VEVO", "Band", "Videos", "Channel"; "Alan" ≠ "Alan Walker"); else a YouTube
   Music artist page whose name equals the artist exactly (`source: ytmusic` —
   the least certain match, worth spot-checking for generic names). Only the
   single best-matching channel is kept. Never fan uploads.
