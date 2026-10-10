@@ -12,9 +12,11 @@ Rules:   a town is only matched INSIDE the province the location names
          a unique town name in all of Canada is accepted. Province-only
          locations get the province centre with precision "province".
          Anything else (e.g. "Atlantic Canada") is left without coordinates.
+Second pass: artists with no usable location but a Wikidata ID (links_local)
+get their place of formation (P740) or birth (P19), only if it is in Canada.
 Usage:   python3 harvest_geo.py [catalog.csv]
 Output:  geo_local.jsonl — {artist, location, lat, lon, precision: town|province,
-          place, province, geonameid, source}
+          place, province, geonameid, source, basis?, wikidata_place?}
 """
 import csv, json, os, re, sys, unicodedata
 from collections import defaultdict
@@ -87,11 +89,68 @@ def geocode(loc, towns, centres):
                 "place": None, "province": prov, "geonameid": None}
     return None
 
+PROV_QID = {"Q1951": "AB", "Q1973": "BC", "Q1948": "MB", "Q1965": "NB", "Q2003": "NL", "Q1952": "NS",
+            "Q1904": "ON", "Q1979": "PE", "Q176": "QC", "Q1989": "SK", "Q2009": "YT", "Q2007": "NT", "Q2023": "NU"}
+
+def nearest_province(lat, lon, towns):
+    """Province of the nearest GeoNames town (Wikidata gives coordinates; the
+    province lookup stays offline)."""
+    best = None
+    for recs in towns.values():
+        for pop, prov, tlat, tlon, *_ in recs:
+            d = (tlat - lat) ** 2 + ((tlon - lon) * 0.7) ** 2
+            if best is None or d < best[0]: best = (d, prov)
+    return best[1] if best else None
+
+def _entities(ids, props):
+    """Wikidata entity API (no SPARQL — lookups by ID don't time out)."""
+    import time, urllib.parse, urllib.request
+    out = {}
+    for i in range(0, len(ids), 50):
+        url = "https://www.wikidata.org/w/api.php?" + urllib.parse.urlencode({
+            "action": "wbgetentities", "ids": "|".join(ids[i:i + 50]), "props": props,
+            "languages": "en|fr", "format": "json"})
+        req = urllib.request.Request(url, headers={"User-Agent": "CanConHarvest/1.0 (https://github.com/trendyspenders-hub/cancon-harvest)"})
+        for attempt in range(3):
+            try:
+                out.update(json.load(urllib.request.urlopen(req, timeout=60)).get("entities", {})); break
+            except Exception:
+                if attempt == 2: raise
+                time.sleep(10)
+        time.sleep(0.5)
+    return out
+
+def _claim_ids(ent, prop):
+    return [c["mainsnak"]["datavalue"]["value"]["id"] for c in (ent.get("claims") or {}).get(prop, [])
+            if c.get("rank") != "deprecated" and (c.get("mainsnak") or {}).get("datavalue")]
+
+def wikidata_places(qids):
+    """Place of formation (bands, P740) or birth (people, P19) — only places
+    whose country (P17) is Canada, with coordinates (P625). -> {qid: rec}"""
+    artists = _entities(list(qids), "claims")
+    pick = {}
+    for qid, ent in artists.items():
+        for prop, basis in (("P740", "formed in"), ("P19", "born in")):   # formation beats birth
+            ids = _claim_ids(ent, prop)
+            if ids: pick[qid] = (ids[0], basis); break
+    places = _entities(sorted({p for p, _ in pick.values()}), "claims|labels")
+    out = {}
+    for qid, (pid, basis) in pick.items():
+        pl = places.get(pid) or {}
+        if "Q16" not in _claim_ids(pl, "P17"): continue                    # not in Canada
+        coord = next((c["mainsnak"]["datavalue"]["value"] for c in (pl.get("claims") or {}).get("P625", [])
+                      if (c.get("mainsnak") or {}).get("datavalue")), None)
+        if not coord: continue
+        label = ((pl.get("labels") or {}).get("en") or (pl.get("labels") or {}).get("fr") or {}).get("value")
+        out[qid] = {"lat": round(coord["latitude"], 4), "lon": round(coord["longitude"], 4), "precision": "town",
+                    "place": label, "province": None, "geonameid": None, "basis": basis, "wikidata_place": pid}
+    return out
+
 def main():
     src = sys.argv[1] if len(sys.argv) > 1 else os.path.join(HERE, "..", "canadian_music_discovery_catalog-7.csv")
     if not os.path.exists(GN): raise SystemExit(__doc__)
     towns, centres = load_places()
-    cache, stats = {}, defaultdict(int)
+    cache, stats, placed = {}, defaultdict(int), set()
     with open(os.path.join(HERE, "geo_local.jsonl"), "w", encoding="utf-8") as out:
         for r in csv.DictReader(open(src, encoding="utf-8-sig")):
             loc, artist = (r.get("location") or "").strip(), (r.get("artist") or "").strip()
@@ -100,8 +159,22 @@ def main():
             g = cache[loc]
             if not g: stats["unmatched"] += 1; continue
             stats[g["precision"]] += 1
+            placed.add(artist.casefold())
             out.write(json.dumps({"artist": artist, "location": loc, **g,
                                   "source": "GeoNames (CC BY 4.0)"}, ensure_ascii=False) + "\n")
+        # Second source: artists with no usable catalog location but a Wikidata ID
+        links = os.path.join(HERE, "links_local.jsonl")
+        qids = {}
+        if os.path.exists(links):
+            for line in open(links, encoding="utf-8"):
+                d = json.loads(line)
+                if d.get("source") == "wikidata" and d.get("id") and d["artist"].casefold() not in placed:
+                    qids.setdefault(d["id"], d["artist"])
+        for qid, g in wikidata_places(qids).items():
+            g["province"] = nearest_province(g["lat"], g["lon"], towns)
+            stats["wikidata town"] += 1
+            out.write(json.dumps({"artist": qids[qid], "location": None, **g,
+                                  "source": "Wikidata (CC0)"}, ensure_ascii=False) + "\n")
     print(dict(stats))
     print("unmatched locations:", [l for l, g in cache.items() if not g][:25])
 

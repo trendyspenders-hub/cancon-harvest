@@ -171,6 +171,11 @@ the Year nominees/winners. Each page's own legend is kept with every number.
   in `geonames/` (git-ignored; CC BY 4.0 — credit GeoNames). Towns only inside
   the named province; no province -> only a dominant city (≥100k and 10× any
   namesake); vague regions left blank. Re-run after a new catalog export.
+  Second pass: artists with no usable catalog location but a Wikidata ID get
+  their place of formation (bands, P740) or birth (people, P19) — only if that
+  place is in Canada — via the Wikidata entity API (SPARQL timed out).
+  `source: "Wikidata (CC0)"`, `basis: "formed in" | "born in"`; province from
+  the nearest GeoNames town. Re-run as `links_local.jsonl` grows.
 
 ## FEATURES Part 2 data
 
