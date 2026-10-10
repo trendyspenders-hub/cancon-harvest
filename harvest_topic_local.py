@@ -27,7 +27,7 @@ import json, os, sys, time
 from collections import Counter
 
 def topic_match(name, ch):
-    return ch.startswith(name) and "topic" in ch
+    return ch == name + " - topic"  # exact, so "J" can't grab "J Balvin - Topic"
 
 def verified_match(name, ch):
     # "Aliocha" -> "Aliocha Schneider" ok; "AliochaVEVO" ok; "Aliochas" not

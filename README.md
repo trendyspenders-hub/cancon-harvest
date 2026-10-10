@@ -7,7 +7,7 @@ anywhere with normal internet access (laptop, VPS, GitHub Actions runner).
 
 - `harvest_topic_local.py` — finds each artist's official auto-generated
   YouTube **Topic** channel ("<Name> - Topic") and lists its uploads
-- `artists.txt` — 17,030 artist names from the live directory, pre-sorted:
+- `artists.txt` — 20,862 artist names from the live directory, pre-sorted:
   francophone/Spanish artists first, then every act with no tracks in the
   player, then the rest
 

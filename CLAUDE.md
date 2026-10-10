@@ -1,7 +1,7 @@
 # CanCon Topic Harvest
 
 This folder is a self-contained job: harvest YouTube "… - Topic" channel
-uploads for 17,030 Canadian artists listed in `artists.txt`.
+uploads for 20,862 Canadian artists listed in `artists.txt`.
 
 ## What's here
 
@@ -30,7 +30,8 @@ python3 harvest_topic_local.py artists.txt 10
 - `harvest_done.jsonl` records one line per artist searched:
   `{artist, source: topic|verified|ytmusic|none, channel, kept, releases, albums}`.
 - Each line of output is one video: `{yt, title, artist, album, year, …}`.
-- Finding the artist, in order: their own `… - Topic` channel; else their
+- Finding the artist, in order: their own Topic channel (named exactly
+  `<artist> - Topic`); else their
   **verified** artist channel (verified badge AND channel name equals the
   artist, or starts with "<artist> ", or is "<artist>VEVO"); else a YouTube
   Music artist page whose name equals the artist exactly (`source: ytmusic` —
@@ -47,7 +48,7 @@ python3 harvest_topic_local.py artists.txt 10
 ## When the user asks for status
 
 Count lines in `tracks_local.jsonl` for tracks found; count distinct `artist`
-values for artists done; compare to `wc -l artists.txt` (17,030 total).
+values for artists done; compare to `wc -l artists.txt` (20,862 total).
 
 ## The GitHub bridge (connecting back to Kimi)
 
@@ -63,6 +64,13 @@ GitHub but cannot reach this Mac).
 - When the user says "push the results", run push-results.sh without asking.
   When they say "sync", remind them to tell Kimi:
   `sync the harvest from github:OWNER/cancon-harvest`
+
+## Adding artists
+
+`artists.txt` is read once at start. To add artists from a new site export
+(`canadian_music_discovery_catalog-N.csv`, `artist` column): append names not
+already in the list (case-insensitive, skip 1-letter names), then restart the
+harvest — finished artists are skipped.
 
 ## Done means
 
