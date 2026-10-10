@@ -7,7 +7,7 @@ set -uo pipefail
 cd "$(dirname "$0")"
 
 running() { pgrep -f "$1" >/dev/null; }
-start()   { nohup caffeinate -i bash -c "$2" >> "$3" 2>&1 & echo "$(date '+%F %T') started: $2"; }
+start()   { nohup caffeinate -i bash -c "$1" >> "$2" 2>&1 & echo "$(date '+%F %T') started: $1"; }   # start "<command>" <log>
 
 # 1. Main YouTube harvest (exits quickly once every artist is done)
 if ! running "[h]arvest_topic_local.py artists.txt" && ! running "[b]ackfill_explicit.py" && ! running "[h]arvest_radar.py" && ! running "[c]heck_dead.py"; then
