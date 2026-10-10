@@ -24,16 +24,26 @@ Names listed in strict_artists.txt (lower-confidence extras) skip step 3.
 Older log lines (pre-album) get re-run; tracks already in tracks_local.jsonl
 for that artist are never written twice.
 """
-import json, os, sys, time
+import json, os, re, sys, time
 from collections import Counter
 
 def topic_match(name, ch):
     return ch == name + " - topic"  # exact, so "J" can't grab "J Balvin - Topic"
 
+BOILERPLATE = {"official", "officiel", "officielle", "music", "musique", "band", "the", "vevo", "tv",
+               "video", "videos", "channel", "page", "youtube", "you", "tube", "artist", "fan"}
+
 def verified_match(name, ch):
-    # "Aliocha" -> "Aliocha Schneider" ok; "AliochaVEVO" ok; "Aliochas" not
+    """Channel name must BE the artist, give or take channel boilerplate:
+    "Art of Dying (Official)", "Barbra Lica - Official You Tube Channel",
+    "AliochaVEVO" match; "Alan" -> "Alan Walker" or "Bill Johnson" -> "Bill
+    Johnson Teaching" do not (a longer real name is a different act)."""
+    if ch == name: return True
     flat_name, flat_ch = name.replace(" ", ""), ch.replace(" ", "")
-    return ch == name or ch.startswith(name + " ") or flat_ch == flat_name + "vevo"
+    if flat_ch == flat_name + "vevo": return True
+    if not ch.startswith(name): return False
+    extra = re.findall(r"[a-z0-9]+", ch[len(name):].lower())
+    return bool(extra) and all(w in BOILERPLATE for w in extra)
 
 def search(ydl, query, n):
     res = ydl.extract_info(f"ytsearch{n}:{query}", download=False)

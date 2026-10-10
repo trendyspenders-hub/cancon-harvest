@@ -69,7 +69,14 @@ All files refresh on GitHub hourly (harvest machine schedule).
 
 ## Make it feel like real radio
 
-### F4 — AI DJ between songs (M) ★
+### F4 — AI DJ between songs (M) ★ — **reference implementation ready**
+> Built: `dj/dj.js` (engine, EN/FR, no dependencies), `dj/demo.html` (working
+> demo with a real YouTube player), data `dj_facts_local.jsonl` (one line per
+> track, sourced fields only). Integrate the engine rather than rewriting it:
+> `const dj = CanConDJ.create({lang, duck: v => player.setVolume(v)});`
+> `await dj.say(dj.link(prevFacts, nextFacts));` between tracks. Show the line
+> as an on-screen transcript (accessibility). Spec below still applies.
+
 - **What:** an optional DJ voice (toggle, off by default for embeds) that
   speaks 5–12 seconds between some tracks:
   *"That was Joni Mitchell, from Fort Macleod, Alberta — off Blue, 1971.
@@ -328,6 +335,137 @@ Provinces**, then the rest.
   Countdown* (90s charted hits), **"degrassi"** → teen-drama-era tracks,
   ↑↑↓↓←→←→BA → *Golden Era*. Subtle toast: "You found a secret station."
 - **Done when:** each trigger works on desktop and mobile (via the search box).
+
+---
+
+# Part 3 — The useful layer (F29–F42)
+
+**Before any of Part 3: finish `BRIEF.md` Phase 0** (real URLs/Back button,
+focus, tap targets, YouTube 200×200). Then: **F29 → F33 → F35** first.
+
+| New file | What's in it |
+|---|---|
+| `new_releases_local.jsonl` | `{artist, album, type, year, cover, tracks, found}` — releases first seen by the weekly radar (this year or last) |
+| `dead_local.jsonl` | `{yt, status: embed_disabled\|gone, checked}` — nightly rolling check; skip these |
+| `songs_local.jsonl` | `{artist, title, canonical, versions: [{yt, kind, album, year}]}` — songs with 2+ versions; `kind` = original/remix/live/remaster/acoustic/demo/instrumental/edit/video |
+| `fresh_local.jsonl` | `{artist, first_seen, tracks, sample}` — artists added in the last 7 days |
+| `dj_facts_local.jsonl` | AI DJ fact sheet (F4) |
+
+## Keep it fresh & clean
+
+### F29 — New This Week (S) ★
+- **What:** a "New This Week" preset + strip on the home page, `NEW` badge on
+  albums/tracks for 30 days after `found`; an artist page "Latest release".
+- **Data:** `new_releases_local.jsonl` (official releases from artists'
+  own YouTube Music pages; tracks are already in `tracks_local.jsonl`).
+- **Done when:** a release found this week appears in the preset and strip.
+
+### F30 — Never play a dead track (S)
+- **What:** before queueing, skip any `yt` in `dead_local.jsonl`; on a
+  player error (embed disabled/removed) skip silently and report it to the
+  site's own log. Hide dead tracks from Discover/artist pages.
+- **Done when:** no track listed in `dead_local.jsonl` ever plays or shows.
+
+### F31 — One song, many versions (S)
+- **What:** rotation plays the `canonical` version by default and never two
+  versions of the same song within 3 hours; artist pages show "Heart of Gold ·
+  4 versions" with a version picker (Live, Remaster, Remix…).
+- **Done when:** a song with 5 versions appears once in Discover, with a picker.
+
+### F32 — Fresh in the directory (S)
+- **What:** "Fresh this week" home strip + a section in the newsletter (BRIEF
+  7.5) from `fresh_local.jsonl`; each artist links to their page.
+- **Done when:** artists added this week appear, older ones don't.
+
+## Smarter radio
+
+### F33 — Rotation engine (M) ★
+- **What:** replace plain shuffle with radio rules, applied to every station:
+  no artist repeat within 60 min; no song (F31 group) repeat within 24 h per
+  listener; era/genre transitions smoothed (avoid hard jumps like 1952 → 2023
+  back-to-back unless the station is "All eras"); a mix target per hour (e.g.
+  70% catalogue / 20% charted / 10% deep cuts — tune per preset); on mixed
+  stations a French-language share (target ≥ 25%, only from `language`-tagged
+  tracks — never guessed).
+- **Done when:** a 3-hour simulated run of any preset passes all rules (write
+  a test that simulates it).
+
+### F34 — Learn from skips (M)
+- **What:** count skips in the first 10 s per track (anonymous, aggregate);
+  tracks with a skip rate far above their station's average get down-weighted
+  (never removed automatically). A listener's own skips down-weight for them
+  only (local storage).
+- **Rules:** no personal data; aggregate counts only; show "fewer like this"
+  as an explicit button too.
+- **Done when:** a track skipped by most listeners plays noticeably less often.
+
+## Trust & legal (before promoting in Québec)
+
+### F35 — Privacy & Québec Law 25 (S) ★
+- **What:** a privacy policy (EN/FR) naming a privacy officer contact; cookie /
+  analytics consent banner (opt-in for anything non-essential); privacy-friendly
+  analytics (Plausible or Umami, no cross-site tracking); a data request form
+  (access / correction / deletion); a list of third parties (YouTube embeds,
+  Ticketmaster links, analytics, host).
+- **Rules:** YouTube embeds set cookies — use the facade (BRIEF Phase 2) so
+  nothing from YouTube loads before the listener presses play; use
+  `youtube-nocookie.com` embeds.
+- **Done when:** a first visit with consent refused loads no analytics and no
+  YouTube until Play; the policy is reachable from every page footer.
+
+### F36 — Takedowns & corrections (S)
+- **What:** `/contact/rights` and `/contact/corrections` forms (EN/FR): rights
+  holders request removal (track/artist URL, reason), artists request fixes.
+  Promise: response within 5 business days. Requests land in the admin queue
+  (F38).
+- **Done when:** a test request appears in the queue with an email confirmation.
+
+### F37 — Uptime & error monitoring (S)
+- **What:** an external uptime check (homepage + one data URL every 5 min),
+  a public `/status` page, and client error reporting (e.g. Sentry) for player
+  errors and JS exceptions — alerts by email.
+- **Done when:** breaking the data URL triggers an alert within 10 minutes.
+
+## Running it
+
+### F38 — Admin & curation dashboard (M)
+- **What:** a protected `/admin`: review queue (wrong-track reports BRIEF 3.3,
+  submissions/claims BRIEF 6.x, takedowns F36), lower-confidence matches to
+  verify (`harvest_done.jsonl` `source: ytmusic`), Canadiana preset editor
+  (F25), pause/unpause any track or artist, view `dead_local.jsonl`.
+- **Rules:** real authentication (not a shared password in the URL); every
+  action logged.
+- **Done when:** a reported track can be paused from the dashboard and
+  disappears from rotation.
+
+### F39 — Artist dashboard (M)
+- **What:** for claimed artists (BRIEF 6.2): plays by week, top cities
+  (city-level only), saves, top tracks; their embed codes and badges; edit
+  links/bio overrides (labelled "from the artist"); add tour links.
+- **Done when:** a claimed test artist sees their own stats and can edit links.
+
+## Access
+
+### F40 — Accessibility extras (S)
+- **What:** high-contrast theme; readable-font toggle (e.g. Atkinson
+  Hyperlegible); DJ transcripts always visible (already in the demo);
+  a visible "Reduce motion" switch in settings (on top of the system setting).
+- **Done when:** all three toggles persist and pass a WCAG AA contrast check.
+
+### F41 — Indigenous language greetings (S)
+- **What:** station IDs and a few interface greetings in Indigenous languages
+  (e.g. Inuktitut, Cree, Mi'kmaw, Anishinaabemowin) on the "Indigenous
+  Voices" station and the About page.
+- **Rules:** wording and recordings come from, and are credited to, native
+  speakers / community partners — never machine-translated.
+- **Done when:** at least one language is live with credited partner text/audio.
+
+## Operations (owner / harvest machine — done or in progress)
+
+### F42 — Automation that survives restarts
+- The harvest folder moves out of `~/Downloads` (macOS blocks background
+  services there) and the hourly push / daily job run under launchd. See
+  CLAUDE.md "Schedule".
 
 ---
 

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CanCon Radio — DJ demo</title>
+<style>
+  :root { --paper:#ffffdb; --ink:#222; --red:#c8290b; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink); font:16px/1.5 Georgia, serif; }
+  main { max-width: 880px; margin: 0 auto; padding: 32px 20px 80px; }
+  .eyebrow { font:12px/1 ui-monospace, monospace; letter-spacing:.2em; color:var(--red); text-transform:uppercase; }
+  h1 { font: 800 clamp(32px,6vw,56px)/1 "Archivo", Arial, sans-serif; margin:.3em 0 .4em; letter-spacing:-.02em; }
+  .deck { display:grid; grid-template-columns: 356px 1fr; gap:24px; align-items:start; border-top:2px solid var(--ink); padding-top:20px; }
+  @media (max-width: 720px) { .deck { grid-template-columns: 1fr; } }
+  #player { width:356px; height:200px; background:#000; }      /* YouTube minimum 200x200: never smaller */
+  .now { font: 800 22px/1.2 "Archivo", Arial, sans-serif; margin:0; }
+  .meta { font-style: italic; color:#555; margin:.2em 0 1em; }
+  button { font: 600 13px/1 ui-monospace, monospace; letter-spacing:.08em; text-transform:uppercase;
+           border:2px solid var(--ink); background:transparent; color:var(--ink); padding:12px 14px; min-height:44px; cursor:pointer; margin:0 6px 6px 0; }
+  button.primary { background: var(--red); border-color: var(--red); color:#fff; }
+  button:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+  .dj { margin-top:24px; border:2px dashed #b5ad8a; padding:16px 18px; min-height: 96px; }
+  .dj .label { font:12px/1 ui-monospace, monospace; letter-spacing:.2em; color:#777; }
+  .dj p { margin:.5em 0 0; font-size:19px; }
+  .on-air { display:inline-block; width:10px; height:10px; border-radius:50%; background:#bbb; margin-right:8px; vertical-align:middle; }
+  .on-air.live { background: var(--red); }
+  .note { font: 13px/1.5 ui-monospace, monospace; color:#666; margin-top:28px; }
+  @media (prefers-reduced-motion: no-preference) { .on-air.live { animation: pulse 1.2s infinite; } }
+  @keyframes pulse { 50% { opacity:.35; } }
+</style>
+</head>
+<body>
+<main>
+  <div class="eyebrow">CanCon Radio · DJ demo</div>
+  <h1>The DJ between the songs</h1>
+  <p>Every word the DJ says comes from a sourced field — album, year, hometown, chart peak, award. Missing facts are simply left out. Press <b>Play</b> (your browser needs one click before it can speak).</p>
+
+  <section class="deck" aria-label="Player">
+    <div id="player"></div>
+    <div>
+      <p class="now" id="now">Nothing on the turntable</p>
+      <p class="meta" id="meta">Press play to start the broadcast</p>
+      <button class="primary" id="play">▶ Play</button>
+      <button id="skip">Skip to the DJ</button>
+      <button id="lang" aria-pressed="false">Français</button>
+      <button id="djtoggle" aria-pressed="true">DJ: on</button>
+    </div>
+  </section>
+
+  <section class="dj" aria-live="polite">
+    <div class="label"><span class="on-air" id="air"></span>ON AIR — TRANSCRIPT</div>
+    <p id="said">—</p>
+  </section>
+
+  <p class="note">Data: <code>dj/sample.json</code> (40 tracks from <code>dj_facts_local.jsonl</code>). Voice: your browser's built-in
+  speech (Canadian English / Canadian French when installed). Serve over http, e.g. <code>python3 -m http.server</code> in this folder.</p>
+</main>
+
+<script src="dj.js"></script>
+<script>
+  let tracks = [], i = -1, player, djOn = true, started = false;
+  const $ = (id) => document.getElementById(id);
+  const dj = CanConDJ.create({ lang: "en", duck: (v) => player && player.setVolume && player.setVolume(v) });
+
+  fetch("sample.json").then((r) => r.json()).then((d) => { tracks = d.sort(() => Math.random() - 0.5); })
+    .catch(() => { $("said").textContent = "Couldn't load sample.json — open this page through a local web server (see note below)."; });
+
+  const tag = document.createElement("script"); tag.src = "https://www.youtube.com/iframe_api"; document.head.appendChild(tag);
+  window.onYouTubeIframeAPIReady = () => {
+    player = new YT.Player("player", { width: 356, height: 200, playerVars: { playsinline: 1, rel: 0 },
+      events: { onStateChange: (e) => { if (e.data === YT.PlayerState.ENDED) advance(); },
+                onError: () => advance(true) } });   // dead/blocked video: skip, say nothing about it
+  };
+
+  function show(t) {
+    $("now").textContent = t.title ? `${t.title}` : t.artist;
+    $("meta").textContent = [t.artist, t.album, t.year, t.place].filter(Boolean).join(" · ");
+  }
+
+  async function advance(silent) {
+    const prev = tracks[i], next = tracks[(i + 1) % tracks.length];
+    i = (i + 1) % tracks.length;
+    if (djOn && !silent) {
+      const line = dj.link(prev, next);
+      $("said").textContent = line; $("air").classList.add("live");
+      await dj.say(line);
+      $("air").classList.remove("live");
+    }
+    show(next); player.loadVideoById(next.yt);
+  }
+
+  $("play").onclick = () => {
+    if (!tracks.length || !player) return;
+    if (!started) { started = true; $("play").textContent = "❚❚ Pause"; return advance(); }
+    const playing = player.getPlayerState() === YT.PlayerState.PLAYING;
+    playing ? player.pauseVideo() : player.playVideo();
+    $("play").textContent = playing ? "▶ Play" : "❚❚ Pause";
+  };
+  $("skip").onclick = () => { if (started) { player.stopVideo(); advance(); } };
+  $("lang").onclick = (e) => {
+    const fr = dj.lang === "en"; dj.setLang(fr ? "fr" : "en");
+    e.target.textContent = fr ? "English" : "Français"; e.target.setAttribute("aria-pressed", String(fr));
+    document.documentElement.lang = fr ? "fr" : "en";
+  };
+  $("djtoggle").onclick = (e) => { djOn = !djOn; e.target.textContent = `DJ: ${djOn ? "on" : "off"}`; e.target.setAttribute("aria-pressed", String(djOn)); };
+</script>
+</body>
+</html>

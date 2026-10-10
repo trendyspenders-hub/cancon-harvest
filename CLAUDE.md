@@ -192,6 +192,27 @@ the Year nominees/winners. Each page's own legend is kept with every number.
 - `python3 harvest_derived.py` — `pregame_local.jsonl` + `lineage_local.jsonl`
   from events/tracks/geo/charts. No network; `push-results.sh` runs it.
 
+## FEATURES Part 3 data + AI DJ
+
+- **AI DJ** — `harvest_dj.py` -> `dj_facts_local.jsonl` (+ `dj/sample.json`);
+  engine `dj/dj.js`, demo `dj/demo.html` (serve `dj/` over http). Wording
+  varies, facts never: every clause comes from a sourced field; awards with a
+  `note` (e.g. rescinded) are never spoken. Don't add an LLM to write lines.
+- **New Releases Radar** — `harvest_radar.py` (Sundays, in run-daily.sh):
+  artists in rotation with a channel id whose albums are already recorded;
+  unseen releases -> tracks/albums/explicit files; releases from this year or
+  last -> `new_releases_local.jsonl`.
+- **Dead tracks** — `check_dead.py` (nightly, 8,000 oldest-checked via
+  YouTube oEmbed) -> `dead_local.jsonl`; state `dead_state.json` (ignored).
+- **Song versions** — `harvest_derived.py` -> `songs_local.jsonl` (version
+  notes after " - " only when they ARE version notes; classical scenes stay
+  separate). **Fresh** -> `fresh_local.jsonl` (first run = baseline).
+- Radar and dead check both refuse to run while the main harvest runs.
+- Verified-channel rule (harvest_topic_local.verified_match): a channel longer
+  than the artist name is accepted only if the extra words are boilerplate
+  (Official, Music, VEVO, Band, Videos, Channel…). "Alan" ≠ "Alan Walker".
+  Earlier prefix matches that fail this rule were removed (log `note`).
+
 ## Schedule (background loop on this Mac)
 
 launchd can't be used while the repo lives in `~/Downloads`: macOS privacy

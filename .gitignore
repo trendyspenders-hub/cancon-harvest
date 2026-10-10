@@ -8,3 +8,5 @@ __pycache__/
 *.log
 *.before-*
 geonames/
+fresh_state.json
+dead_state.json

@@ -39,7 +39,7 @@ def main():
     log = open(done_p, "a", encoding="utf-8")
     fails = 0
     for i, d in enumerate(todo):
-        name, wanted, n, na = d["artist"], mine.get(d["artist"].lower(), set()), 0, 0
+        name, wanted, n, na, cid = d["artist"], mine.get(d["artist"].lower(), set()), 0, 0, None
         try:
             cid = d.get("channel_id")
             if not cid:
@@ -71,7 +71,7 @@ def main():
             time.sleep(600 if fails >= 5 else 2); fails = 0 if fails >= 5 else fails
             continue
         fails = 0
-        log.write(json.dumps({"artist": name, "flagged": n, "albums": na}) + "\n"); log.flush()
+        log.write(json.dumps({"artist": name, "flagged": n, "albums": na, "channel_id": cid if na else None}) + "\n"); log.flush()
         if i % 25 == 0: print(f"{time.strftime('%H:%M:%S')} [{i}/{len(todo)}] {name} | {na} albums, {n} flagged", flush=True)
         time.sleep(1)
     print("DONE")
