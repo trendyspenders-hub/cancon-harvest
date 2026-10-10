@@ -211,6 +211,39 @@ own domain/host; see 5.5.)*
 - **What:** confirm both are meant to be public. If not, put them behind an
   admin key.
 
+### 3.5 "Listen on" streaming links
+- **Data:** `links_local.jsonl` in `github:trendyspenders-hub/cancon-harvest`
+  — one line per artist per source:
+  `{artist, source: wikidata|musicbrainz, id, spotify, apple_music,
+  soundcloud, bandcamp, deezer, tidal, website}`. Missing fields are absent.
+  Every link comes from Wikidata or MusicBrainz (exact name, Canadian,
+  unambiguous) — **sourced, never guessed**. ~1,800 artists from Wikidata now;
+  MusicBrainz is adding more (14 of 20 known artists linked in testing).
+- **Merge rule:** combine both lines for an artist; when both have the same
+  field, prefer `wikidata`. Keep each link's source for the profile's
+  "Sources" section.
+- **What:** on artist pages and Directory cards, a "Listen on" row of platform
+  icons (Spotify, Apple Music, Bandcamp, SoundCloud, Deezer, Tidal, Official
+  site) — only the ones that exist, each opening in a new tab with
+  `rel="noopener"`. In the player, under the current track, "More from
+  <artist> on Spotify / Apple Music / Bandcamp" using the same data.
+- **Done when:** an artist with links shows them on their card and page, and
+  an artist without links shows no empty icons.
+
+### 3.6 SoundCloud & Bandcamp as a second playback source
+- **What:** about 44% of artists have no YouTube presence and are
+  directory-only. Where `links_local.jsonl` has a `soundcloud` or `bandcamp`
+  link, offer playback through the official embed widget (SoundCloud widget
+  player; Bandcamp embedded player — both work without an API key). Mark these
+  in the UI ("via SoundCloud" / "via Bandcamp") the same way YouTube is marked
+  today. Start with play-from-artist-page; add them to rotation behind a
+  "Deep indie" toggle until hand-off between sources is proven reliable.
+- **Why:** puts a whole tier of small Canadian artists on air — the
+  "deep cuts" spirit of the station.
+- **Done when:** a directory-only artist with a Bandcamp link can be played
+  from their page, and rotation can hand off YouTube → SoundCloud → Bandcamp
+  without stalling.
+
 ---
 
 ## Phase 4 — Unmistakably Canadian
@@ -349,7 +382,8 @@ The harvest (`github:trendyspenders-hub/cancon-harvest`) now fills `album` and
 **drop tracks for artists no longer in `tracks_local.jsonl`** (41 lower-confidence
 name-only matches were removed), and treat `source: ytmusic` matches in
 `harvest_done.jsonl` as lower confidence — good candidates for the "Report a
-wrong track" flow (3.3).
+wrong track" flow (3.3). Streaming links live in a separate file,
+`links_local.jsonl` (see 3.5) — it never changes `tracks_local.jsonl`.
 
 ---
 
