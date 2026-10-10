@@ -1,0 +1,6 @@
+{
+  "name": "cancon-dj-voice",
+  "private": true,
+  "type": "module",
+  "description": "CanCon Radio DJ voice service — Azure neural TTS behind an origin-locked, CDN-cached endpoint"
+}

@@ -61,7 +61,9 @@
 <script>
   let tracks = [], i = -1, player, djOn = true, started = false;
   const $ = (id) => document.getElementById(id);
-  const dj = CanConDJ.create({ lang: "en", duck: (v) => player && player.setVolume && player.setVolume(v) });
+  // ?voice=https://<voice-service>/api/voice  -> neural voice; otherwise the browser voice
+  const voiceUrl = new URLSearchParams(location.search).get("voice");
+  const dj = CanConDJ.create({ lang: "en", voiceUrl, duck: (v) => player && player.setVolume && player.setVolume(v) });
 
   fetch("sample.json").then((r) => r.json()).then((d) => { tracks = d.sort(() => Math.random() - 0.5); })
     .catch(() => { $("said").textContent = "Couldn't load sample.json — open this page through a local web server (see note below)."; });
