@@ -20,6 +20,7 @@ Output:  tracks_local.jsonl — send it back / drop it next to process3.py and
           releases, albums: true}
 
 Resumable: artists logged in harvest_done.jsonl with albums=true are skipped.
+Names listed in strict_artists.txt (lower-confidence extras) skip step 3.
 Older log lines (pre-album) get re-run; tracks already in tracks_local.jsonl
 for that artist are never written twice.
 """
@@ -40,7 +41,7 @@ def search(ydl, query, n):
         raise RuntimeError("search failed")
     return [e for e in res.get("entries") or [] if e]
 
-def find_channel(ydl, ytm, name, max_per):
+def find_channel(ydl, ytm, name, max_per, strict=False):
     """-> (source, channel_name, channel_id, videos)"""
     key = name.lower()
     videos = []
@@ -59,6 +60,8 @@ def find_channel(ydl, ytm, name, max_per):
         best = Counter(e.get("channel_id") for e in hits).most_common(1)[0][0]
         videos = [e for e in hits if e.get("channel_id") == best]
         return "verified", videos[0].get("channel") or "", best, videos
+    if strict:  # lower-confidence names: Topic/verified only, no name-only match
+        return "none", "", "", []
     # Last resort: YouTube Music artist page with exactly this name
     for r in ytm.search(name, filter="artists", limit=5):
         if (r.get("artist") or "").strip().lower() == key and r.get("browseId"):
@@ -96,6 +99,10 @@ def main():
     log_path = os.path.join(here, "harvest_done.jsonl")
 
     names = [n.strip() for n in open(names_file, encoding="utf-8") if n.strip()]
+    strict_path = os.path.join(here, "strict_artists.txt")
+    strict = set()
+    if os.path.exists(strict_path):
+        strict = {n.strip().lower() for n in open(strict_path, encoding="utf-8") if n.strip()}
     done, have = set(), set()
     if os.path.exists(log_path):
         for line in open(log_path, encoding="utf-8"):
@@ -121,7 +128,7 @@ def main():
         key = name.lower()
         try:
             with YoutubeDL({"quiet": True, "extract_flat": True, "ignoreerrors": True}) as ydl:
-                source, channel, cid, videos = find_channel(ydl, ytm, name, max_per)
+                source, channel, cid, videos = find_channel(ydl, ytm, name, max_per, key in strict)
             rows = [row(e.get("id"), e.get("title"), name) for e in videos[:max_per]]
             rels = releases(ytm, cid) if cid else []
             for r in rels:

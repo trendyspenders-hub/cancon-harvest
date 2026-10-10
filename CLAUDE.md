@@ -41,6 +41,11 @@ python3 harvest_topic_local.py artists.txt 10
   Music artist page whose name equals the artist exactly (`source: ytmusic` —
   the least certain match, worth spot-checking for generic names). Only the
   single best-matching channel is kept. Never fan uploads.
+- **Strict names**: artists in `strict_artists.txt` (the 5,707 extras not in
+  catalog-7) accept Topic or verified channels only — no name-only ytmusic
+  match. The user prefers leaving an artist directory-only over crediting a
+  same-name stranger. Name-only matches already harvested for them were removed
+  (log lines with `"note": "strict: …"`; backup `tracks_local.jsonl.before-strict`).
 - **Albums**: every album, EP and single on that artist's YouTube Music page is
   harvested in full (via `ytmusicapi`), with `album` and `year` filled in. Up to
   N (`10`) channel videos are kept too, with `album: ""`. yt-dlp can't open
