@@ -14,7 +14,7 @@ lineage_local.jsonl   "Hometown lineage": one line per town with 3+ artists in
 
 Usage:   python3 harvest_derived.py      (cheap; push-results.sh runs it)
 """
-import json, os, random
+import json, os, random, unicodedata
 from collections import defaultdict
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -67,8 +67,12 @@ def main():
         if g.get("precision") != "town": continue
         k = g["artist"].casefold()
         if k not in tracks: continue
-        t = towns.setdefault((g["place"], g["province"]), {"town": g["place"], "province": g["province"],
-                                                           "lat": g["lat"], "lon": g["lon"], "artists": {}})
+        # "Montréal" (GeoNames) and "Montreal" (Wikidata) are one town; keep the accented name
+        tkey = (unicodedata.normalize("NFKD", g["place"] or "").encode("ascii", "ignore").decode().casefold(), g["province"])
+        t = towns.setdefault(tkey, {"town": g["place"], "province": g["province"],
+                                    "lat": g["lat"], "lon": g["lon"], "artists": {}})
+        if not t["town"].isascii() or g["place"].isascii(): pass
+        else: t["town"] = g["place"]
         t["artists"][k] = {"artist": names.get(k, g["artist"]), "since": first_year.get(k) if first_year.get(k, 9999) < 9999 else None,
                            "top_hit": hits.get(k)}
     m = 0
