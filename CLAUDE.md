@@ -172,13 +172,23 @@ the Year nominees/winners. Each page's own legend is kept with every number.
   the named province; no province -> only a dominant city (≥100k and 10× any
   namesake); vague regions left blank. Re-run after a new catalog export.
 
-## Schedule (launchd, this Mac)
+## Schedule (background loop on this Mac)
 
-- `com.cancon.push` — `push-results.sh` every hour.
-- `com.cancon.daily` — `run-daily.sh` at 06:00: concerts (if
-  `TICKETMASTER_API_KEY` is in `.env`) then push.
-- Plists in `~/Library/LaunchAgents/`; logs `push.log`, `daily.log` here.
-  Stop: `launchctl bootout gui/$(id -u)/com.cancon.push` (and `.daily`).
+launchd can't be used while the repo lives in `~/Downloads`: macOS privacy
+protection blocks background services from reading Downloads ("Operation not
+permitted", exit 126). Instead a `nohup caffeinate -i bash -c '…'` loop runs:
+- every hour: `push-results.sh` (log `push.log`)
+- once in the 06:00 hour: `run-daily.sh` — concerts if `TICKETMASTER_API_KEY`
+  is in `.env`, then push (log `daily.log`)
+It stops on reboot (like the harvesters). Check: `pgrep -fl run-daily.sh`.
+Stop: `pkill -f "run-daily.sh >> daily.log"`. To make it reboot-proof, move the
+repo out of Downloads (e.g. `~/cancon-harvest`) and use launchd there.
+
+Waiter loops (also nohup) start the backfills when their harvest ends:
+`backfill_explicit.py` after the track harvest, `harvest_links.py relations`
+after the MusicBrainz stage; a Discogs loop re-runs every 15 min until the
+track harvest ends. Patterns use `[h]arvest…` so `pgrep -f` never matches the
+waiter's own command line.
 
 ## Adding artists
 
