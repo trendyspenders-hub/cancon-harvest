@@ -1,0 +1,675 @@
+{
+ "built": "2026-10-09",
+ "presets": [
+  {
+   "name": "Northern Bars",
+   "tag": "Canadian hip-hop & R&B, coast to coast"
+  },
+  {
+   "name": "Maritime Kitchen Party",
+   "tag": "Folk & country from the East Coast"
+  },
+  {
+   "name": "Franco Classics",
+   "tag": "Québec chanson & pop, en français et en esprit"
+  },
+  {
+   "name": "Coup de cœur",
+   "tag": "Francophone voices coast to coast"
+  },
+  {
+   "name": "En español",
+   "tag": "Canadian artists singing in Spanish"
+  },
+  {
+   "name": "MuchMusic 90s",
+   "tag": "The decade Canada took over the dial"
+  },
+  {
+   "name": "Indie All-Dressed",
+   "tag": "Two decades of indie rock & weird pop"
+  },
+  {
+   "name": "Indigenous Voices",
+   "tag": "First Nations, Inuit & Métis artists"
+  },
+  {
+   "name": "Prairie Static",
+   "tag": "Signals from Manitoba, Saskatchewan & Alberta"
+  },
+  {
+   "name": "Slow Burner",
+   "tag": "Late-night folk, jazz, soul & country"
+  },
+  {
+   "name": "Full Send",
+   "tag": "Rock, punk, metal & hip-hop at speed"
+  },
+  {
+   "name": "Left Field",
+   "tag": "The weird shelf — new wave, reggae, experiments"
+  },
+  {
+   "name": "Fresh Pressings",
+   "tag": "New Canadian music, 2020 and up"
+  },
+  {
+   "name": "Golden Era",
+   "tag": "The classics: 1950s through 1970s"
+  }
+ ],
+ "queue": [
+  {
+   "yt": "UeJGZpwgtts",
+   "artist": "Dan Hill",
+   "title": "Sometimes When We Touch",
+   "album": "Longer Fuse",
+   "year": 1977,
+   "place": "Toronto",
+   "province": "Ontario",
+   "basis": "born in",
+   "peak": 1,
+   "chart": "RPM",
+   "chart_year": 1977,
+   "year_end": 4,
+   "awards": [
+    {
+     "award": "JUNO Album of the Year",
+     "year": 1978,
+     "result": "winner"
+    }
+   ],
+   "cover": "https://yt3.googleusercontent.com/3I35-JKE8toO1Pu-yucTEpxWvO3iI505vITyd0vNhgotKkg9ipNjihLLh09w2ujAmqETSVwPZEUI6m7b=w544-h544-l90-rj"
+  },
+  {
+   "yt": "rUxH-SqHw8Y",
+   "artist": "Daniel Powter",
+   "title": "Bad Day (Stripped Down)",
+   "album": "Bad Day (Stripped Down)",
+   "year": 2024,
+   "place": "Vernon",
+   "province": "British Columbia",
+   "basis": "born in",
+   "peak": 27,
+   "chart": "Canadian Singles Chart",
+   "chart_year": 2005,
+   "cover": "https://yt3.googleusercontent.com/U9jWVvtlwA1RREY3jHJVEx925aCDa39fSoukVsEAA-aTyfcSyJ7V7r7o2D2Mufoy5NJ5aByX501jHOoc=w544-h544-l90-rj"
+  },
+  {
+   "yt": "jVYd0uzsP7g",
+   "artist": "Damhnait Doyle",
+   "title": "Whatever You Need",
+   "album": "Shadows Wake Me",
+   "year": 1996,
+   "place": "Labrador City",
+   "province": "Newfoundland and Labrador",
+   "basis": "born in",
+   "peak": 34,
+   "chart": "RPM",
+   "chart_year": 1996,
+   "cover": "https://yt3.googleusercontent.com/XQN8gcwOeS4BMhPzjiw9hUFtPcb-KBHhvp1Xq09j8qZnpuBJ0Bj8AKxZF8HhAqCTbPLpDwRwlliHhgM=w544-h544-l90-rj"
+  },
+  {
+   "yt": "KeGJwe5nEhA",
+   "artist": "Daniel Lanois",
+   "title": "Lotta Love To Give",
+   "place": "Hull",
+   "province": "Quebec",
+   "basis": "born in",
+   "peak": 34,
+   "chart": "RPM",
+   "chart_year": 1993,
+   "cover": "https://yt3.googleusercontent.com/ACty_dPyPqTR6zKiLKLIlq1HXiTgMKFVMPDQ9HhHboOXDPPl0OFsUZzCX-hsOhY6Jd7jytpiSGPS9Eo=w544-h544-l90-rj"
+  },
+  {
+   "yt": "kZ-ltVoVS2E",
+   "artist": "Dan Mangan",
+   "title": "Sold",
+   "album": "Nice, Nice, Very Nice",
+   "year": 2009,
+   "place": "Smithers",
+   "province": "British Columbia",
+   "basis": "born in",
+   "awards": [
+    {
+     "award": "Polaris Music Prize",
+     "year": 2010,
+     "result": "shortlist"
+    }
+   ],
+   "cover": "https://yt3.googleusercontent.com/ZjQwSGB3TI7Cj-6PJtjJbcok7y5Cc6AAJf7oo1BzglHTdRdScIGL97Bg_w4Ie4byAjZPDsvvQRESc6Ls=w544-h544-l90-rj"
+  },
+  {
+   "yt": "jyZDSnoi4XQ",
+   "artist": "Daniel Bélanger",
+   "title": "Chante encore",
+   "album": "Rêver Mieux",
+   "year": 2001,
+   "place": "Montreal",
+   "province": "Quebec",
+   "basis": "born in",
+   "awards": [
+    {
+     "award": "JUNO Album of the Year",
+     "year": 2003,
+     "result": "nominee"
+    }
+   ],
+   "cover": "https://yt3.googleusercontent.com/03X1b2__pX104_T3-YNOOc8ut2o4tbQMJHXtJcXkVRR4zLgdCXQbFfjqwLgW6QHdLSns8BBOp9F91qQW=w544-h544-l90-rj"
+  },
+  {
+   "yt": "vRhK_cLrzw8",
+   "artist": "Dany Bédar",
+   "title": "Presque tout dit (2025)",
+   "album": "Le meilleur des autres",
+   "year": 2025,
+   "place": "Val-d'Or",
+   "province": "Quebec",
+   "basis": "born in",
+   "cover": "https://yt3.googleusercontent.com/0lsRVbKh6MelZbQf0X8QxsBs3NWfID8azhgsTGavuznpn1sWCa53ntEJbWwnxp4d6NNYwIeyGNAg2-Fvbw=w544-h544-l90-rj"
+  },
+  {
+   "yt": "I2npLY04ho4",
+   "artist": "Derev",
+   "title": "A Trace Within",
+   "album": "Troubled Mind",
+   "year": 2025,
+   "place": "Toronto",
+   "province": "Ontario",
+   "cover": "https://yt3.googleusercontent.com/NX6-zZ5ee-yea8ddGy2aP0vDdKb4w8hNHzydUii3jwpLF8XxTaKJ9fVU580G7kTyyQXh8lTHZTHhpTbr=w544-h544-l90-rj"
+  },
+  {
+   "yt": "6b34y6SmOSU",
+   "artist": "DD/MM/YYYY",
+   "title": "Birdtown",
+   "place": "Toronto",
+   "province": "Ontario",
+   "basis": "formed in",
+   "cover": "https://yt3.googleusercontent.com/lyaLvK-WQHD9aqNn-9wigDuZoBbW6lFCY6wObR-7m-5RUDkhBhLv4d2PIRIDfOEhoYX6nV16-FLoKnW8tA=w544-h544-l90-rj"
+  },
+  {
+   "yt": "BH12CQ7wzas",
+   "artist": "Deex",
+   "title": "iScream",
+   "album": "iScream",
+   "year": 2016,
+   "place": "Winnipeg",
+   "province": "Manitoba",
+   "cover": "https://yt3.googleusercontent.com/k4_ZVLCyhTL3dj8JHvYEvBnlrs1W-uwG9hq5G-JN0ckjyJqkliAslSNOLWDSWRBsLmEFo1JFdA92Re7W=w544-h544-l90-rj"
+  },
+  {
+   "yt": "NlzhKollHGM",
+   "artist": "Death Sentence",
+   "title": "Release Me From My Cage",
+   "album": "Until The End Of The Sentence",
+   "year": 2017,
+   "place": "Vancouver",
+   "province": "British Columbia",
+   "cover": "https://yt3.googleusercontent.com/LE1J9IG4ZAAWfyQXMcqZ-YuXEdt-F956DNvLYlD2bwnYE2-L6X9osQkeDL8gOh_yH__4JysZ6kW90MjGOQ=w544-h544-l90-rj"
+  },
+  {
+   "yt": "0B3NQKCzLvQ",
+   "artist": "Damage",
+   "title": "After the Love Has Gone (Radio Mix)",
+   "album": "After The Love Has Gone",
+   "year": 2003,
+   "place": "Calgary",
+   "province": "Alberta",
+   "cover": "https://yt3.googleusercontent.com/9wXqXLkNvqZ1iAAPniMAwVnc_I0nIoKpnoofn1b2i-vEUzec6Hm1KHMP7b112hIVtOmhMnx88cQpJ3_U=w544-h544-l90-rj"
+  },
+  {
+   "yt": "LTlfl4M-GX0",
+   "artist": "Dax",
+   "title": "Took My Heart Out",
+   "album": "From A Man's Perspective",
+   "year": 2024,
+   "place": "Canada",
+   "province": "Saskatchewan",
+   "basis": "born in",
+   "cover": "https://yt3.googleusercontent.com/JGG4BAHh4DbL-aFXsXKDJBFKB1HydZp2bqLooHGsgnZZX2Jq0payZtlnjWVbUtMfTOldEtgDfyMRHPVwYw=w544-h544-l90-rj"
+  },
+  {
+   "yt": "JKAi4kivWzg",
+   "artist": "Del Barber",
+   "title": "Me And Jim",
+   "album": "Almanac",
+   "year": 2023,
+   "place": "Winnipeg",
+   "province": "Manitoba",
+   "basis": "born in",
+   "cover": "https://yt3.googleusercontent.com/rgKWlhRVK5v7Y7LGd07o8-hkOT29J-bL0a0Yp87GOjbwCFw5KkQro-mVZPLvxwDHWkTI8hy8LM46sM0=w544-h544-l90-rj"
+  },
+  {
+   "yt": "cDsAnIWLlg0",
+   "artist": "Dan Jones",
+   "title": "Oasis in the Mind",
+   "album": "Enlightening Sleep Stories for Grownups: 2020 Collection, Vol. Five",
+   "year": 2021,
+   "place": "Spruce Grove",
+   "province": "Alberta",
+   "cover": "https://yt3.googleusercontent.com/o46r5V80JYgCO8535qu7YSok8KwMF5hvFV-416ty8o6H5ZSzgrWUpHqBLgbblgrU7QqK_ndfM_kTUuLkFg=w544-h544-l90-rj"
+  },
+  {
+   "yt": "YK0_h9-k1Ps",
+   "artist": "Debbie Zepick",
+   "title": "We Weren't Expecting You",
+   "album": "See Amid the Winter's Snow",
+   "year": 2003,
+   "place": "Ponoka",
+   "province": "Alberta",
+   "cover": "https://yt3.googleusercontent.com/KLTJhnnPZ_hnzyfWXDPkpqoJ-9tmamUbt6GV84rSa_Dp63UaZOPlEEY9lfXKlBP7shaLivuVyBInp0koZw=w544-h544-l90-rj"
+  }
+ ],
+ "shows": [
+  {
+   "date": "2026-10-09",
+   "time": "20:00:00",
+   "venue": "Algonquin Commons Theatre",
+   "city": "Nepean",
+   "region": "ON",
+   "url": "https://www.ticketmaster.ca/christone-kingfish-ingram-the-hard-road-nepean-ontario-10-09-2026/event/310064CCD4DAECCC",
+   "artists": [
+    "Angelique Francis"
+   ],
+   "lineup": [
+    "Christone \"Kingfish\" Ingram",
+    "Angelique Francis"
+   ],
+   "tracks": 12,
+   "cover": null
+  },
+  {
+   "date": "2026-10-16",
+   "time": "20:30:00",
+   "venue": "Club SAW",
+   "city": "Ottawa",
+   "region": "ON",
+   "url": "https://www.ticketweb.ca/event/chris-murphy-peter-elkas-club-saw-tickets/14211944",
+   "artists": [
+    "Chris Murphy"
+   ],
+   "lineup": [
+    "Chris Murphy",
+    "Peter Elkas"
+   ],
+   "tracks": 12,
+   "cover": null
+  },
+  {
+   "date": "2026-10-17",
+   "time": "19:30:00",
+   "venue": "Broom Factory",
+   "city": "Kingston",
+   "region": "ON",
+   "url": "https://www.ticketweb.ca/event/chris-murphy-peter-elkas-broom-factory-tickets/14211704",
+   "artists": [
+    "Chris Murphy"
+   ],
+   "lineup": [
+    "Chris Murphy",
+    "Peter Elkas"
+   ],
+   "tracks": 12,
+   "cover": null
+  },
+  {
+   "date": "2026-10-18",
+   "time": "14:00:00",
+   "venue": "Black Sheep Inn",
+   "city": "Wakefield",
+   "region": "QC",
+   "url": "https://www.ticketweb.ca/event/chris-murphy-peter-elkas-black-sheep-inn-tickets/14212444",
+   "artists": [
+    "Chris Murphy"
+   ],
+   "lineup": [
+    "Chris Murphy",
+    "Peter Elkas"
+   ],
+   "tracks": 12,
+   "cover": null
+  },
+  {
+   "date": "2026-10-22",
+   "time": "20:00:00",
+   "venue": "Massey Hall",
+   "city": "Toronto",
+   "region": "ON",
+   "url": "https://www.ticketmaster.ca/allison-russell-with-very-special-guests-toronto-ontario-10-22-2026/event/100064A69B24FB9C",
+   "artists": [
+    "Allison Russell"
+   ],
+   "lineup": [
+    "Allison Russell",
+    "Elisapie",
+    "AHI"
+   ],
+   "tracks": 12,
+   "cover": null
+  },
+  {
+   "date": "2026-10-22",
+   "time": "19:30:00",
+   "venue": "The Molson Canadian Centre at Casino New Brunswick",
+   "city": "Moncton",
+   "region": "NB",
+   "url": "https://www.ticketmaster.ca/styx-moncton-new-brunswick-10-22-2026/event/31006444AB1B5F4C",
+   "artists": [
+    "Billy Raffoul"
+   ],
+   "lineup": [
+    "Styx",
+    "Billy Raffoul"
+   ],
+   "tracks": 12,
+   "cover": null
+  },
+  {
+   "date": "2026-10-23",
+   "time": "20:00:00",
+   "venue": "Théâtre Beanfield",
+   "city": "Montreal",
+   "region": "QC",
+   "url": "https://www.ticketmaster.ca/allison-russell-in-the-hour-of-montreal-quebec-10-23-2026/event/3100649DCC68C3A9",
+   "artists": [
+    "Allison Russell"
+   ],
+   "lineup": [
+    "Allison Russell",
+    "AHI"
+   ],
+   "tracks": 12,
+   "cover": null
+  },
+  {
+   "date": "2026-10-23",
+   "time": "19:00:00",
+   "venue": "The Starlite Room",
+   "city": "Edmonton",
+   "region": "AB",
+   "url": "https://www.ticketweb.ca/event/actors-the-starlite-room-tickets/14920043",
+   "artists": [
+    "Actors"
+   ],
+   "lineup": [
+    "Actors"
+   ],
+   "tracks": 12,
+   "cover": null
+  },
+  {
+   "date": "2026-10-25",
+   "time": "20:00:00",
+   "venue": "National Arts Centre",
+   "city": "Ottawa",
+   "region": "ON",
+   "url": "https://www.ticketmaster.ca/event/Z7r9jZ1A7044a",
+   "artists": [
+    "Allison Russell"
+   ],
+   "lineup": [
+    "Allison Russell",
+    "AHI"
+   ],
+   "tracks": 12,
+   "cover": null
+  },
+  {
+   "date": "2026-10-25",
+   "time": "16:00:00",
+   "venue": "Théâtre Manuvie",
+   "city": "Brossard",
+   "region": "QC",
+   "url": "https://www.ticketmaster.ca/claude-dubois-brossard-quebec-10-25-2026/event/31006433A00C3C90",
+   "artists": [
+    "Claude Dubois"
+   ],
+   "lineup": [
+    "Claude Dubois"
+   ],
+   "tracks": 5,
+   "cover": null
+  },
+  {
+   "date": "2026-10-28",
+   "time": "20:00:00",
+   "venue": "Studio 919 (Previously known as Wicket Hall)",
+   "city": "Victoria",
+   "region": "BC",
+   "url": "https://www.ticketweb.ca/event/cat-clyde-dean-johnson-studio-919-previously-known-as-tickets/14212514",
+   "artists": [
+    "Cat Clyde"
+   ],
+   "lineup": [
+    "Cat Clyde",
+    "Dean Johnson"
+   ],
+   "tracks": 12,
+   "cover": null
+  },
+  {
+   "date": "2026-10-28",
+   "time": "19:00:00",
+   "venue": "The Fox Cabaret",
+   "city": "Vancouver",
+   "region": "BC",
+   "url": "https://www.ticketmaster.ca/chris-murphy-vancouver-british-columbia-10-28-2026/event/110064D2AFE0A555",
+   "artists": [
+    "Chris Murphy"
+   ],
+   "lineup": [
+    "Chris Murphy"
+   ],
+   "tracks": 12,
+   "cover": null
+  }
+ ],
+ "recent": [
+  {
+   "artist": "D.b.s.",
+   "album": "Tales from the Crib",
+   "type": "Album",
+   "year": 2026,
+   "cover": "https://yt3.googleusercontent.com/Tej1q73ph6q6HQVGR_Jk_1fpHDwfQk8Yri4uL15y1KNftUj1U2Ld-N0tjIiLLfsZe-SSx7QiqNXwe7yV=w544-h544-l90-rj",
+   "yt": "1gOEx06AtXw"
+  },
+  {
+   "artist": "D'Ari",
+   "album": "Lady Be Strong",
+   "type": "Single",
+   "year": 2026,
+   "cover": "https://yt3.googleusercontent.com/l9I9VcGj4pvJraNvohw3V9N3QdzMZbGWtrTM4JmeSfaHD4WaMTVTbcx9sf_EP_zDGvjnDimzTpu-bmGL=w544-h544-l90-rj",
+   "yt": "i0JwtDPCDFc"
+  },
+  {
+   "artist": "Dabin",
+   "album": "Flutters",
+   "type": "Single",
+   "year": 2026,
+   "cover": "https://yt3.googleusercontent.com/9iaaniTYI8w8A5DxrWHFJTWRCbUeDaivBE4VKzMegXDzbqiHW3sQZQ9AFQtF-jYgNjF-Wl6UMFOMcic=w544-h544-l90-rj",
+   "yt": "NrUZbi6O61s"
+  },
+  {
+   "artist": "DahL",
+   "album": "BAD BITCH MUSIC",
+   "type": "Album",
+   "year": 2026,
+   "cover": "https://yt3.googleusercontent.com/nqRsZtBb3uxOvyqpB2qxIH9ITmi0m7kp9Kt3FMfCY5W6I5-I8Oi0w_8j0NFDIswenVHnZ8ifIgBV23Rq=w544-h544-l90-rj",
+   "yt": "4rRjZvhivi4"
+  },
+  {
+   "artist": "DAHLIA",
+   "album": "コバルトブルーの夢",
+   "type": "Single",
+   "year": 2026,
+   "cover": "https://yt3.googleusercontent.com/YQi08RkZGM_wzxmPcjrbLboFgc_y5EADF7Tm6Er9mPhSGVL3zIx0qe7MqGQRgQbINwc_EVmovVNvYFE=w544-h544-l90-rj",
+   "yt": "S4UFklYynIM"
+  },
+  {
+   "artist": "Daisey",
+   "album": "Christmas by Your Side",
+   "type": "Album",
+   "year": 2026,
+   "cover": "https://yt3.googleusercontent.com/PQS70gpjrzAQkroetndhqxSL0Wo1BwGRqtK3z3bqBFMJfuHbTKXvHq3hnKedEVdGXdU36gstx-oLgiygaQ=w544-h544-l90-rj",
+   "yt": "vC4J3FE4OMk"
+  },
+  {
+   "artist": "Daisy Chain",
+   "album": "Honey",
+   "type": "Single",
+   "year": 2026,
+   "cover": "https://yt3.googleusercontent.com/fv8Te74UNAWw8U-RKKy4y5LX7cscKxL_6DFvr8Ena5eLNoAQeAp_uTxLhA07Jo5ezVwOGcYV88C6v0w=w544-h544-l90-rj",
+   "yt": "nJM0ZGHHTh4"
+  },
+  {
+   "artist": "Dala",
+   "album": "The Big Bang",
+   "type": "Album",
+   "year": 2026,
+   "cover": "https://yt3.googleusercontent.com/h0Lc6ptuUZUmi_RSiwHxzQDud6_z_Whhpic58NVScRQjNqNSOO1akjXwi7gBjs_PdBWrhZxSxhnnlDiF=w544-h544-l90-rj",
+   "yt": "eSv5DxzQ_h4"
+  },
+  {
+   "artist": "Damage",
+   "album": "Star Power (feat. MDEE The Veteran)",
+   "type": "Single",
+   "year": 2026,
+   "cover": "https://yt3.googleusercontent.com/4m1AjKha-FJZxPuGnOKgck-5wKDAweVxeYTo6qYgFdXsgJq-E8Kz9B49SX577ErMSYaXvnSo6z3MYxeW=w544-h544-l90-rj",
+   "yt": "bWXDj1-9hn4"
+  },
+  {
+   "artist": "Damhnait Doyle",
+   "album": "Bird in Flames",
+   "type": "EP",
+   "year": 2026,
+   "cover": "https://yt3.googleusercontent.com/YRFc5wOOKHRpu9vIYMEvCF94Ah-lGrv-ZY3kJCKlzhFaTjOTHGzJZIXPNzQy4jq6sImnqUJkG9eOh90z=w544-h544-l90-rj",
+   "yt": "U9wxRGG4u9M"
+  },
+  {
+   "artist": "Damnage",
+   "album": "5 Minutes",
+   "type": "Single",
+   "year": 2026,
+   "cover": "https://yt3.googleusercontent.com/1VZMdFTEx-r0oWx3UCFswLx3staDUsNWhVJkC-LactnxsXkb85-pZH4sXv7Frb87wFuzLXsvSLzaPcfgNw=w544-h544-l90-rj",
+   "yt": "UaJPapEeSAc"
+  },
+  {
+   "artist": "Dan Davidson",
+   "album": "Training Wheels",
+   "type": "Single",
+   "year": 2026,
+   "cover": "https://yt3.googleusercontent.com/2LJIUTiGfyNbim7g1BqIZAJfSRkPatxwrz-cqt7xZV6GudrBopdOWOywRXQxcm376E1RPPkMWi1Z_nG5=w544-h544-l90-rj",
+   "yt": "QAKpUln1J80"
+  },
+  {
+   "artist": "Dan Ficara",
+   "album": "Mediterania",
+   "type": "Single",
+   "year": 2026,
+   "cover": "https://yt3.googleusercontent.com/KuZfATriHOgCISzHO7rEcyIJfdc3xO5LOjPKRkT9EtKEL-ic6HboBISOuLeq_sF5XUlUxVH0dpvaaQ87=w544-h544-l90-rj",
+   "yt": "3lXKYDKfP90"
+  },
+  {
+   "artist": "Dan Politano",
+   "album": "You Came Around",
+   "type": "Single",
+   "year": 2026,
+   "cover": "https://yt3.googleusercontent.com/IEWxp1Ru0guIVfSwgp46D5j_BXOmLWOkHeB7NfZrd50Y9yexwpgcbTXuaGd2pW48wxfLTZvrL6rk1mc=w544-h544-l90-rj",
+   "yt": "gf9IBezhhqo"
+  },
+  {
+   "artist": "Dang Thai Son",
+   "album": "Dang Thai Son - Piano History -",
+   "type": "Album",
+   "year": 2026,
+   "cover": "https://yt3.googleusercontent.com/uB7ZTtDu7vg3EWIMWCKU6juw565BhLsip_w2T3VbneLQdIB1w8DSN3PJri_hjzdKmyu8J_Z8CMgDeDw=w544-h544-l90-rj",
+   "yt": "ce_7rh54vzU"
+  },
+  {
+   "artist": "Dani Black",
+   "album": "Só Quero Te Amar",
+   "type": "Single",
+   "year": 2026,
+   "cover": "https://yt3.googleusercontent.com/YXQgCj0bVrZNhcGCjoWhdHG3O76eckSDn74yvOk-dk3MCbz6IsdK0tGpgVs7d6rbvISDNfF6QW_5UeM=w544-h544-l90-rj",
+   "yt": "6trI3pCmRys"
+  }
+ ],
+ "lineage": {
+  "town": "Winnipeg",
+  "province": "MB",
+  "total": 46,
+  "artists": [
+   {
+    "artist": "Burton Cummings",
+    "since": 1976,
+    "top_hit": {
+     "title": "Stand Tall",
+     "yt": "zh5MA4_Ulx0",
+     "peak": 4,
+     "chart": "RPM",
+     "year": 1976
+    }
+   },
+   {
+    "artist": "Bilal",
+    "since": 2000,
+    "top_hit": null
+   },
+   {
+    "artist": "Deex",
+    "since": 2010,
+    "top_hit": null
+   },
+   {
+    "artist": "Del Barber",
+    "since": 2013,
+    "top_hit": null
+   },
+   {
+    "artist": "3PEAT",
+    "since": 2016,
+    "top_hit": null
+   },
+   {
+    "artist": "Apollo Suns",
+    "since": 2017,
+    "top_hit": null
+   },
+   {
+    "artist": "Charlie Fettah",
+    "since": 2018,
+    "top_hit": null
+   },
+   {
+    "artist": "Daka",
+    "since": 2021,
+    "top_hit": null
+   },
+   {
+    "artist": "BED OF ROSES",
+    "since": 2023,
+    "top_hit": null
+   }
+  ]
+ },
+ "stats": {
+  "tracks": 92472,
+  "artists": 1624,
+  "with_album": 82406,
+  "provinces": {
+   "BC": 4171,
+   "MB": 1561,
+   "AB": 1564,
+   "ON": 2036,
+   "QC": 724,
+   "SK": 1350,
+   "NS": 248,
+   "NB": 145,
+   "NT": 75,
+   "NU": 50,
+   "NL": 216,
+   "YT": 79,
+   "PE": 83
+  }
+ }
+}

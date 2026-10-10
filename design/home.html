@@ -1,0 +1,767 @@
+<!doctype html>
+<html lang="en" data-theme="day">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CanCon Radio — The Great Canadian Songbook (redesign mockup)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;500;600&family=Spectral:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   CanCon Radio — homepage redesign (reference mockup for the build)
+   Direction: broadcast console on newsprint.
+   RED IS RESERVED for: the RADIO wordmark, Play, the On Air lamp, live dots.
+   Selection = ink. Everything else = paper / ink / rule.
+   ============================================================ */
+:root{
+  --paper:#ffffdb; --paper-2:#f7f1c8; --paper-3:#efe7b4;
+  --ink:#1f1d1a; --ink-2:#57534a; --ink-3:#8a846f;
+  --line:#d9d1a6; --rule:#1f1d1a;
+  --signal:#c8290b; --signal-ink:#fff6ea;
+  --console:#1f1d1a; --console-2:#2c2925; --console-ink:#efe6c2; --gold:#f2df97;
+  --shadow: 4px 4px 0 var(--ink);
+  --radius: 10px;
+  --display: "Archivo", "Arial Narrow", sans-serif;
+  --serif: "Spectral", Georgia, serif;
+  --mono: "IBM Plex Mono", ui-monospace, monospace;
+  --max: 1320px;
+}
+[data-theme="night"]{
+  --paper:#14120e; --paper-2:#1c1a15; --paper-3:#25221b;
+  --ink:#f1e9c6; --ink-2:#c3bb98; --ink-3:#8c8569;
+  --line:#37322a; --rule:#f1e9c6;
+  --console:#0b0a08; --console-2:#1a1814; --console-ink:#efe6c2;
+  --shadow: 4px 4px 0 #000;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.55 var(--serif);
+  -webkit-font-smoothing:antialiased;transition:background .3s,color .3s}
+/* paper grain */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.35;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .4 0 0 0 0 .35 0 0 0 0 .2 0 0 0 .18 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+[data-theme="night"] body::before{mix-blend-mode:screen;opacity:.12}
+main,header,footer{position:relative}   /* no z-index: the mobile tuning sheet must be able to sit above the scrim */
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+.label{font:500 12px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
+.h2{font:800 clamp(26px,2.6vw,34px)/1.05 var(--display);font-stretch:85%;letter-spacing:-.01em;margin:0}
+.muted{color:var(--ink-2)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* ---------- header ---------- */
+.top{border-bottom:2px solid var(--rule);background:var(--paper)}
+.top .wrap{display:flex;align-items:center;gap:28px;height:72px}
+.logo{display:flex;flex-direction:column;text-decoration:none;line-height:.9}
+.logo b{font:900 30px/0.95 var(--display);font-stretch:70%;letter-spacing:-.01em}
+.logo b span{color:var(--signal)}
+.logo i{display:block;height:7px;margin-top:3px;background:
+  linear-gradient(90deg,var(--ink) 1px,transparent 1px) 0 100%/6px 5px repeat-x,
+  linear-gradient(var(--ink),var(--ink)) 0 100%/100% 1px no-repeat}
+.nav{display:flex;gap:6px;margin-left:12px}
+.nav a{font:500 14px/1 var(--mono);text-decoration:none;padding:10px 12px;border-radius:6px;color:var(--ink-2)}
+.nav a[aria-current="page"]{color:var(--ink);background:var(--paper-3)}
+.top .meta{margin-left:auto;display:flex;align-items:center;gap:16px;font:500 12px/1 var(--mono);color:var(--ink-3);letter-spacing:.06em}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--ink-3);display:inline-block}
+.dot.live{background:var(--signal);box-shadow:0 0 0 0 rgba(200,41,11,.5);animation:ping 1.6s infinite}
+@keyframes ping{70%{box-shadow:0 0 0 8px rgba(200,41,11,0)}100%{box-shadow:0 0 0 0 rgba(200,41,11,0)}}
+.iconbtn{width:44px;height:44px;display:grid;place-items:center;border:1.5px solid var(--line);border-radius:10px;background:transparent}
+.seg{display:flex;border:1.5px solid var(--line);border-radius:10px;overflow:hidden}
+.seg button{border:0;background:transparent;padding:0 12px;height:41px;font:600 12px/1 var(--mono)}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+
+/* ---------- on-air hero ---------- */
+.onair{padding:40px 0 34px;border-bottom:2px solid var(--rule)}
+.onair .wrap{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,1fr);gap:48px;align-items:start}
+.bezel{background:var(--console);border-radius:18px;padding:16px;box-shadow:var(--shadow);color:var(--console-ink)}
+.screen{position:relative;width:100%;aspect-ratio:16/9;min-height:200px;border-radius:10px;overflow:hidden;background:#000}
+.screen .art-bg{position:absolute;inset:-20px;background-size:cover;background-position:center;filter:blur(24px) saturate(1.1);opacity:.55;transform:scale(1.1)}
+.screen .art{position:absolute;left:50%;top:50%;width:62%;aspect-ratio:1;max-height:84%;transform:translate(-50%,-50%);
+  background-size:cover;background-position:center;border-radius:6px;box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.screen .facade{position:absolute;inset:0;border:0;background:transparent;display:grid;place-items:center}
+.screen .facade span{width:84px;height:84px;border-radius:50%;background:var(--signal);display:grid;place-items:center;
+  box-shadow:0 6px 0 rgba(0,0,0,.35);transition:transform .15s}
+.screen .facade:hover span{transform:scale(1.06)}
+.screen iframe,.screen #yt{position:absolute;inset:0;width:100%;height:100%;border:0}
+.consolebar{display:flex;align-items:center;gap:16px;margin-top:14px;font:500 12px/1 var(--mono);letter-spacing:.1em}
+.freq{color:var(--gold)}
+.vu{display:flex;gap:3px;align-items:flex-end;height:22px;flex:1}
+.vu i{flex:1;background:var(--console-2);height:20%;border-radius:2px;transition:height .12s}
+.playing .vu i{animation:vu 900ms ease-in-out infinite alternate}
+.vu i:nth-child(3n){animation-duration:700ms}.vu i:nth-child(4n){animation-duration:1100ms}.vu i:nth-child(5n){animation-duration:820ms}
+.playing .vu i{background:linear-gradient(to top,var(--gold) 0 70%,#e88d55 70% 88%,var(--signal) 88%)}
+@keyframes vu{from{height:15%}to{height:95%}}
+@media (prefers-reduced-motion:reduce){.playing .vu i{animation:none;height:55%}}
+.lamp{display:inline-flex;align-items:center;gap:10px;font:700 13px/1 var(--mono);letter-spacing:.2em;text-transform:uppercase;
+  padding:9px 14px;border:1.5px solid var(--line);border-radius:999px;color:var(--ink-3)}
+.lamp b{width:10px;height:10px;border-radius:50%;background:var(--ink-3)}
+.playing .lamp{color:var(--signal);border-color:var(--signal)}
+.playing .lamp b{background:var(--signal);box-shadow:0 0 12px var(--signal)}
+.np-title{font:900 clamp(40px,5.2vw,82px)/.92 var(--display);font-stretch:72%;letter-spacing:-.015em;margin:18px 0 10px;text-transform:uppercase;
+  overflow-wrap:anywhere}
+.np-artist{font:400 italic clamp(22px,2vw,30px)/1.15 var(--serif);margin:0}
+.np-meta{margin:10px 0 0;color:var(--ink-2);font-size:16px}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.badge{font:600 11px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;padding:7px 10px;border:1.5px solid var(--ink);border-radius:6px}
+.badge.solid{background:var(--ink);color:var(--paper)}
+.dj{margin-top:20px;padding:14px 16px;border-left:3px solid var(--ink);background:var(--paper-2);border-radius:0 8px 8px 0;font-style:italic;color:var(--ink-2);min-height:56px}
+.dj em{font:600 10px/1 var(--mono);font-style:normal;letter-spacing:.18em;color:var(--ink-3);display:block;margin-bottom:6px}
+.controls{display:flex;align-items:center;gap:12px;margin-top:22px}
+.play{width:84px;height:84px;border-radius:50%;border:0;background:var(--signal);color:var(--signal-ink);display:grid;place-items:center;box-shadow:0 5px 0 #7e1a06;transition:transform .1s, box-shadow .1s}
+.play:active{transform:translateY(3px);box-shadow:0 2px 0 #7e1a06}
+.ctl{width:52px;height:52px;border-radius:50%;border:1.5px solid var(--line);background:transparent;display:grid;place-items:center}
+.ctl[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.station-line{margin-top:18px;font:500 12px/1.5 var(--mono);color:var(--ink-3);letter-spacing:.06em}
+.station-line b{color:var(--ink);font-weight:600}
+
+/* ---------- presets ---------- */
+section{padding:44px 0}
+.sechead{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:20px}
+.presets{display:grid;grid-template-columns:repeat(7,1fr);gap:12px}
+.preset{position:relative;text-align:left;border:1.5px solid var(--ink);border-radius:var(--radius);padding:14px 14px 16px;min-height:150px;
+  background:var(--paper);overflow:hidden;display:flex;flex-direction:column;gap:6px;transition:transform .15s, box-shadow .15s}
+.preset::before{content:"";position:absolute;inset:0 0 auto 0;height:46px;background:var(--tone);opacity:.95;
+  -webkit-mask:repeating-linear-gradient(90deg,#000 0 2px,transparent 2px 7px);mask:repeating-linear-gradient(90deg,#000 0 2px,transparent 2px 7px)}
+.preset .n{position:relative;font:600 11px/1 var(--mono);letter-spacing:.12em;color:var(--ink-3);margin-top:44px}
+.preset b{font:800 19px/1.05 var(--display);font-stretch:80%}
+.preset small{font:400 13px/1.35 var(--serif);color:var(--ink-2)}
+.preset:hover{transform:translate(-2px,-2px);box-shadow:var(--shadow)}
+.preset[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.preset[aria-pressed="true"] small,.preset[aria-pressed="true"] .n{color:var(--paper-3)}
+.preset .go{position:absolute;right:12px;bottom:12px;width:30px;height:30px;border-radius:50%;background:var(--signal);display:grid;place-items:center;opacity:0;transform:scale(.8);transition:.15s}
+.preset:hover .go,.preset[aria-pressed="true"] .go{opacity:1;transform:none}
+
+/* ---------- console: tuning + live queue ---------- */
+.console{display:grid;grid-template-columns:minmax(0,1.75fr) minmax(320px,1fr);gap:40px;align-items:start}
+.tune h3,.queue h3{margin:0 0 12px;font:700 15px/1 var(--display);font-stretch:85%;letter-spacing:.02em}
+.block{margin-bottom:30px}
+.era{display:flex;background:var(--console);border-radius:12px;padding:6px;gap:4px}
+.era button{flex:1;border:0;background:transparent;color:#a39b7d;font:800 15px/1 var(--display);font-stretch:80%;height:48px;border-radius:8px}
+.era button[aria-pressed="true"]{background:var(--gold);color:#1f1d1a}
+.moods{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.mood{text-align:left;border:1.5px solid var(--line);border-radius:var(--radius);background:transparent;padding:14px 16px;min-height:96px}
+.mood b{display:block;font:800 20px/1 var(--display);font-stretch:80%;text-transform:uppercase}
+.mood small{display:block;margin-top:6px;font:400 italic 14px/1.3 var(--serif);color:var(--ink-2)}
+.mood[aria-pressed="true"]{border-color:var(--ink);background:var(--ink);color:var(--paper);box-shadow:var(--shadow)}
+.mood[aria-pressed="true"] small{color:var(--paper-3)}
+.dial-read{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
+.dial-read output{font:600 15px/1 var(--mono);letter-spacing:.06em}
+.band{position:relative;height:96px;background:var(--console);border-radius:12px;color:var(--console-ink);touch-action:none;user-select:none;cursor:ew-resize;overflow:hidden}
+.band .ticks{position:absolute;inset:0 18px;display:flex;justify-content:space-between;align-items:flex-start}
+.band .tick{position:relative;width:1px;height:16px;background:#6e6754;margin-top:0}
+.band .tick.major{height:30px;background:#cfc49c}
+.band .names{position:absolute;left:18px;right:18px;bottom:10px;height:40px}
+.band .names span:nth-child(odd){bottom:0}.band .names span:nth-child(even){bottom:20px}   /* two staggered rows: no overlap */
+.band .names span{position:absolute;transform:translateX(-50%);font:500 10.5px/1 var(--mono);letter-spacing:.06em;color:#9d957a;white-space:nowrap;text-transform:uppercase}
+.band .names span.on{color:var(--gold)}
+.band .names span:first-child{transform:translateX(0)}.band .names span:last-child{transform:translateX(-100%)}   /* ends stay inside the band */
+.needle{position:absolute;top:8px;bottom:8px;width:3px;margin-left:-1.5px;background:var(--signal);border-radius:2px;box-shadow:0 0 10px rgba(200,41,11,.7)}
+.needle::after{content:"";position:absolute;top:-6px;left:-5px;width:13px;height:13px;border-radius:50%;background:var(--signal)}
+.hint{font:500 11px/1.4 var(--mono);color:var(--ink-3);letter-spacing:.06em;margin-top:8px}
+details.fine{border:1.5px solid var(--line);border-radius:var(--radius)}
+details.fine summary{list-style:none;padding:16px 18px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font:700 16px/1 var(--display);font-stretch:85%}
+details.fine summary::-webkit-details-marker{display:none}
+details.fine summary span{font:500 12px/1 var(--mono);color:var(--ink-3)}
+details.fine[open] summary{border-bottom:1.5px solid var(--line)}
+.fine-body{padding:18px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1.5px solid var(--line);background:transparent;border-radius:999px;padding:0 14px;min-height:44px;font:500 13px/1 var(--mono)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.summary{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:14px}
+.summary .tag{font:600 12px/1 var(--mono);padding:8px 10px;border-radius:6px;background:var(--paper-3)}
+
+.queue{position:sticky;top:96px}
+.qcard{border:1.5px solid var(--ink);border-radius:14px;background:var(--paper);box-shadow:var(--shadow);overflow:hidden}
+.qcard header{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border-bottom:1.5px solid var(--line)}
+.row{display:grid;grid-template-columns:44px minmax(0,1fr) auto auto;gap:12px;align-items:center;padding:9px 16px;border-bottom:1px solid var(--line);position:relative}
+.row:last-child{border-bottom:0}
+.row img,.row .ph{width:44px;height:44px;border-radius:5px;object-fit:cover;background:var(--paper-3)}
+.row .t{font:700 15px/1.15 var(--display);font-stretch:85%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.row .a{font:400 italic 14px/1.2 var(--serif);color:var(--ink-2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.row .acts{display:flex;gap:4px;opacity:0;transition:opacity .15s}
+.row:hover .acts,.row:focus-within .acts{opacity:1}
+.row .acts button{width:34px;height:34px;border-radius:50%;border:1.5px solid var(--line);background:var(--paper);display:grid;place-items:center}
+.row .yr{font:500 12px/1 var(--mono);color:var(--ink-3)}
+.row:hover .yr{display:none}
+.qsec{padding:10px 16px 6px;background:var(--paper-2)}
+
+/* ---------- shelves ---------- */
+.shelf{position:relative}
+.track{display:grid;grid-auto-flow:column;grid-auto-columns:var(--cw,200px);gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 18px;scrollbar-width:thin}
+.track > *{scroll-snap-align:start}
+.shelf::after{content:"";position:absolute;right:0;top:0;bottom:18px;width:60px;background:linear-gradient(90deg,transparent,var(--paper));pointer-events:none}
+.arrows{display:flex;gap:8px}
+.arrows button{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--ink);background:transparent;display:grid;place-items:center}
+.cover{text-align:left;border:0;background:transparent;padding:0}
+.cover .img{aspect-ratio:1;border-radius:8px;background:var(--paper-3) center/cover;box-shadow:0 1px 0 var(--line);position:relative}
+.cover .img::after{content:"▶";position:absolute;right:10px;bottom:10px;width:40px;height:40px;border-radius:50%;background:var(--signal);color:#fff;display:grid;place-items:center;font-size:14px;opacity:0;transition:.15s}
+.cover:hover .img::after,.cover:focus-visible .img::after{opacity:1}
+.cover b{display:block;margin-top:10px;font:800 16px/1.15 var(--display);font-stretch:85%}
+.cover span{display:block;font:400 italic 14px/1.3 var(--serif);color:var(--ink-2)}
+.cover em{display:block;margin-top:4px;font:500 11px/1 var(--mono);font-style:normal;color:var(--ink-3);letter-spacing:.08em;text-transform:uppercase}
+.show{--cw:300px;border:1.5px solid var(--ink);border-radius:14px;padding:16px;display:grid;grid-template-columns:72px 1fr;gap:14px;background:var(--paper)}
+.date{border-radius:10px;background:var(--console);color:var(--console-ink);text-align:center;padding:10px 0;height:84px}
+.date small{display:block;font:600 11px/1 var(--mono);letter-spacing:.14em;color:var(--gold)}
+.date b{display:block;font:900 34px/1.1 var(--display);font-stretch:75%}
+.show h4{margin:0;font:800 19px/1.1 var(--display);font-stretch:82%}
+.show p{margin:4px 0 12px;font-size:14px;color:var(--ink-2)}
+.show .btns{grid-column:1/-1;display:flex;gap:8px}
+.btn{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;min-height:44px;padding:0 14px;border-radius:10px;border:1.5px solid var(--ink);background:transparent;font:600 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;text-decoration:none}
+.btn.ink{background:var(--ink);color:var(--paper)}
+.via{font:500 10.5px/1 var(--mono);color:var(--ink-3);letter-spacing:.06em;align-self:center}
+
+/* ---------- discovery duo: map + lineage ---------- */
+.duo{display:grid;grid-template-columns:1fr 1.25fr;gap:24px}
+.panel{border:1.5px solid var(--ink);border-radius:16px;padding:22px;background:var(--paper)}
+.duo > *{min-width:0}
+.tilemap{display:grid;grid-template-columns:repeat(9,minmax(0,1fr));gap:6px;margin-top:16px}
+.tile{aspect-ratio:1;border-radius:8px;border:1.5px solid var(--ink);display:flex;flex-direction:column;justify-content:space-between;padding:7px;
+  background:color-mix(in srgb,var(--ink) calc(var(--w,0)*100%),var(--paper));color:var(--paper);text-align:left}
+.tile.light{color:var(--ink)}
+.tile b{font:800 15px/1 var(--display);font-stretch:80%}
+.tile small{font:500 10px/1 var(--mono)}
+.tile:hover{outline:2px solid var(--ink);outline-offset:2px}
+.legend{display:flex;align-items:center;gap:10px;margin-top:14px;font:500 11px/1 var(--mono);color:var(--ink-3)}
+.legend i{height:10px;flex:0 0 120px;border-radius:5px;background:linear-gradient(90deg,var(--paper-3),var(--ink));border:1px solid var(--line)}
+.timeline{position:relative;margin-top:26px;padding-top:36px}
+.timeline::before{content:"";position:absolute;left:0;right:0;top:46px;height:2px;background:var(--ink)}
+.stops{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:6px}
+.stop b{overflow-wrap:normal}
+.timeline{overflow-x:auto}
+.stops{grid-auto-columns:minmax(88px,1fr)}
+.timeline::before{min-width:calc(9 * 94px)}
+.stop{position:relative;text-align:left;border:0;background:transparent;padding:0}
+.stop::before{content:"";position:absolute;top:4px;left:0;width:14px;height:14px;border-radius:50%;background:var(--paper);border:2px solid var(--ink)}
+.stop.hit::before{background:var(--ink)}
+.stop .y{position:absolute;top:-30px;left:0;font:600 12px/1 var(--mono)}
+.stop b{display:block;margin-top:28px;font:800 14px/1.1 var(--display);font-stretch:82%;padding-right:4px}
+.stop span{display:block;font:400 italic 12.5px/1.25 var(--serif);color:var(--ink-2);margin-top:3px}
+
+/* ---------- stats + actions ---------- */
+.stats{display:grid;grid-template-columns:repeat(3,auto) 1fr;gap:44px;align-items:end;border-top:2px solid var(--rule);border-bottom:2px solid var(--rule);padding:28px 0}
+.stat b{display:block;font:900 clamp(40px,4.4vw,64px)/.9 var(--display);font-stretch:72%}
+.stat span{font:500 12px/1 var(--mono);letter-spacing:.14em;color:var(--ink-3);text-transform:uppercase}
+.actions{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;justify-self:end;min-width:520px}
+
+/* ---------- footer ---------- */
+footer{padding:48px 0 140px;border-top:2px solid var(--rule);margin-top:40px}
+footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}
+footer ol{margin:12px 0 0;padding:0;list-style:none;counter-reset:s;display:grid;gap:14px}
+footer ol li{counter-increment:s;padding-left:46px;position:relative;color:var(--ink-2);font-size:15.5px}
+footer ol li::before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:0;font:900 26px/1 var(--display);font-stretch:75%;color:var(--ink)}
+footer ul{list-style:none;padding:0;margin:12px 0 0;display:grid;gap:8px;font-size:15px;color:var(--ink-2)}
+
+/* ---------- sticky mini player (appears when the hero scrolls away) ---------- */
+.mini{position:fixed;left:50%;top:12px;z-index:40;transform:translate(-50%,-180%);visibility:hidden;transition:transform .3s cubic-bezier(.2,.8,.2,1),visibility 0s .3s;
+  width:min(760px,calc(100vw - 24px));display:grid;grid-template-columns:48px 1fr auto;gap:14px;align-items:center;
+  background:var(--console);color:var(--console-ink);border-radius:14px;padding:10px 12px;box-shadow:0 14px 30px rgba(0,0,0,.25)}
+.mini.show{transform:translate(-50%,0);visibility:visible;transition:transform .3s cubic-bezier(.2,.8,.2,1)}
+.mini img{width:48px;height:48px;border-radius:6px;object-fit:cover;background:#333}
+.mini b{display:block;font:800 16px/1.1 var(--display);font-stretch:82%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.mini span{font:400 italic 14px/1.2 var(--serif);color:#b8af8c}
+.mini .mbtns{display:flex;gap:8px;align-items:center}
+.mini .mplay{width:48px;height:48px;border-radius:50%;border:0;background:var(--signal);color:#fff;display:grid;place-items:center}
+.mini .mctl{width:44px;height:44px;border-radius:50%;border:1.5px solid #4a453a;background:transparent;color:var(--console-ink);display:grid;place-items:center}
+.mini .tunebtn{display:none}
+
+/* ---------- spec labels (for the build session) ---------- */
+.spec [data-spec]{outline:2px dashed #2a6fdb;outline-offset:4px;position:relative}
+.spec [data-spec]::after{content:attr(data-spec);position:absolute;top:-12px;left:8px;z-index:20;background:#2a6fdb;color:#fff;font:600 11px/1 var(--mono);padding:4px 6px;border-radius:4px;white-space:nowrap}
+.specbtn{position:fixed;left:16px;bottom:16px;z-index:40;border:1.5px solid var(--ink);background:var(--paper);border-radius:999px;padding:10px 14px;font:600 12px/1 var(--mono)}
+
+/* ---------- page-load choreography ---------- */
+@media (prefers-reduced-motion:no-preference){
+  .rise{opacity:0;transform:translateY(14px);animation:rise .7s cubic-bezier(.2,.8,.2,1) forwards}
+  .d1{animation-delay:.05s}.d2{animation-delay:.15s}.d3{animation-delay:.25s}.d4{animation-delay:.35s}.d5{animation-delay:.45s}
+  @keyframes rise{to{opacity:1;transform:none}}
+}
+
+/* ---------- responsive ---------- */
+@media (max-width:1180px){ .presets{grid-template-columns:repeat(4,1fr)} .actions{min-width:0} .stats{grid-template-columns:repeat(3,auto);} .actions{grid-column:1/-1;justify-self:stretch} }
+@media (max-width:980px){
+  .onair .wrap{grid-template-columns:minmax(0,1fr);gap:28px}
+  .console{grid-template-columns:minmax(0,1fr)}
+  .queue{position:static}
+  .duo{grid-template-columns:1fr}
+  .moods{grid-template-columns:repeat(2,1fr)}
+  footer .cols{grid-template-columns:1fr}
+}
+@media (max-width:720px){
+  body{font-size:16px}
+  .wrap{padding:0 16px}
+  .top .wrap{height:60px;gap:12px}
+  .nav,.top .meta .counts{display:none}
+  .onair{padding:20px 0 24px}
+  .np-title{font-size:44px}
+  .presets{grid-template-columns:repeat(2,1fr)}
+  .preset{min-height:132px}
+  .era{overflow-x:auto}
+  .era button{flex:0 0 72px}
+  .band .names span{display:none;bottom:0 !important}
+  .band .names span:nth-child(4n+1),.band .names span.on{display:block}
+  .specbtn{display:none}
+  .stats{grid-template-columns:1fr 1fr;gap:20px}
+  .controls{gap:8px}.ctl{width:46px;height:46px}.play{width:72px;height:72px}
+  .seg button{min-width:44px;height:44px}
+  .row .acts{opacity:1}.row .yr{display:none}.row .acts button{width:44px;height:44px}
+  .tilemap{gap:3px}
+  .tile{padding:3px 4px;border-radius:5px}
+  .tile b{font-size:11px}.tile small{font-size:8.5px}
+  .timeline{overflow-x:auto;padding-bottom:8px}
+  .timeline::before{width:calc(9 * 116px)}
+  .stops{grid-auto-columns:110px}
+  .actions{grid-template-columns:1fr 1fr}
+  /* thumb-zone player: the mini player docks to the bottom and is always shown */
+  .mini{top:auto;bottom:max(10px,env(safe-area-inset-bottom));transform:translate(-50%,0);visibility:visible;grid-template-columns:44px 1fr auto}
+  .mini .tunebtn{display:grid}
+  .mini .mctl.prev{display:none}
+  /* tuning becomes a bottom sheet */
+  .tune{position:fixed;left:0;right:0;bottom:0;z-index:35;max-height:82vh;overflow:auto;background:var(--paper);border-top:2px solid var(--rule);
+    border-radius:18px 18px 0 0;padding:14px 16px 100px;transform:translateY(105%);transition:transform .3s cubic-bezier(.2,.8,.2,1);box-shadow:0 -20px 40px rgba(0,0,0,.25)}
+  .tune.open{transform:none}
+  .tune .grab{display:block !important}
+  .scrim{position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:34;opacity:0;pointer-events:none;transition:opacity .3s}
+  .scrim.open{opacity:1;pointer-events:auto}
+  .specbtn{bottom:96px}
+}
+</style>
+</head>
+<body>
+<a class="sr" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="/" aria-label="CanCon Radio home"><b>CANCON <span>RADIO</span></b><i></i></a>
+    <nav class="nav" aria-label="Main">
+      <a href="/" aria-current="page" data-i18n="radio">Radio</a><a href="/discover" data-i18n="discover">Discover</a><a href="/directory" data-i18n="directory">Directory</a>
+    </nav>
+    <div class="meta">
+      <span class="counts" id="counts"></span>
+      <span class="seg" role="group" aria-label="Language"><button id="lang-en" aria-pressed="true">EN</button><button id="lang-fr" aria-pressed="false">FR</button></span>
+      <button class="iconbtn" id="night" aria-label="Night broadcast" aria-pressed="false">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <!-- ================= ON AIR ================= -->
+  <section class="onair" id="onair" aria-label="On air" data-spec="BRIEF 1.1 On Air hero · player ≥200×200 (0.7)">
+    <div class="wrap">
+      <div class="bezel rise d1">
+        <div class="screen" id="screen">
+          <div class="art-bg" id="artbg"></div>
+          <div class="art" id="art" role="img" aria-label=""></div>
+          <button class="facade" id="facade" aria-label="Play"><span><svg width="34" height="34" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></span></button>
+        </div>
+        <div class="consolebar">
+          <span class="freq" id="freq">CANCON · 98.1 FM</span>
+          <div class="vu" aria-hidden="true"></div>
+          <span id="clock">0:00</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="rise d2"><span class="lamp" id="lamp"><b></b><span id="lampText">Ready to broadcast</span></span></div>
+        <h1 class="np-title rise d2" id="title">—</h1>
+        <p class="np-artist rise d3" id="artist">—</p>
+        <p class="np-meta rise d3" id="meta"></p>
+        <div class="badges rise d3" id="badges"></div>
+        <div class="dj rise d4" aria-live="polite" data-spec="FEATURES F4 AI DJ transcript"><em>DJ</em><span id="djline">Press play — the DJ introduces every song, using only sourced facts.</span></div>
+        <div class="controls rise d4">
+          <button class="ctl" id="prev" aria-label="Previous"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6zM9.5 12 18 18V6z"/></svg></button>
+          <button class="play" id="play" aria-label="Play"><svg id="playIcon" width="34" height="34" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+          <button class="ctl" id="next" aria-label="Next"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 6h2v12h-2zM6 18l8.5-6L6 6z"/></svg></button>
+          <button class="ctl" id="save" aria-label="Save to favourites" aria-pressed="false"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+          <button class="ctl" id="share" aria-label="Copy a link to this station"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg></button>
+        </div>
+        <p class="station-line rise d5" id="stationLine"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PRESETS ================= -->
+  <section aria-labelledby="presets-h" data-spec="BRIEF 1.2 preset tiles · one tap plays">
+    <div class="wrap">
+      <div class="sechead"><h2 class="h2" id="presets-h" data-i18n="presets">Preset stations</h2><span class="label">Tap to tune</span></div>
+      <div class="presets" id="presets"></div>
+    </div>
+  </section>
+
+  <!-- ================= CONSOLE ================= -->
+  <section aria-label="Tuning and live queue" style="padding-top:8px">
+    <div class="wrap console">
+      <div class="tune" id="tune" aria-labelledby="tune-h" data-spec="BRIEF 1.3 tuning panel">
+        <div class="grab" style="display:none;width:48px;height:5px;border-radius:3px;background:var(--line);margin:0 auto 16px"></div>
+        <div class="sechead"><h2 class="h2" id="tune-h" data-i18n="tune">Tune the station</h2><button class="btn" id="reset">Reset dials</button></div>
+
+        <div class="block"><h3>Era</h3><div class="era" id="era" role="group" aria-label="Era"></div></div>
+        <div class="block"><h3>Mood</h3><div class="moods" id="moods" role="group" aria-label="Mood"></div></div>
+
+        <div class="block">
+          <div class="dial-read"><h3 style="margin:0">Frequency — genre</h3><output id="dialout" aria-live="polite">88.0 FM · ALL GENRES</output></div>
+          <div class="band" id="band" role="slider" tabindex="0" aria-label="Genre dial" aria-valuemin="0" aria-valuemax="16" aria-valuenow="0" aria-valuetext="All genres">
+            <div class="ticks" id="ticks"></div><div class="names" id="names"></div><div class="needle" id="needle"></div>
+          </div>
+          <p class="hint">Drag the needle or use ← → · stack more genres in Fine tune</p>
+        </div>
+
+        <details class="fine block" id="fine" data-spec="Fine tune drawer (language incl. English, region, genres)">
+          <summary>Fine tune <span id="fineCount">language · region · more genres</span></summary>
+          <div class="fine-body">
+            <h3>Language</h3><div class="chips block" id="langs" role="group" aria-label="Language"></div>
+            <h3>Region</h3><div class="chips block" id="regions" role="group" aria-label="Region"></div>
+            <h3>Stack genres</h3><div class="chips" id="genres" role="group" aria-label="Genres"></div>
+            <p class="hint">Language and region tags are artist-level, from sourced profiles — never guessed.</p>
+          </div>
+        </details>
+        <div class="summary" id="summary" aria-live="polite"></div>
+      </div>
+
+      <aside class="queue" aria-label="Live queue" data-spec="Sticky live queue · Coming up next is never empty">
+        <div class="qcard">
+          <header><h3 style="margin:0">Live queue</h3><span class="label"><span class="dot" id="qdot"></span> rotation</span></header>
+          <div class="qsec"><span class="label">Coming up next</span></div>
+          <div id="upnext"></div>
+          <div class="qsec"><span class="label">Previously on air</span></div>
+          <div id="history"></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ================= SHELVES ================= -->
+  <section aria-labelledby="shows-h" data-spec="FEATURES F9 + F21 concerts · Pre-game">
+    <div class="wrap">
+      <div class="sechead"><div><span class="label">Live music · from Ticketmaster</span><h2 class="h2" id="shows-h">On stage soon</h2></div>
+        <div class="arrows"><button aria-label="Scroll left" data-scroll="shows" data-dir="-1">←</button><button aria-label="Scroll right" data-scroll="shows" data-dir="1">→</button></div></div>
+      <div class="shelf"><div class="track" id="shows" style="--cw:310px"></div></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="new-h" style="padding-top:8px" data-spec="FEATURES F29 New this week / F15 real covers">
+    <div class="wrap">
+      <div class="sechead"><div><span class="label">Official releases · 2025–26</span><h2 class="h2" id="new-h">Fresh pressings</h2></div>
+        <div class="arrows"><button aria-label="Scroll left" data-scroll="recent" data-dir="-1">←</button><button aria-label="Scroll right" data-scroll="recent" data-dir="1">→</button></div></div>
+      <div class="shelf"><div class="track" id="recent"></div></div>
+    </div>
+  </section>
+
+  <!-- ================= MAP + LINEAGE ================= -->
+  <section aria-label="Explore by place">
+    <div class="wrap duo">
+      <div class="panel" data-spec="BRIEF 4.2 Signal map (tile-map teaser)">
+        <span class="label">Signal map</span>
+        <h2 class="h2" style="margin-top:8px">Tune by region</h2>
+        <p class="muted" style="margin:6px 0 0">Artists placed on the map, by province and territory. Tap a region to tune in.</p>
+        <div class="tilemap" id="tilemap" role="group" aria-label="Provinces and territories"></div>
+        <div class="legend"><span>fewer</span><i></i><span>more artists</span></div>
+      </div>
+      <div class="panel" data-spec="FEATURES F20 Hometown lineage">
+        <span class="label">Hometown lineage</span>
+        <h2 class="h2" style="margin-top:8px" id="lin-h">From Winnipeg</h2>
+        <p class="muted" style="margin:6px 0 0" id="lin-sub"></p>
+        <div class="timeline"><div class="stops" id="stops"></div></div>
+        <div style="margin-top:22px;display:flex;gap:10px"><button class="btn ink" id="linplay">▶ Play the lineage</button><button class="btn">More towns</button></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= STATS + ACTIONS ================= -->
+  <section style="padding-top:12px">
+    <div class="wrap">
+      <div class="stats" data-spec="Balanced stats + actions row">
+        <div class="stat"><b id="s-tracks">—</b><span>tracks in rotation</span></div>
+        <div class="stat"><b id="s-artists">—</b><span>artists on air</span></div>
+        <div class="stat"><b>13</b><span>provinces &amp; territories</span></div>
+        <div class="actions">
+          <button class="btn">Deep cuts</button><button class="btn">Surprise me</button><button class="btn">Share dial</button><button class="btn">Embed</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap cols">
+    <div><span class="label">How this station works</span>
+      <ol>
+        <li>Every track plays through an official YouTube embed — playback and ad revenue stay with the rights holders.</li>
+        <li>Set the era, mood, genre and region dials; the rotation reshuffles itself every time you change one.</li>
+        <li>Dead signals are skipped automatically. The broadcast never stops — just like a real transmitter.</li>
+      </ol></div>
+    <div><span class="label">Sources &amp; credits</span>
+      <ul><li>Music: official YouTube &amp; YouTube Music channels</li><li>Charts: Canadian Music Blog (RPM, Hot 100, CKOI)</li><li>Bios: Wikipedia (CC BY-SA)</li><li>Places: GeoNames (CC BY), Wikidata</li><li>Links: MusicBrainz, Wikidata, Discogs</li><li>Concerts: Ticketmaster</li></ul></div>
+    <div><span class="label">CanCon Radio</span>
+      <ul><li>Music from the 1920s to now</li><li><a href="/about">About &amp; what is CanCon?</a></li><li><a href="/privacy">Privacy (Law 25)</a></li><li><a href="/contact/rights">Rights &amp; corrections</a></li></ul></div>
+  </div>
+</footer>
+
+<!-- sticky mini player (desktop: top when hero scrolls away · mobile: bottom thumb bar) -->
+<div class="mini" id="mini" aria-label="Mini player" data-spec="Sticky mini player · mobile thumb-zone bar">
+  <img id="miniart" alt="">
+  <div style="min-width:0"><b id="minititle">—</b><span id="miniartist">—</span></div>
+  <div class="mbtns">
+    <button class="mctl tunebtn" id="tunebtn" aria-label="Tune the station" aria-expanded="false"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg></button>
+    <button class="mctl prev" id="mprev" aria-label="Previous">⏮</button>
+    <button class="mplay" id="mplay" aria-label="Play"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>
+    <button class="mctl" id="mnext" aria-label="Next">⏭</button>
+  </div>
+</div>
+<div class="scrim" id="scrim"></div>
+<button class="specbtn" id="specbtn" aria-pressed="false">Show spec labels</button>
+
+<script src="../dj/dj.js"></script>
+<script>
+(async function () {
+  const $ = (id) => document.getElementById(id);
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const D = await fetch("mock-data.json").then((r) => r.json());
+  const fmt = (n) => n.toLocaleString("en-CA");
+  const ICON = { play: '<path d="M8 5v14l11-7z"/>', pause: '<path d="M6 5h4v14H6zM14 5h4v14h-4z"/>' };
+
+  // ---------- counts ----------
+  $("counts").innerHTML = `<span class="dot" id="hdot"></span>&nbsp; ${fmt(D.stats.tracks)} TRACKS · ${fmt(D.stats.artists)} ARTISTS`;
+  $("s-tracks").textContent = fmt(D.stats.tracks);
+  $("s-artists").textContent = fmt(D.stats.artists);
+
+  // ---------- broadcast state ----------
+  const Q = D.queue.slice();
+  let idx = 0, playing = false, started = false, player = null, history = [];
+  const params = new URLSearchParams(location.search);
+  const dj = window.CanConDJ ? CanConDJ.create({ lang: "en", voiceUrl: params.get("voice"),
+              duck: (v) => player && player.setVolume && player.setVolume(v) }) : null;
+
+  function metaLine(t) {
+    const where = t.place ? `${t.place}${t.province ? ", " + t.province : ""}` : (t.province || "");
+    return [t.album && t.album !== t.title ? t.album : null, t.year, where].filter(Boolean).join(" · ");
+  }
+  function badges(t) {
+    const out = [];
+    if (t.peak) out.push(`<span class="badge solid">#${t.peak} ${esc(t.chart === "Billboard Canadian Hot 100" ? "Hot 100" : t.chart)} ${t.chart_year}</span>`);
+    (t.awards || []).slice(0, 1).forEach((a) => out.push(`<span class="badge">${esc(a.award.replace(" Music Prize", ""))} ${a.year} ${a.result}</span>`));
+    if (t.basis) out.push(`<span class="badge">${esc(t.basis)} ${esc(t.place)}</span>`);
+    return out.join("");
+  }
+  function show(t) {
+    $("title").textContent = t.title; $("artist").textContent = t.artist;
+    $("meta").textContent = metaLine(t); $("badges").innerHTML = badges(t);
+    $("art").style.backgroundImage = `url("${t.cover}")`; $("artbg").style.backgroundImage = `url("${t.cover}")`;
+    $("art").setAttribute("aria-label", `Album cover: ${t.album || t.title} by ${t.artist}`);
+    $("miniart").src = t.cover; $("minititle").textContent = t.title; $("miniartist").textContent = t.artist;
+    renderQueue();
+  }
+  function setPlaying(p) {
+    playing = p;
+    document.body.classList.toggle("playing", p);
+    $("lampText").textContent = p ? "On air" : (started ? "Paused" : "Ready to broadcast");
+    $("playIcon").innerHTML = p ? ICON.pause : ICON.play;
+    $("play").setAttribute("aria-label", p ? "Pause" : "Play");
+    $("mplay").innerHTML = `<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">${p ? ICON.pause : ICON.play}</svg>`;
+    $("mplay").setAttribute("aria-label", p ? "Pause" : "Play");
+    ["hdot", "qdot"].forEach((i) => $(i) && $(i).classList.toggle("live", p));
+  }
+
+  // ---------- YouTube (facade: nothing from YouTube loads until Play) ----------
+  function loadYT() {
+    return new Promise((res) => {
+      if (window.YT && YT.Player) return res();
+      window.onYouTubeIframeAPIReady = res;
+      const s = document.createElement("script"); s.src = "https://www.youtube.com/iframe_api"; document.head.appendChild(s);
+    });
+  }
+  async function start() {
+    started = true; $("facade").remove();
+    await loadYT();
+    const host = document.createElement("div"); host.id = "yt"; $("screen").appendChild(host);
+    player = new YT.Player("yt", { videoId: Q[idx].yt, host: "https://www.youtube-nocookie.com",
+      playerVars: { autoplay: 1, playsinline: 1, rel: 0, modestbranding: 1 },
+      events: { onStateChange: (e) => { if (e.data === 1) setPlaying(true); if (e.data === 2) setPlaying(false); if (e.data === 0) advance(); },
+                onError: () => advance(true) } });
+  }
+  async function advance(silent, dir = 1) {
+    const prev = Q[idx];
+    history.unshift(prev); history = history.slice(0, 6);
+    idx = (idx + dir + Q.length) % Q.length;
+    const next = Q[idx];
+    if (dj && !silent && dir === 1) {
+      const line = dj.link(prev, next); $("djline").textContent = line;
+      if (player && player.pauseVideo) player.pauseVideo();
+      await dj.say(line);
+    }
+    show(next);
+    if (player && player.loadVideoById) player.loadVideoById(next.yt);
+  }
+  function toggle() {
+    if (!started) return start();
+    if (!player || !player.getPlayerState) return;
+    player.getPlayerState() === 1 ? player.pauseVideo() : player.playVideo();
+  }
+  $("play").onclick = toggle; $("facade").onclick = toggle; $("mplay").onclick = toggle;
+  $("next").onclick = () => advance(); $("mnext").onclick = () => advance();
+  $("prev").onclick = () => advance(true, -1); $("mprev").onclick = () => advance(true, -1);
+  $("save").onclick = (e) => { const b = e.currentTarget; b.setAttribute("aria-pressed", String(b.getAttribute("aria-pressed") !== "true")); };
+  $("share").onclick = () => navigator.clipboard && navigator.clipboard.writeText(location.href);
+
+  // ---------- queue (never empty) ----------
+  function row(t, kind) {
+    return `<div class="row"><img src="${esc(t.cover)}" alt="" loading="lazy"><div style="min-width:0"><div class="t">${esc(t.title)}</div><div class="a">${esc(t.artist)}</div></div>
+      <span class="yr">${t.year || ""}</span><div class="acts"><button aria-label="Play ${esc(t.title)} now" data-yt="${t.yt}">▶</button>${kind === "h" ? `<button aria-label="Save ${esc(t.title)}">♡</button>` : ""}</div></div>`;
+  }
+  function renderQueue() {
+    const next = [1, 2, 3, 4, 5].map((k) => Q[(idx + k) % Q.length]);
+    $("upnext").innerHTML = next.map((t) => row(t, "n")).join("");
+    const h = history.length ? history : Q.slice(-4).reverse();
+    $("history").innerHTML = h.map((t) => row(t, "h")).join("");
+  }
+  document.addEventListener("click", (e) => {
+    const b = e.target.closest("[data-yt]"); if (!b) return;
+    const i = Q.findIndex((t) => t.yt === b.dataset.yt);
+    if (i >= 0) { idx = i; show(Q[idx]); started ? player && player.loadVideoById(Q[idx].yt) : start(); }
+  });
+
+  // ---------- presets ----------
+  const TONES = ["#3d5a80", "#6b8f71", "#8c5e3c", "#7a4e7e", "#b0843c", "#2f6f73", "#55606e", "#7d6b3d", "#9b7a5a", "#465c49", "#6d4c41", "#4f6d8f", "#8a7a2e", "#5a4e7a"];
+  let station = { preset: null, era: "All eras", mood: "All", genre: "All genres", lang: "All languages", region: "Coast to coast" };
+  $("presets").innerHTML = D.presets.map((p, i) => `<button class="preset" style="--tone:${TONES[i]}" aria-pressed="false" data-preset="${i}">
+      <span class="n">PRESET ${String(i + 1).padStart(2, "0")}</span><b>${esc(p.name)}</b><small>${esc(p.tag)}</small>
+      <span class="go" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></span></button>`).join("");
+  $("presets").addEventListener("click", (e) => {
+    const b = e.target.closest(".preset"); if (!b) return;
+    document.querySelectorAll(".preset").forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
+    station.preset = D.presets[b.dataset.preset].name; updateStation();
+    if (!started) start();
+  });
+
+  // ---------- tuning ----------
+  function group(id, items, key, cls = "chip") {
+    $(id).innerHTML = items.map((it, i) => {
+      const [label, sub] = Array.isArray(it) ? it : [it, null];
+      return `<button class="${cls}" aria-pressed="${i === 0}" data-v="${esc(label)}">${cls === "mood" ? `<b>${esc(label)}</b><small>${esc(sub)}</small>` : esc(label)}</button>`;
+    }).join("");
+    $(id).addEventListener("click", (e) => {
+      const b = e.target.closest("button"); if (!b) return;
+      if (id === "genres") { b.setAttribute("aria-pressed", String(b.getAttribute("aria-pressed") !== "true")); }
+      else { $(id).querySelectorAll("button").forEach((x) => x.setAttribute("aria-pressed", String(x === b))); station[key] = b.dataset.v; }
+      updateStation();
+    });
+  }
+  group("era", ["All eras", "1950s", "1960s", "1970s", "1980s", "1990s", "2000s", "2010s", "2020s"], "era", "");
+  document.querySelectorAll("#era button").forEach((b) => (b.textContent = b.dataset.v === "All eras" ? "ALL" : b.dataset.v.toUpperCase()));
+  group("moods", [["All", "every frequency at once"], ["Slow", "folk, jazz, soul & country — the late shift"], ["Fast", "rock, punk, metal & hip-hop — full volume"], ["Weird", "new wave, reggae & left-field experiments"]], "mood", "mood");
+  group("langs", ["All languages", "English", "Français", "Español"], "lang");
+  const PROV = ["Coast to coast", "Ontario", "Quebec", "British Columbia", "Alberta", "Manitoba", "Saskatchewan", "Nova Scotia", "New Brunswick", "Newfoundland and Labrador", "Prince Edward Island", "Yukon", "Northwest Territories", "Nunavut"];
+  group("regions", PROV, "region");
+  const GENRES = ["All genres", "Rock", "Pop", "Indie", "Folk", "Country", "Hip-hop", "R&B", "Electronic", "Metal", "Punk", "Jazz", "Indigenous", "Soul", "New wave", "Reggae", "Classical"];
+  group("genres", GENRES.slice(1), "genres");
+  $("reset").onclick = () => location.reload();
+
+  // FM dial: 17 stops across 88.0–108.0 FM
+  const stops = GENRES.length, mhz = (i) => (88 + (20 * i) / (stops - 1)).toFixed(1);
+  $("ticks").innerHTML = Array.from({ length: 81 }, (_, i) => `<i class="tick${i % 5 === 0 ? " major" : ""}"></i>`).join("");
+  $("names").innerHTML = GENRES.map((g, i) => `<span style="left:${(100 * i) / (stops - 1)}%">${esc(g === "All genres" ? "All" : g)}</span>`).join("");
+  let gi = 0;
+  function setDial(i) {
+    gi = Math.max(0, Math.min(stops - 1, i));
+    const band = $("band"), pad = 18, w = band.clientWidth - pad * 2;
+    $("needle").style.left = `${pad + (w * gi) / (stops - 1)}px`;
+    $("names").querySelectorAll("span").forEach((s, k) => s.classList.toggle("on", k === gi));
+    $("dialout").textContent = `${mhz(gi)} FM · ${GENRES[gi].toUpperCase()}`;
+    band.setAttribute("aria-valuenow", gi); band.setAttribute("aria-valuetext", GENRES[gi]);
+    station.genre = GENRES[gi]; updateStation();
+  }
+  const band = $("band");
+  const fromX = (x) => { const r = band.getBoundingClientRect(); return Math.round(((x - r.left - 18) / (r.width - 36)) * (stops - 1)); };
+  band.addEventListener("pointerdown", (e) => { band.setPointerCapture(e.pointerId); setDial(fromX(e.clientX)); });
+  band.addEventListener("pointermove", (e) => { if (e.buttons) setDial(fromX(e.clientX)); });
+  band.addEventListener("keydown", (e) => { if (e.key === "ArrowRight" || e.key === "ArrowUp") { setDial(gi + 1); e.preventDefault(); }
+                                         if (e.key === "ArrowLeft" || e.key === "ArrowDown") { setDial(gi - 1); e.preventDefault(); } });
+  addEventListener("resize", () => setDial(gi));
+
+  function updateStation() {
+    const tags = [station.preset, station.era, station.mood !== "All" ? station.mood : null, station.genre,
+                  station.lang !== "All languages" ? station.lang : null, station.region !== "Coast to coast" ? station.region : null]
+                 .filter(Boolean);
+    $("summary").innerHTML = `<span class="label">Now tuned to</span>` + tags.map((t) => `<span class="tag">${esc(t)}</span>`).join("");
+    $("stationLine").innerHTML = `Station: <b>${esc(tags.join(" · "))}</b> · music from the 1920s to now`;
+    $("freq").textContent = `CANCON · ${mhz(gi)} FM`;
+    const extra = [station.lang !== "All languages", station.region !== "Coast to coast", document.querySelectorAll('#genres [aria-pressed="true"]').length].filter(Boolean).length;
+    $("fineCount").textContent = extra ? `${extra} set` : "language · region · more genres";
+  }
+
+  // ---------- shelves ----------
+  const MON = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+  $("shows").innerHTML = D.shows.map((s) => {
+    const [y, m, d] = s.date.split("-");
+    return `<article class="show"><div class="date"><small>${MON[+m - 1]}</small><b>${+d}</b></div>
+      <div><h4>${esc(s.artists.join(" · "))}</h4><p>${esc(s.venue)}<br>${esc(s.city)}, ${esc(s.region)}${s.time ? " · " + s.time.slice(0, 5) : ""}</p></div>
+      <div class="btns"><button class="btn ink" aria-label="Pre-game: ${s.tracks} tracks from the lineup">▶ Pre-game</button><a class="btn" href="${esc(s.url)}" target="_blank" rel="noopener">Tickets ↗</a><span class="via">via Ticketmaster</span></div></article>`;
+  }).join("");
+  $("recent").innerHTML = D.recent.map((r) => `<button class="cover" data-yt="${r.yt}" aria-label="Play ${esc(r.album)} by ${esc(r.artist)}">
+      <div class="img" style="background-image:url('${esc(r.cover)}')"></div><b>${esc(r.album)}</b><span>${esc(r.artist)}</span><em>${esc(r.type || "")} · ${r.year}</em></button>`).join("");
+  document.querySelectorAll("[data-scroll]").forEach((b) => (b.onclick = () => $(b.dataset.scroll).scrollBy({ left: +b.dataset.dir * 640, behavior: "smooth" })));
+  // recent covers aren't in the queue: play them directly
+  document.querySelectorAll("#recent .cover").forEach((c) => c.addEventListener("click", (e) => {
+    e.stopPropagation(); const r = D.recent.find((x) => x.yt === c.dataset.yt);
+    Q.splice(idx + 1, 0, { yt: r.yt, title: r.album, artist: r.artist, album: r.album, year: r.year, cover: r.cover });
+    advance(true);
+  }));
+
+  // ---------- tile map (geographic tile grid, 9 columns) ----------
+  const TILES = { YT: [1, 1], NT: [2, 1], NU: [3, 1], BC: [1, 2], AB: [2, 2], SK: [3, 2], MB: [4, 2], ON: [5, 3], QC: [6, 2], NL: [8, 2], NB: [7, 3], PE: [8, 3], NS: [8, 4] };
+  const NAMES = { YT: "Yukon", NT: "Northwest Territories", NU: "Nunavut", BC: "British Columbia", AB: "Alberta", SK: "Saskatchewan", MB: "Manitoba", ON: "Ontario", QC: "Quebec", NL: "Newfoundland and Labrador", NB: "New Brunswick", PE: "Prince Edward Island", NS: "Nova Scotia" };
+  const pc = D.stats.provinces, max = Math.max(...Object.values(pc));
+  $("tilemap").innerHTML = Object.entries(TILES).map(([code, [c, r]]) => {
+    const n = pc[code] || 0, w = Math.max(.08, Math.sqrt(n / max));
+    return `<button class="tile${w < .45 ? " light" : ""}" style="grid-column:${c};grid-row:${r};--w:${w}" aria-label="${NAMES[code]}: ${fmt(n)} artists. Tune to ${NAMES[code]}" data-region="${NAMES[code]}"><b>${code}</b><small>${fmt(n)}</small></button>`;
+  }).join("");
+  $("tilemap").addEventListener("click", (e) => {
+    const t = e.target.closest(".tile"); if (!t) return;
+    station.region = t.dataset.region;
+    document.querySelectorAll("#regions button").forEach((x) => x.setAttribute("aria-pressed", String(x.dataset.v === station.region)));
+    $("fine").open = true; updateStation(); $("tune").scrollIntoView({ behavior: "smooth" });
+  });
+
+  // ---------- lineage ----------
+  const L = D.lineage;
+  if (L) {
+    $("lin-h").textContent = `From ${L.town}`;
+    $("lin-sub").textContent = `${L.total} artists in rotation from ${L.town}, in the order they first released music.`;
+    $("stops").innerHTML = L.artists.map((a) => `<button class="stop${a.top_hit ? " hit" : ""}"><span class="y">${a.since}</span><b>${esc(a.artist)}</b>${a.top_hit ? `<span>${esc(a.top_hit.title)} · #${a.top_hit.peak} ${esc(a.top_hit.chart)}</span>` : ""}</button>`).join("");
+  }
+
+  // ---------- mini player: appears once the hero scrolls away ----------
+  const mini = $("mini");
+  new IntersectionObserver(([e]) => mini.classList.toggle("show", !e.isIntersecting), { threshold: 0.15 }).observe($("onair"));
+
+  // ---------- mobile bottom sheet ----------
+  const openSheet = (o) => { $("tune").classList.toggle("open", o); $("scrim").classList.toggle("open", o); $("tunebtn").setAttribute("aria-expanded", String(o)); };
+  $("tunebtn").onclick = () => openSheet(!$("tune").classList.contains("open"));
+  $("scrim").onclick = () => openSheet(false);
+
+  // ---------- night mode, language, spec overlay ----------
+  $("night").onclick = (e) => { const n = document.documentElement.dataset.theme !== "night"; document.documentElement.dataset.theme = n ? "night" : "day"; e.currentTarget.setAttribute("aria-pressed", String(n)); };
+  const FR = { radio: "Radio", discover: "Découvrir", directory: "Répertoire", presets: "Stations préréglées", tune: "Syntoniser la station" };
+  const EN = { radio: "Radio", discover: "Discover", directory: "Directory", presets: "Preset stations", tune: "Tune the station" };
+  function setLang(l) {
+    document.documentElement.lang = l; const T = l === "fr" ? FR : EN;
+    document.querySelectorAll("[data-i18n]").forEach((el) => (el.textContent = T[el.dataset.i18n]));
+    $("lang-en").setAttribute("aria-pressed", String(l === "en")); $("lang-fr").setAttribute("aria-pressed", String(l === "fr"));
+    if (dj) dj.setLang(l);
+  }
+  $("lang-en").onclick = () => setLang("en"); $("lang-fr").onclick = () => setLang("fr");
+  $("specbtn").onclick = (e) => { const on = document.body.classList.toggle("spec"); e.currentTarget.setAttribute("aria-pressed", String(on)); e.currentTarget.textContent = on ? "Hide spec labels" : "Show spec labels"; };
+
+  // ---------- covers that fail to load: plain paper tile, never a broken-image icon ----------
+  const BLANK = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";
+  document.addEventListener("error", (e) => { const t = e.target; if (t.tagName === "IMG" && t.src !== BLANK) t.src = BLANK; }, true);
+
+  // ---------- go ----------
+  document.querySelector(".vu").innerHTML = "<i></i>".repeat(28);
+  show(Q[idx]); setDial(0); updateStation(); setPlaying(false);
+})();
+</script>
+</body>
+</html>
