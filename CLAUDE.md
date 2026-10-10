@@ -74,6 +74,26 @@ GitHub but cannot reach this Mac).
   When they say "sync", remind them to tell Kimi:
   `sync the harvest from github:OWNER/cancon-harvest`
 
+## Streaming links (`harvest_links.py`)
+
+Separate from the track harvest; never touches `tracks_local.jsonl`.
+
+- `python3 harvest_links.py wikidata` — one SPARQL query, ~1 min. Exact
+  name match (EN/FR label); names shared by 2+ Wikidata entries skipped.
+  Run once (re-running appends duplicates).
+- `python3 harvest_links.py musicbrainz` — resumable, 1 request/second
+  (MusicBrainz rule, don't raise it), ~15–19 h for the full list. Exact name or
+  alias, country CA, and only if exactly one such artist. Progress: `links.log`;
+  resume state `links_done.jsonl` (status linked / no-links / none / ambiguous).
+- Output `links_local.jsonl`: one line per artist per source —
+  `{artist, source: wikidata|musicbrainz, id, spotify, apple_music, soundcloud,
+  bandcamp, deezer, tidal, website}`; missing fields are absent. Prefer
+  wikidata over musicbrainz when both have a field.
+- song.link (Odesli) per-track links: API needs a key now (HTTP 401), and its
+  public `song.link/y/<videoId>` pages only show YouTube links (checked
+  2026-10-09) — not used. Links are artist-level only for now.
+- `push-results.sh` pushes the links files too.
+
 ## Adding artists
 
 `artists.txt` is read once at start. To add artists from a new site export
