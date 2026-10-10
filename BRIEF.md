@@ -244,6 +244,21 @@ own domain/host; see 5.5.)*
   from their page, and rotation can hand off YouTube → SoundCloud → Bandcamp
   without stalling.
 
+### 3.7 Archival tracks from Discogs (opt-in)
+- **Data:** `tracks_discogs.jsonl` — same schema as `tracks_local.jsonl`.
+  Only for artists the YouTube harvest couldn't find; each artist was matched
+  on Discogs by exact name, single match, and at least one Canadian release.
+  The videos are **community-added on Discogs and often fan uploads** — e.g.
+  Banned from Atlantis' 1994 demo and 1995 album.
+- **What:** merge into a separate "Archival" pool, never the main rotation.
+  Label them in the player ("archival · via Discogs community"), and include
+  them only when the listener turns on an "Archival / deep indie" option (or a
+  dedicated "Lost Tapes" preset). Verify every video ID like the main merge;
+  drop dead ones.
+- **Done when:** with the option off, rotation is unchanged; with it on,
+  previously directory-only artists like Banned from Atlantis play, clearly
+  labelled.
+
 ---
 
 ## Phase 4 — Unmistakably Canadian
@@ -384,6 +399,8 @@ name-only matches were removed), and treat `source: ytmusic` matches in
 `harvest_done.jsonl` as lower confidence — good candidates for the "Report a
 wrong track" flow (3.3). Streaming links live in a separate file,
 `links_local.jsonl` (see 3.5) — it never changes `tracks_local.jsonl`.
+Discogs community videos are in `tracks_discogs.jsonl` (see 3.7) — keep them
+out of the main merge.
 
 ---
 

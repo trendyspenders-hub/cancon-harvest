@@ -94,6 +94,25 @@ Separate from the track harvest; never touches `tracks_local.jsonl`.
   2026-10-09) — not used. Links are artist-level only for now.
 - `push-results.sh` pushes the links files too.
 
+## Discogs pass (`harvest_discogs.py`)
+
+For artists the YouTube harvest logged `source: none` only. Unauthenticated
+Discogs API (25 requests/min — `GAP = 2.6`s, don't lower it). Accepts an
+artist only on exact name (ignoring Discogs' " (2)" suffix), exactly one such
+artist, AND at least one release marked Canada.
+
+- Profile links (Bandcamp, SoundCloud, website…) -> `links_local.jsonl`,
+  `source: discogs`.
+- YouTube videos attached to their releases -> **`tracks_discogs.jsonl`**
+  (same schema as `tracks_local.jsonl`, album/year from the release). These
+  are community-added, often fan uploads, so they are deliberately NOT in
+  `tracks_local.jsonl` — the site should offer them as an opt-in
+  "archival / deep indie" source.
+- Resume state `discogs_done.jsonl` (linked / none / ambiguous / not-canadian).
+  New `none` artists are picked up on every re-run; `discogs.log` for progress.
+- Bandcamp search can't be used: it serves scripts an anti-bot challenge.
+  Don't try to get around it.
+
 ## Adding artists
 
 `artists.txt` is read once at start. To add artists from a new site export

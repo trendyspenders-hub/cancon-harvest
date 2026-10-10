@@ -8,6 +8,7 @@ cd "$(dirname "$0")"
 git add tracks_local.jsonl
 [ -f harvest_done.jsonl ] && git add harvest_done.jsonl   # resume state
 for f in links_local.jsonl links_done.jsonl; do [ -f "$f" ] && git add "$f"; done   # streaming links
+for f in tracks_discogs.jsonl discogs_done.jsonl; do [ -f "$f" ] && git add "$f"; done   # Discogs pass
 
 if git diff --cached --quiet; then
   echo "Nothing new to push."
