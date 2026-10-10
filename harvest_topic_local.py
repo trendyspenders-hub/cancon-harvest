@@ -38,6 +38,7 @@ def verified_match(name, ch):
     "Art of Dying (Official)", "Barbra Lica - Official You Tube Channel",
     "AliochaVEVO" match; "Alan" -> "Alan Walker" or "Bill Johnson" -> "Bill
     Johnson Teaching" do not (a longer real name is a different act)."""
+    name, ch = re.sub(r"\s+", " ", name).strip(), re.sub(r"\s+", " ", ch).strip()   # "La Bottine Souriante "
     if ch == name: return True
     flat_name, flat_ch = name.replace(" ", ""), ch.replace(" ", "")
     if flat_ch == flat_name + "vevo": return True

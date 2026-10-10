@@ -10,3 +10,4 @@ __pycache__/
 geonames/
 fresh_state.json
 dead_state.json
+.*_complete

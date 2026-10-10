@@ -213,23 +213,25 @@ the Year nominees/winners. Each page's own legend is kept with every number.
   (Official, Music, VEVO, Band, Videos, Channel…). "Alan" ≠ "Alan Walker".
   Earlier prefix matches that fail this rule were removed (log `note`).
 
-## Schedule (background loop on this Mac)
+## Schedule (launchd — survives restarts)
 
-launchd can't be used while the repo lives in `~/Downloads`: macOS privacy
-protection blocks background services from reading Downloads ("Operation not
-permitted", exit 126). Instead a `nohup caffeinate -i bash -c '…'` loop runs:
-- every hour: `push-results.sh` (log `push.log`)
-- once in the 06:00 hour: `run-daily.sh` — concerts if `TICKETMASTER_API_KEY`
-  is in `.env`, then push (log `daily.log`)
-It stops on reboot (like the harvesters). Check: `pgrep -fl run-daily.sh`.
-Stop: `pkill -f "run-daily.sh >> daily.log"`. To make it reboot-proof, move the
-repo out of Downloads (e.g. `~/cancon-harvest`) and use launchd there.
-
-Waiter loops (also nohup) start the backfills when their harvest ends:
-`backfill_explicit.py` after the track harvest, `harvest_links.py relations`
-after the MusicBrainz stage; a Discogs loop re-runs every 15 min until the
-track harvest ends. Patterns use `[h]arvest…` so `pgrep -f` never matches the
-waiter's own command line.
+The repo lives at **`~/cancon-harvest`** (moved out of `~/Downloads`, where
+macOS privacy protection blocks background services). Three launchd agents in
+`~/Library/LaunchAgents/`:
+- `com.cancon.jobs` — `jobs.sh` at login + every 15 min: starts whichever
+  long-running job should be running and isn't (harvest -> album/explicit
+  backfill; MusicBrainz links -> relations backfill; Discogs pass). Marker
+  files `.harvest_complete`, `.backfill_complete`, `.links_complete`,
+  `.relations_complete`, `.discogs_complete` (git-ignored) record finished
+  stages — delete one to force a re-run. Log: `jobs.log`.
+- `com.cancon.push` — `push-results.sh` every hour (log `push.log`).
+- `com.cancon.daily` — `run-daily.sh` at 06:00: concerts, dead-track check,
+  Sunday radar, then push (log `daily.log`).
+Check: `launchctl list | grep cancon`. Pause everything:
+`for j in jobs push daily; do launchctl bootout gui/$(id -u)/com.cancon.$j; done`
+then `pkill -f "[h]arvest_"`. Resume: `launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.cancon.<job>.plist`.
+YouTube is only ever hit by one process: the backfill, radar and dead check
+all wait for / refuse to run alongside the main harvest.
 
 ## Adding artists
 
