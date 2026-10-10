@@ -10846,3 +10846,1212 @@
 {"artist": "Arielle Soucy", "status": "none", "mbid": null, "rels": true}
 {"artist": "Arkells", "status": "linked", "mbid": "79c976f6-0a85-42d6-9e01-8ae2c5592bc2", "rels": true}
 {"artist": "Art Bergmann", "status": "no-links", "mbid": "dea59f1f-0659-430a-bbae-80a4a2a65827", "rels": true}
+{"artist": "Ashley MacIsaac", "status": "linked", "mbid": "ec2764e4-8cc1-4c40-b7c0-466a3763cd37", "rels": true}
+{"artist": "Atach Tatuq", "status": "none", "mbid": null, "rels": true}
+{"artist": "Austra", "status": "linked", "mbid": "af9e8d94-d471-4f91-82c7-250c22545162", "rels": true}
+{"artist": "Avril Lavigne", "status": "linked", "mbid": "0103c1cc-4a09-4a5d-a344-56ad99a77193", "rels": true}
+{"artist": "B-Kool", "status": "no-links", "mbid": "d7c5609c-ef81-4ac9-9303-e13d08344694", "rels": true}
+{"artist": "BADBADNOTGOOD", "status": "linked", "mbid": "754294d5-d7d2-4ea2-8184-1dcaaf55a56f", "rels": true}
+{"artist": "Bahamas", "status": "linked", "mbid": "294d06f7-fd1f-4cbe-a433-bb9cd6ac937b", "rels": true}
+{"artist": "Barbara Law", "status": "none", "mbid": null, "rels": true}
+{"artist": "Barenaked Ladies", "status": "linked", "mbid": "86e736b4-93e2-40ff-9e1c-fb7c63fef5f6", "rels": true}
+{"artist": "Barney Bentall", "status": "linked", "mbid": "c736bed0-eea8-4bfb-b0bd-cbcee914fb63", "rels": true}
+{"artist": "Barry Harris", "status": "linked", "mbid": "6694e65e-40d7-480e-a623-4f57aab78be6", "rels": true}
+{"artist": "Basia Bulat", "status": "linked", "mbid": "0b483ac2-aaf0-466b-a5f7-daa8b9c4de20", "rels": true}
+{"artist": "bbno$", "status": "linked", "mbid": "27638856-79a1-4495-b7da-1912899560c7", "rels": true}
+{"artist": "Beau Dommage", "status": "none", "mbid": null, "rels": true}
+{"artist": "Bedouin Soundclash", "status": "linked", "mbid": "e0036453-ce34-4095-af40-8c70ee07cef1", "rels": true}
+{"artist": "Begonia", "status": "none", "mbid": null, "rels": true}
+{"artist": "Belvedere", "status": "linked", "mbid": "405ac86d-51f2-4dab-8066-06fccea33d9d", "rels": true}
+{"artist": "Bender", "status": "ambiguous", "mbid": null, "rels": true}
+{"artist": "Bernie Shaw", "status": "no-links", "mbid": "f7267e3e-aebd-410c-adf1-572e5ee95658", "rels": true}
+{"artist": "Bif Naked", "status": "linked", "mbid": "e9a639e2-3840-410a-bd6d-4e7bdb66734d", "rels": true}
+{"artist": "Bill Plaskett", "status": "no-links", "mbid": "94690e31-f831-44ef-8230-e73c42176a28", "rels": true}
+{"artist": "Billy Klippert", "status": "no-links", "mbid": "3285db6c-cea8-41da-8b90-d1cb065de875", "rels": true}
+{"artist": "Billy Talent", "status": "linked", "mbid": "fd429857-5ace-4609-ae54-1502c3bdac11", "rels": true}
+{"artist": "Black Tiger Sex Machine", "status": "linked", "mbid": "8a672f30-4ed6-4fb4-9b8a-4f28e1d1be1c", "rels": true}
+{"artist": "Blood Ceremony", "status": "linked", "mbid": "697645c4-c8c6-4e21-a52d-ff60453b6482", "rels": true}
+{"artist": "Blue Hawaii", "status": "linked", "mbid": "1a151a4b-b482-4358-b19c-30653e7b9dc4", "rels": true}
+{"artist": "Blue Peter", "status": "linked", "mbid": "0342218f-e814-4c97-9b40-cec2a51ab001", "rels": true}
+{"artist": "Blue Rodeo", "status": "linked", "mbid": "6b52e1be-f27a-433c-b51a-3f2d63abc2ba", "rels": true}
+{"artist": "Blue Sky Black Death", "status": "none", "mbid": null, "rels": true}
+{"artist": "Bob Moses", "status": "linked", "mbid": "7ce3d484-d681-437c-8d33-913261d0ad51", "rels": true}
+{"artist": "Born Ruffians", "status": "linked", "mbid": "87e58b4e-465c-4d8b-bfee-9c49ca8b7358", "rels": true}
+{"artist": "Braids", "status": "none", "mbid": null, "rels": true}
+{"artist": "Brett Kissel", "status": "linked", "mbid": "7b5a76ca-e1a1-41d1-a9a1-6481414e6f4e", "rels": true}
+{"artist": "Broken Social Scene", "status": "linked", "mbid": "2eada8f8-056a-4093-bbc2-004909ce743b", "rels": true}
+{"artist": "Bruce Cockburn", "status": "linked", "mbid": "254b70d3-4aec-4c64-ac95-b13a1dbb30cb", "rels": true}
+{"artist": "Bryan Adams", "status": "linked", "mbid": "4dbf5678-7a31-406a-abbe-232f8ac2cd63", "rels": true}
+{"artist": "Buck 65", "status": "linked", "mbid": "8d18b680-368c-4649-a5e3-85e0c2dd6fc2", "rels": true}
+{"artist": "C-Boogie", "status": "no-links", "mbid": "4125a3c3-746d-49c1-9fbd-b59dbad0e668", "rels": true}
+{"artist": "Cadence Weapon", "status": "linked", "mbid": "9abfb2cd-7a7f-444a-b1db-7e5dd1def050", "rels": true}
+{"artist": "Cancer Bats", "status": "linked", "mbid": "00b952be-6c97-4880-84f9-06de584b491b", "rels": true}
+{"artist": "Career Suicide", "status": "linked", "mbid": "038919d5-da1b-4a53-a5e9-b552baeda8d9", "rels": true}
+{"artist": "Caribou", "status": "linked", "mbid": "735e3514-a8ae-401f-af3b-6300df1b8d2c", "rels": true}
+{"artist": "Carly Rae Jepsen", "status": "linked", "mbid": "09887aa7-226e-4ecc-9a0c-02d2ae5777e1", "rels": true}
+{"artist": "Carolyn Dawn Johnson", "status": "linked", "mbid": "9ee3fc49-a54c-48cd-96d5-d678f5d409db", "rels": true}
+{"artist": "Catherine MacLellan", "status": "none", "mbid": null, "rels": true}
+{"artist": "Céline Dion", "status": "linked", "mbid": "847e8a0c-cc20-4213-9e16-975515c2a926", "rels": true}
+{"artist": "CFCF", "status": "linked", "mbid": "c06cb96b-2a5c-439a-8171-fe3bd7d01ac3", "rels": true}
+{"artist": "Chad VanGaalen", "status": "linked", "mbid": "d5c5c11b-153d-4f28-9525-db5ec1bfe0ad", "rels": true}
+{"artist": "Charlotte Cardin", "status": "none", "mbid": null, "rels": true}
+{"artist": "Charlotte Day Wilson", "status": "linked", "mbid": "a78f1671-3ebf-4822-b2bd-70ccc3088c2d", "rels": true}
+{"artist": "Chester Hansen", "status": "none", "mbid": null, "rels": true}
+{"artist": "Chilliwack", "status": "linked", "mbid": "2c64e662-bca3-42f2-93d4-c826a05c2201", "rels": true}
+{"artist": "CHIN", "status": "no-links", "mbid": "a7eeef8d-9a97-4a79-a731-a75c64d8cd95", "rels": true}
+{"artist": "Chixdiggit", "status": "none", "mbid": null, "rels": true}
+{"artist": "Choclair", "status": "linked", "mbid": "a1b53496-be3b-4af8-bf52-8e40b50644be", "rels": true}
+{"artist": "Chromeo", "status": "linked", "mbid": "647221d0-f6b1-4e03-924c-c59b8059536f", "rels": true}
+{"artist": "City and Colour", "status": "linked", "mbid": "b1003bf1-25b8-41f4-a783-36060f987913", "rels": true}
+{"artist": "Classified", "status": "linked", "mbid": "3bd5fb5e-8dd3-4130-be7f-c408a0534f80", "rels": true}
+{"artist": "Cleopatrick", "status": "linked", "mbid": "69c8cacb-12a6-4cee-9221-02eb3c396c04", "rels": true}
+{"artist": "Cœur de pirate", "status": "linked", "mbid": "130e7bd0-6d34-48a9-822f-03eff7ea95d4", "rels": true}
+{"artist": "Colin Stetson", "status": "none", "mbid": null, "rels": true}
+{"artist": "Colter Wall", "status": "none", "mbid": null, "rels": true}
+{"artist": "Comeback Kid", "status": "linked", "mbid": "6d152109-c447-446d-9a06-3621c920bebd", "rels": true}
+{"artist": "Coney Hatch", "status": "no-links", "mbid": "4402b877-c7a4-49e9-91c7-d1e934d031cc", "rels": true}
+{"artist": "Constantines", "status": "linked", "mbid": "e94357c5-815c-424d-80d4-968ec02d6d05", "rels": true}
+{"artist": "Corb Lund", "status": "ambiguous", "mbid": null, "rels": true}
+{"artist": "Corey Hart", "status": "linked", "mbid": "32673e42-5ba2-4528-b3fe-a000a0c606e3", "rels": true}
+{"artist": "Corridor", "status": "none", "mbid": null, "rels": true}
+{"artist": "Counterparts", "status": "linked", "mbid": "4b0dd5e7-c795-42bd-8311-bc9f71fabd0a", "rels": true}
+{"artist": "Cowboy Junkies", "status": "linked", "mbid": "b52211f1-49a2-4cd2-8535-dd1ba37ea90b", "rels": true}
+{"artist": "Crash Test Dummies", "status": "linked", "mbid": "afb8f901-d846-4c70-a898-59bc183d1da7", "rels": true}
+{"artist": "Crash Vegas", "status": "linked", "mbid": "6644574f-895f-4684-a836-fc36387ea4dd", "rels": true}
+{"artist": "CRi", "status": "none", "mbid": null, "rels": true}
+{"artist": "Crowbar", "status": "no-links", "mbid": "74e3de96-f394-4aaf-b416-4d04c50b8370", "rels": true}
+{"artist": "Cryptopsy", "status": "linked", "mbid": "756af95c-8793-4546-a93f-f3581b5b1c8d", "rels": true}
+{"artist": "Crystal Castles", "status": "linked", "mbid": "b1570544-93ab-4b2b-8398-131735394202", "rels": true}
+{"artist": "Current Swell", "status": "linked", "mbid": "a71b0ba2-78f4-48af-adcc-a1a309a98cee", "rels": true}
+{"artist": "D.O.", "status": "linked", "mbid": "c9e6f0ad-8661-4974-9d28-ffe1ea9f87af", "rels": true}
+{"artist": "D.O.A.", "status": "linked", "mbid": "0f0b2f97-a073-4a92-ab99-ff7980ad7fca", "rels": true}
+{"artist": "DaHoudini", "status": "none", "mbid": null, "rels": true}
+{"artist": "Dallas Smith", "status": "linked", "mbid": "933de17e-4f37-45a4-bad6-56ad20c21b87", "rels": true}
+{"artist": "Dan-e-o", "status": "none", "mbid": null, "rels": true}
+{"artist": "Daniel Caesar", "status": "linked", "mbid": "b46e298d-d3a5-4695-a03e-63e8c523b23e", "rels": true}
+{"artist": "Daniel Lavoie", "status": "linked", "mbid": "63fb2e79-3bf8-4f3d-9743-619591b57281", "rels": true}
+{"artist": "Daphni", "status": "linked", "mbid": "859216c4-5d01-479b-b6c3-e20cc591a86a", "rels": true}
+{"artist": "Darryl Riley", "status": "none", "mbid": null, "rels": true}
+{"artist": "Dayglo Abortions", "status": "linked", "mbid": "6bf62b1c-2dc5-419e-ba38-e0c6516a9868", "rels": true}
+{"artist": "Dead Can't Bounce", "status": "none", "mbid": null, "rels": true}
+{"artist": "Dead Hendrix", "status": "none", "mbid": null, "rels": true}
+{"artist": "Dead Obies", "status": "none", "mbid": null, "rels": true}
+{"artist": "deadmau5", "status": "linked", "mbid": "4a00ec9d-c635-463a-8cd4-eb61725f0c60", "rels": true}
+{"artist": "Death from Above 1979", "status": "linked", "mbid": "92dc699f-fcbc-4278-afbe-40b5ad060a55", "rels": true}
+{"artist": "Dedos", "status": "no-links", "mbid": "a45c0f98-aeea-40a2-aa78-5073ae609f59", "rels": true}
+{"artist": "Dee", "status": "linked", "mbid": "ad73f2a4-3385-4cb5-947a-36be823533da", "rels": true}
+{"artist": "Def3", "status": "linked", "mbid": "8bc75025-7c62-4045-80a3-2c7844eeabf6", "rels": true}
+{"artist": "Default", "status": "none", "mbid": null, "rels": true}
+{"artist": "Destroyer", "status": "linked", "mbid": "61604b45-8a91-4e33-a1b6-45d7b1fec4e5", "rels": true}
+{"artist": "Diana Krall", "status": "linked", "mbid": "67d2cb7a-9ddb-4a7f-82bf-5a2d1a038e98", "rels": true}
+{"artist": "Diane Dufresne", "status": "none", "mbid": null, "rels": true}
+{"artist": "Diane Tell", "status": "linked", "mbid": "412035e4-a609-4c23-9d88-464eef9757f3", "rels": true}
+{"artist": "DijahSB", "status": "linked", "mbid": "3d29c2b1-4c13-4520-8369-523fd891cb32", "rels": true}
+{"artist": "DillanPonders", "status": "linked", "mbid": "8f7439c2-bfc6-41bc-8147-a676f737d9c0", "rels": true}
+{"artist": "Dizzy", "status": "none", "mbid": null, "rels": true}
+{"artist": "DJ Benoît", "status": "none", "mbid": null, "rels": true}
+{"artist": "DJ Charlie B", "status": "no-links", "mbid": "4e832a4e-6d12-433c-8459-aa938a9c9b51", "rels": true}
+{"artist": "DJ Cosm", "status": "no-links", "mbid": "619d1a06-d6eb-42a8-8dea-9085faab7ed3", "rels": true}
+{"artist": "DJ Critical", "status": "none", "mbid": null, "rels": true}
+{"artist": "DJX", "status": "none", "mbid": null, "rels": true}
+{"artist": "Do Make Say Think", "status": "linked", "mbid": "882d41ca-194d-405a-bfc5-b698ccfd77b4", "rels": true}
+{"artist": "Don Cash", "status": "linked", "mbid": "32ad2182-b019-41b6-aea1-75c0aadacbd9", "rels": true}
+{"artist": "Doug and the Slugs", "status": "linked", "mbid": "b7f71f66-5dd9-4945-a7eb-b94509fe67fb", "rels": true}
+{"artist": "Downey", "status": "none", "mbid": null, "rels": true}
+{"artist": "Dragonette", "status": "linked", "mbid": "00ef5e52-582b-4d53-a03a-bbd5b3084197", "rels": true}
+{"artist": "Drake", "status": "linked", "mbid": "9fff2f8a-21e6-47de-a2b8-7f449929d43f", "rels": true}
+{"artist": "Dream Warriors", "status": "linked", "mbid": "34d59c27-28cd-4715-9f6f-4b5d9f343c2a", "rels": true}
+{"artist": "Drezus", "status": "none", "mbid": null, "rels": true}
+{"artist": "Dvsn", "status": "linked", "mbid": "6c4ee7ef-36b6-4bae-b396-51bb96148986", "rels": true}
+{"artist": "Econoline Crush", "status": "linked", "mbid": "c00a611d-81a4-4062-bd98-ac8f91c1795a", "rels": true}
+{"artist": "Ed Bickert", "status": "linked", "mbid": "d7b3f76e-e591-4ffa-9484-0cd73906451d", "rels": true}
+{"artist": "Elisapie", "status": "none", "mbid": null, "rels": true}
+{"artist": "Elise LeGrow", "status": "linked", "mbid": "efc67d89-948c-4262-af78-7077e37e67cb", "rels": true}
+{"artist": "Elliott Brood", "status": "linked", "mbid": "6407b0d9-23d6-4e6a-a050-7fd576a52867", "rels": true}
+{"artist": "Emilie-Claire Barlow", "status": "none", "mbid": null, "rels": true}
+{"artist": "Emily Haines & the Soft Skeleton", "status": "none", "mbid": null, "rels": true}
+{"artist": "Eric's Trip", "status": "none", "mbid": null, "rels": true}
+{"artist": "Étienne", "status": "none", "mbid": null, "rels": true}
+{"artist": "Evening Hymns", "status": "linked", "mbid": "81427834-e235-4280-bfca-9a522120a285", "rels": true}
+{"artist": "Excision", "status": "linked", "mbid": "733c6e6f-0306-403e-9243-82b16a4f82d8", "rels": true}
+{"artist": "Exciter", "status": "linked", "mbid": "0fa1e771-9aa6-49fe-82b7-d5ea09f33519", "rels": true}
+{"artist": "Exco Levi", "status": "linked", "mbid": "3635efed-bfa6-4ba2-9bf8-c670d5ab1179", "rels": true}
+{"artist": "Fefe Dobson", "status": "linked", "mbid": "42f55e6a-7a8d-4e8f-bbc7-da411b41bd15", "rels": true}
+{"artist": "Feist", "status": "linked", "mbid": "a670e05a-cea8-4b37-bce9-d82daf1a0fa4", "rels": true}
+{"artist": "Figgy Duff", "status": "no-links", "mbid": "bcb1abcb-a116-4379-ae37-ef18af22d48d", "rels": true}
+{"artist": "Finger Eleven", "status": "linked", "mbid": "0b76f632-25fa-4681-9862-86499c28afd3", "rels": true}
+{"artist": "Five Man Electrical Band", "status": "linked", "mbid": "76c515cd-6817-456f-b813-d98d19f7d865", "rels": true}
+{"artist": "FM", "status": "no-links", "mbid": "a1216e02-1fef-45b7-b24a-b6fa27bb737c", "rels": true}
+{"artist": "FouKi", "status": "none", "mbid": null, "rels": true}
+{"artist": "Foxwarren", "status": "linked", "mbid": "81239c30-1f43-498f-a319-37218922d232", "rels": true}
+{"artist": "Frazey Ford", "status": "linked", "mbid": "c455e254-994c-40d3-a953-4ff6954c3557", "rels": true}
+{"artist": "Frog Eyes", "status": "linked", "mbid": "9cf2cd10-7629-488b-abc2-f9cca721383a", "rels": true}
+{"artist": "Fucked Up", "status": "linked", "mbid": "19202b40-eb93-48a0-b6fc-fce9568182aa", "rels": true}
+{"artist": "Galaxie", "status": "none", "mbid": null, "rels": true}
+{"artist": "Gilles Vigneault", "status": "none", "mbid": null, "rels": true}
+{"artist": "Glass Tiger", "status": "linked", "mbid": "c70eb51f-3492-43f2-849e-74f9003621e3", "rels": true}
+{"artist": "Glenn Lewis", "status": "linked", "mbid": "f4294502-5009-4ac6-b051-8f849523b1d3", "rels": true}
+{"artist": "Gob", "status": "linked", "mbid": "c6903a2e-063c-4f91-a284-17b8f421be7b", "rels": true}
+{"artist": "Goddo", "status": "no-links", "mbid": "78f6df46-40a6-4fe4-9590-8c26e642a5d7", "rels": true}
+{"artist": "Godspeed You! Black Emperor", "status": "linked", "mbid": "3648db01-b29d-4ab9-835c-83f6a5068fe4", "rels": true}
+{"artist": "Gordon Lightfoot", "status": "linked", "mbid": "9d97b077-b28d-4ba8-a3d9-c71926e3b2b6", "rels": true}
+{"artist": "Gorguts", "status": "linked", "mbid": "a95ef44c-aeda-4222-9d57-10b28240e634", "rels": true}
+{"artist": "Great Big Sea", "status": "linked", "mbid": "41a52c92-753f-4da4-bd9d-a01186cbbf6a", "rels": true}
+{"artist": "Great Lake Swimmers", "status": "none", "mbid": null, "rels": true}
+{"artist": "Grimes", "status": "linked", "mbid": "7e5a2a59-6d9f-4a17-b7c2-e1eedb7bd222", "rels": true}
+{"artist": "GrimSkunk", "status": "linked", "mbid": "db484675-72cf-451b-a585-ef05c362225f", "rels": true}
+{"artist": "Half Moon Run", "status": "linked", "mbid": "b48e0b4e-587b-4fb4-9706-78dfd1a5ea92", "rels": true}
+{"artist": "Hank Snow", "status": "none", "mbid": null, "rels": true}
+{"artist": "Harmonium", "status": "no-links", "mbid": "0310f78a-3395-46e9-9986-342480de490e", "rels": true}
+{"artist": "Haviah Mighty", "status": "none", "mbid": null, "rels": true}
+{"artist": "Hawksley Workman", "status": "linked", "mbid": "8427ea7b-717e-4834-97f1-57a4c29351c3", "rels": true}
+{"artist": "Helix", "status": "ambiguous", "mbid": null, "rels": true}
+{"artist": "Hey Rosetta!", "status": "linked", "mbid": "8704ce0c-c734-4ff8-957d-951e920fe273", "rels": true}
+{"artist": "High Valley", "status": "linked", "mbid": "f5db378d-81c8-4f8c-a7bb-b554877732a9", "rels": true}
+{"artist": "Hollerado", "status": "linked", "mbid": "d2aad428-18a2-4264-835e-c0b2ba726020", "rels": true}
+{"artist": "Holly Cole", "status": "linked", "mbid": "08160a8d-d768-4664-9afa-5720196d16e9", "rels": true}
+{"artist": "Holy Fuck", "status": "linked", "mbid": "4342cf80-7c06-4402-a431-457e77310474", "rels": true}
+{"artist": "Homeshake", "status": "none", "mbid": null, "rels": true}
+{"artist": "Honeymoon Suite", "status": "linked", "mbid": "03e39569-c546-4512-8c6d-f8a8283ec3d1", "rels": true}
+{"artist": "Hubert Lenoir", "status": "linked", "mbid": "ebef47f3-38aa-489c-be2a-528e6921e784", "rels": true}
+{"artist": "I Mother Earth", "status": "linked", "mbid": "22950fa6-84b4-45c2-8065-f198d820628c", "rels": true}
+{"artist": "Ian Tyson", "status": "linked", "mbid": "05f3901b-607a-47e7-b0b2-0effbdfd542c", "rels": true}
+{"artist": "IllScarlett", "status": "linked", "mbid": "dcbeebf7-127c-46aa-8393-524b46d142b4", "rels": true}
+{"artist": "Images in Vogue", "status": "no-links", "mbid": "b18f7233-b32c-4f31-bb0b-3bf20a918f56", "rels": true}
+{"artist": "Jacksoul", "status": "linked", "mbid": "a83f1108-de2c-4849-a137-cc277c0f84f2", "rels": true}
+{"artist": "Jacques Greene", "status": "linked", "mbid": "a64a323b-4df9-48b5-a277-4cfc3f30a34f", "rels": true}
+{"artist": "Jale", "status": "no-links", "mbid": "811bba3c-6690-48b2-a99d-918d2f403f0e", "rels": true}
+{"artist": "James Barker Band", "status": "linked", "mbid": "b327f9b3-c033-4d87-b6f9-9e21bee58420", "rels": true}
+{"artist": "Jann Arden", "status": "linked", "mbid": "31930c85-3e0e-488e-8407-46a0d73fa816", "rels": true}
+{"artist": "Japandroids", "status": "none", "mbid": null, "rels": true}
+{"artist": "Jean Leloup", "status": "none", "mbid": null, "rels": true}
+{"artist": "Jean-Michel Blais", "status": "none", "mbid": null, "rels": true}
+{"artist": "Jean-Pierre Ferland", "status": "none", "mbid": null, "rels": true}
+{"artist": "Jeremy Dutcher", "status": "none", "mbid": null, "rels": true}
+{"artist": "Jérôme Minière", "status": "linked", "mbid": "fdde417a-a6e6-429c-bba4-e6d417290024", "rels": true}
+{"artist": "Jessie Reyez", "status": "linked", "mbid": "18f56081-ccd7-4e07-981a-558c20951ccd", "rels": true}
+{"artist": "Jessy Lanza", "status": "linked", "mbid": "0dfb3c3d-e140-4575-baf3-7ff20ae56c9c", "rels": true}
+{"artist": "JJ Wilde", "status": "linked", "mbid": "ffae0e05-008a-4234-9b5a-dba742e57ffa", "rels": true}
+{"artist": "Joel Plaskett", "status": "linked", "mbid": "12b689a4-0d5e-4458-b44f-5c8ccaf12388", "rels": true}
+{"artist": "Johnny Orlando", "status": "linked", "mbid": "e8608780-e53e-4a09-9443-1e9ead1df35e", "rels": true}
+{"artist": "Joni Mitchell", "status": "linked", "mbid": "a6de8ef9-b1a1-4756-97aa-481bbb8a4069", "rels": true}
+{"artist": "Jully Black", "status": "linked", "mbid": "874d16f9-e2e4-4441-be37-bf16ed32290e", "rels": true}
+{"artist": "July Talk", "status": "none", "mbid": null, "rels": true}
+{"artist": "Junior Boys", "status": "linked", "mbid": "86a064f9-3ed4-4621-b29d-d05442c6b1ae", "rels": true}
+{"artist": "Justin Bieber", "status": "linked", "mbid": "e0140a67-e4d1-4f13-8a01-364355bee46e", "rels": true}
+{"artist": "k-os", "status": "none", "mbid": null, "rels": true}
+{"artist": "k.d. lang", "status": "linked", "mbid": "675c1c5e-5625-4a5e-97a2-b02aab5db2fc", "rels": true}
+{"artist": "K'naan", "status": "none", "mbid": null, "rels": true}
+{"artist": "Kaia Kater", "status": "none", "mbid": null, "rels": true}
+{"artist": "Kardinal Offishall", "status": "linked", "mbid": "03647192-f55b-42b2-9a74-db28fcae8fd1", "rels": true}
+{"artist": "Kashtin", "status": "none", "mbid": null, "rels": true}
+{"artist": "Kataklysm", "status": "linked", "mbid": "91d51bc3-bfcc-49f2-b6c4-d6d205d6291b", "rels": true}
+{"artist": "Kate & Anna McGarrigle", "status": "linked", "mbid": "c773cf10-e516-49a3-ab11-0ac3e8efeb22", "rels": true}
+{"artist": "Kathleen Edwards", "status": "linked", "mbid": "7e915503-cc34-43fa-a6d7-986ff909d5e9", "rels": true}
+{"artist": "Kaytranada", "status": "linked", "mbid": "e56aee57-d90e-40cf-a70d-beb70f6f3c69", "rels": true}
+{"artist": "KEN mode", "status": "linked", "mbid": "68c1feca-ff4f-4df4-a829-9c495a26c69c", "rels": true}
+{"artist": "Keshia Chanté", "status": "linked", "mbid": "f45e686a-6360-4214-bb40-66ba24b6e7b5", "rels": true}
+{"artist": "Keys N Krates", "status": "linked", "mbid": "1ed5c328-840d-43b6-8455-8d1b4e7f3080", "rels": true}
+{"artist": "Kim Mitchell", "status": "linked", "mbid": "88144008-9c66-4cd5-a16c-8e23ad31d28f", "rels": true}
+{"artist": "Kim Stockwood", "status": "linked", "mbid": "90749fa1-6d10-4080-a1e1-1edb407504cd", "rels": true}
+{"artist": "Kittie", "status": "linked", "mbid": "7677be48-16e9-4c84-9365-a69dd6f2df55", "rels": true}
+{"artist": "Klô Pelgag", "status": "none", "mbid": null, "rels": true}
+{"artist": "Land of Talk", "status": "linked", "mbid": "336dfcad-2587-4f5d-9338-3a445282364f", "rels": true}
+{"artist": "Langdon Auger", "status": "no-links", "mbid": "a370a858-2802-4e8d-844d-397567854ec4", "rels": true}
+{"artist": "Lee Aaron", "status": "linked", "mbid": "004913ca-cc81-44ca-b1b5-6f82149cf475", "rels": true}
+{"artist": "Legitimate", "status": "none", "mbid": null, "rels": true}
+{"artist": "Leonard Cohen", "status": "linked", "mbid": "65314b12-0e08-43fa-ba33-baaa7b874c15", "rels": true}
+{"artist": "Les Cowboys Fringants", "status": "none", "mbid": null, "rels": true}
+{"artist": "Lex Leosis", "status": "none", "mbid": null, "rels": true}
+{"artist": "Library Voices", "status": "linked", "mbid": "eca33d92-9b13-4126-b58c-3056bb9a22f3", "rels": true}
+{"artist": "Lido Pimienta", "status": "linked", "mbid": "9fb537ca-9145-4855-8a18-17b20339f1fc", "rels": true}
+{"artist": "Lighthouse", "status": "linked", "mbid": "dc7aafa5-423a-4e87-8778-b8c51e3612c6", "rels": true}
+{"artist": "LIGHTS", "status": "linked", "mbid": "efdbd3b1-2d20-4cea-af46-dffbc1e7daba", "rels": true}
+{"artist": "Lil Windex", "status": "none", "mbid": null, "rels": true}
+{"artist": "Limblifter", "status": "linked", "mbid": "b8558bc4-a8f9-4abe-9b27-aa4c796c08fb", "rels": true}
+{"artist": "Lindsay Ell", "status": "linked", "mbid": "735f2b10-a267-4cd2-990f-f91702be9130", "rels": true}
+{"artist": "Lisa LeBlanc", "status": "linked", "mbid": "2d058274-5c6d-4dbd-aff3-100ca9ae4c37", "rels": true}
+{"artist": "Loud", "status": "linked", "mbid": "b3848943-93cc-4a6c-8d59-605c7bef9701", "rels": true}
+{"artist": "Loud Luxury", "status": "linked", "mbid": "4c445344-9df2-407e-9bf3-8a5c0b86777e", "rels": true}
+{"artist": "Loverboy", "status": "linked", "mbid": "c11ba128-03b1-404d-ae88-452524b7ecc3", "rels": true}
+{"artist": "Lowest of the Low", "status": "none", "mbid": null, "rels": true}
+{"artist": "Lunice", "status": "linked", "mbid": "6fb9bcd1-7ac8-40cc-9c4a-cba4c91e9c23", "rels": true}
+{"artist": "Lydia Képinski", "status": "none", "mbid": null, "rels": true}
+{"artist": "Mac DeMarco", "status": "linked", "mbid": "f2492c31-54a8-4347-a1fc-f81f72873bbf", "rels": true}
+{"artist": "Main Source", "status": "linked", "mbid": "a9af6b83-35a4-469d-8c2b-41f5ca73a8cc", "rels": true}
+{"artist": "Majical Cloudz", "status": "linked", "mbid": "096832e7-13c0-45f3-bb2a-2b9e75f65a23", "rels": true}
+{"artist": "Majid Jordan", "status": "linked", "mbid": "abaa7001-0d80-4e58-be5d-d2d246fd9d87", "rels": true}
+{"artist": "Malajube", "status": "linked", "mbid": "9af2e75f-5eed-4008-88dc-d9491625434f", "rels": true}
+{"artist": "Manteca", "status": "linked", "mbid": "60cc83bc-c3c7-4ac1-87b4-0cde19dd9cd9", "rels": true}
+{"artist": "Marc Costanzo", "status": "none", "mbid": null, "rels": true}
+{"artist": "Margeaux", "status": "none", "mbid": null, "rels": true}
+{"artist": "Marie-Jo Thério", "status": "linked", "mbid": "a576cbea-20f8-46a8-a91d-8bca135b7ba0", "rels": true}
+{"artist": "Mark", "status": "none", "mbid": null, "rels": true}
+{"artist": "Martha and the Muffins", "status": "linked", "mbid": "d0a4fd70-d8ab-442e-8fb0-f5608936dce3", "rels": true}
+{"artist": "Martha Wainwright", "status": "linked", "mbid": "231475d8-fddb-4d7d-aad9-287e59e4b4ba", "rels": true}
+{"artist": "Mashmakhan", "status": "no-links", "mbid": "16b5dc65-ce1a-4072-8ac0-a7db1e2df346", "rels": true}
+{"artist": "Mathematik", "status": "linked", "mbid": "b330eb7e-d137-47cd-9317-6dafc269f3cd", "rels": true}
+{"artist": "Matt Dusk", "status": "linked", "mbid": "e2a4561f-1a71-4951-9365-f8b0a5690e33", "rels": true}
+{"artist": "Matt Mays", "status": "linked", "mbid": "87f02750-fb8a-462c-9f3d-a43ec609fcb1", "rels": true}
+{"artist": "Matthew Good Band", "status": "linked", "mbid": "9d119d4b-7a7d-4aaf-be18-727c9d1b6ed2", "rels": true}
+{"artist": "Max Webster", "status": "no-links", "mbid": "76fe1f52-d059-46e4-b683-b1512d2fd5f4", "rels": true}
+{"artist": "Maynard Ferguson", "status": "none", "mbid": null, "rels": true}
+{"artist": "mcenroe", "status": "linked", "mbid": "651f1327-d706-472f-a154-042558520412", "rels": true}
+{"artist": "Meghan Patrick", "status": "none", "mbid": null, "rels": true}
+{"artist": "Melanie Fiona", "status": "linked", "mbid": "209e47f9-df65-47bd-9a40-4fb4c5c9c349", "rels": true}
+{"artist": "Men Without Hats", "status": "linked", "mbid": "bcabb743-60ed-406b-94da-9bf82e032e58", "rels": true}
+{"artist": "Mes Aïeux", "status": "none", "mbid": null, "rels": true}
+{"artist": "Messenjah", "status": "no-links", "mbid": "7885409f-9c3a-4117-a4ec-aa543ed4032e", "rels": true}
+{"artist": "Metric", "status": "linked", "mbid": "4449ccf6-c948-4d33-aa97-b6ad98ce4b5b", "rels": true}
+{"artist": "METZ", "status": "none", "mbid": null, "rels": true}
+{"artist": "Michael Bublé", "status": "linked", "mbid": "611700cf-27f0-4dc9-ae80-c513a767853e", "rels": true}
+{"artist": "Michie Mee", "status": "linked", "mbid": "07c136c6-672a-428d-a4b2-43f782290b5f", "rels": true}
+{"artist": "Mitsou", "status": "none", "mbid": null, "rels": true}
+{"artist": "Mocky", "status": "linked", "mbid": "c321a13a-1c52-43c0-b60a-3a454cb7f9a2", "rels": true}
+{"artist": "Moe Koffman", "status": "linked", "mbid": "a4ca5651-ec66-4410-bb67-527dbcc0edb8", "rels": true}
+{"artist": "Moist", "status": "none", "mbid": null, "rels": true}
+{"artist": "Moneen", "status": "none", "mbid": null, "rels": true}
+{"artist": "Monster Truck", "status": "linked", "mbid": "5fdbd21b-cdf7-4368-ad58-48b1fd49721a", "rels": true}
+{"artist": "Mother Mother", "status": "linked", "mbid": "69681b02-05b8-4685-80cb-e98983b7a96f", "rels": true}
+{"artist": "Moxy", "status": "linked", "mbid": "ee4a916b-0cc6-4ba4-8037-ba18794e8942", "rels": true}
+{"artist": "Moxy Früvous", "status": "linked", "mbid": "bf103bd9-7a20-4a7e-95e0-369fe494fc88", "rels": true}
+{"artist": "MSTRKRFT", "status": "linked", "mbid": "74134743-106c-47a6-bb8d-5c9efde7818c", "rels": true}
+{"artist": "Murda Beatz", "status": "linked", "mbid": "91376b53-c37d-4eed-ac24-63d167af6885", "rels": true}
+{"artist": "Murray McLauchlan", "status": "linked", "mbid": "5b5cd01a-114a-4a25-8baa-6dbbe995ce3e", "rels": true}
+{"artist": "Mustafa", "status": "linked", "mbid": "987c5b70-b132-483f-8e0f-7bca4dca617f", "rels": true}
+{"artist": "Mustafa the Poet", "status": "none", "mbid": null, "rels": true}
+{"artist": "Neil Young", "status": "linked", "mbid": "75167b8b-44e4-407b-9d35-effe87b223cf", "rels": true}
+{"artist": "Nelly Furtado", "status": "linked", "mbid": "13655113-cd16-4b43-9dca-cadbbf26ee05", "rels": true}
+{"artist": "Nickelback", "status": "linked", "mbid": "bc710bcf-8815-42cf-bad2-3f1d12246aeb", "rels": true}
+{"artist": "Night Lovell", "status": "none", "mbid": null, "rels": true}
+{"artist": "Nikki Yanofsky", "status": "none", "mbid": null, "rels": true}
+{"artist": "Nineteen85", "status": "no-links", "mbid": "3c5abd66-7e1f-4124-b00f-192984a2ab30", "rels": true}
+{"artist": "Nomeansno", "status": "linked", "mbid": "37e9d7b2-7779-41b2-b2eb-3685351caad3", "rels": true}
+{"artist": "Octave Minds", "status": "none", "mbid": null, "rels": true}
+{"artist": "Offenbach", "status": "linked", "mbid": "eb26d923-4fcf-49c0-b1d9-1636258a2c35", "rels": true}
+{"artist": "Ohbijou", "status": "linked", "mbid": "637b0a5e-7c92-4e45-a362-41cd803f506d", "rels": true}
+{"artist": "Old Man Luedecke", "status": "linked", "mbid": "1f860ad4-8677-4cdc-9a66-fb1f9713bd1c", "rels": true}
+{"artist": "Oliver Jones", "status": "no-links", "mbid": "ef16f964-05a2-404e-ac80-3919c6724ac1", "rels": true}
+{"artist": "Orville Peck", "status": "none", "mbid": null, "rels": true}
+{"artist": "Oscar Peterson", "status": "linked", "mbid": "ed801bdd-f057-41c0-94fb-76cb5676cd59", "rels": true}
+{"artist": "Our Lady Peace", "status": "linked", "mbid": "78661da3-894c-4947-a34b-fb7edf585d9b", "rels": true}
+{"artist": "P'tit Belliveau", "status": "linked", "mbid": "210fee1d-8b8e-4383-8e05-7772e7cf329d", "rels": true}
+{"artist": "Paranoid Castle", "status": "none", "mbid": null, "rels": true}
+{"artist": "PartyNextDoor", "status": "linked", "mbid": "f23ef341-33bd-47c1-b83c-846a78581f05", "rels": true}
+{"artist": "Paul Piché", "status": "none", "mbid": null, "rels": true}
+{"artist": "Payolas", "status": "none", "mbid": null, "rels": true}
+{"artist": "Peach Pit", "status": "linked", "mbid": "1888892a-06b7-4bbd-b0a1-3ffde01e4094", "rels": true}
+{"artist": "Pierre Kwenders", "status": "none", "mbid": null, "rels": true}
+{"artist": "Pkew Pkew Pkew", "status": "none", "mbid": null, "rels": true}
+{"artist": "Plague Language", "status": "none", "mbid": null, "rels": true}
+{"artist": "Plants and Animals", "status": "linked", "mbid": "d4e75c13-d1e9-4c48-86a0-9c854e1d88f7", "rels": true}
+{"artist": "Plastikman", "status": "linked", "mbid": "abee98f6-5239-4abf-bbe6-e1e2815a0dd6", "rels": true}
+{"artist": "Platinum Blonde", "status": "linked", "mbid": "fc05e5f2-680a-4d72-ac41-0d3325dae5b0", "rels": true}
+{"artist": "Plumtree", "status": "linked", "mbid": "e68e96fa-e50d-4e0e-83bc-086bdef68634", "rels": true}
+{"artist": "Point Blank", "status": "no-links", "mbid": "677bff67-cebc-46b0-a88a-09d4dbb9b664", "rels": true}
+{"artist": "Population II", "status": "none", "mbid": null, "rels": true}
+{"artist": "Prairie Oyster", "status": "linked", "mbid": "5015aa63-334d-4bdb-9e86-5abf3b93b261", "rels": true}
+{"artist": "Prism", "status": "linked", "mbid": "8456de82-496b-4eb9-b85d-b85b0be2ff29", "rels": true}
+{"artist": "Project Pablo", "status": "none", "mbid": null, "rels": true}
+{"artist": "Propagandhi", "status": "linked", "mbid": "cc546218-cc08-4ae9-9592-ac1596c1470d", "rels": true}
+{"artist": "Protest the Hero", "status": "linked", "mbid": "6318e724-7e6b-4e41-a35b-080065077c80", "rels": true}
+{"artist": "PUP", "status": "ambiguous", "mbid": null, "rels": true}
+{"artist": "Purity Ring", "status": "linked", "mbid": "fdb53441-e5e6-4657-9aad-8dab672e1cdc", "rels": true}
+{"artist": "Radio Radio", "status": "linked", "mbid": "3e61d551-8962-44a9-af88-aeac11256544", "rels": true}
+{"artist": "Rah Rah", "status": "none", "mbid": null, "rels": true}
+{"artist": "Rascalz", "status": "linked", "mbid": "093d8839-950e-4a5f-a946-55199c69b3bc", "rels": true}
+{"artist": "Razor", "status": "linked", "mbid": "ba31a1e0-6b75-458f-b07f-ec81253513a1", "rels": true}
+{"artist": "Remy Shand", "status": "linked", "mbid": "4043e97e-8a69-424f-bf59-16bc8aac71e6", "rels": true}
+{"artist": "Reuben and the Dark", "status": "linked", "mbid": "afbfaa45-d43c-4d2c-bdbb-0d324f1312ba", "rels": true}
+{"artist": "REZZ", "status": "linked", "mbid": "2eaf4267-4dd6-412a-9bb0-596afb90215b", "rels": true}
+{"artist": "Rheostatics", "status": "linked", "mbid": "f73d67ff-d255-4d35-af4f-2be516f33476", "rels": true}
+{"artist": "Rich Terfry", "status": "none", "mbid": null, "rels": true}
+{"artist": "Richard Desjardins", "status": "none", "mbid": null, "rels": true}
+{"artist": "Riit", "status": "none", "mbid": null, "rels": true}
+{"artist": "Rob Johnson", "status": "none", "mbid": null, "rels": true}
+{"artist": "Robert Charlebois", "status": "none", "mbid": null, "rels": true}
+{"artist": "Roch Voisine", "status": "linked", "mbid": "0dea7760-339a-482d-a692-fc1c414d110d", "rels": true}
+{"artist": "Rose Cousins", "status": "linked", "mbid": "4606cc91-77fa-43a3-a003-c4cb30bd1b7c", "rels": true}
+{"artist": "Roy Woods", "status": "linked", "mbid": "f50cee24-a799-45da-b65f-fb0874cd521d", "rels": true}
+{"artist": "Royal Wood", "status": "linked", "mbid": "110dd273-2746-4469-94d2-ea54b3c30809", "rels": true}
+{"artist": "Rufus Wainwright", "status": "none", "mbid": null, "rels": true}
+{"artist": "Rumble & Strong", "status": "none", "mbid": null, "rels": true}
+{"artist": "Run-Up", "status": "none", "mbid": null, "rels": true}
+{"artist": "Rush", "status": "linked", "mbid": "534ee493-bfac-4575-a44a-0ae41e2c3fe4", "rels": true}
+{"artist": "Sacrifice", "status": "linked", "mbid": "6fc5a89a-8f86-42ec-9bb7-3ccc0221a8a1", "rels": true}
+{"artist": "Saga", "status": "linked", "mbid": "cc5b8e90-07fd-416d-bd90-8a524b29d1f7", "rels": true}
+{"artist": "Said the Whale", "status": "none", "mbid": null, "rels": true}
+{"artist": "Sam Roberts", "status": "linked", "mbid": "c8a1771b-4526-4183-b066-120676990d74", "rels": true}
+{"artist": "Sans Pression", "status": "none", "mbid": null, "rels": true}
+{"artist": "Sarah McLachlan", "status": "linked", "mbid": "ce58d854-7430-4231-aa44-97f0144b3372", "rels": true}
+{"artist": "Sass Jordan", "status": "linked", "mbid": "3bbd6c44-385e-4e51-8250-fbb23435f165", "rels": true}
+{"artist": "Saukrates", "status": "none", "mbid": null, "rels": true}
+{"artist": "Scott Helman", "status": "none", "mbid": null, "rels": true}
+{"artist": "Sebutones", "status": "no-links", "mbid": "730afe60-19bf-449a-819f-80e26abd0282", "rels": true}
+{"artist": "Self Taught", "status": "no-links", "mbid": "8959e3f3-35a6-4ef4-b04f-6272c73f8e45", "rels": true}
+{"artist": "Sevn Thomas", "status": "none", "mbid": null, "rels": true}
+{"artist": "Shad", "status": "linked", "mbid": "15d58b2e-63f9-454b-845b-397dc443f17f", "rels": true}
+{"artist": "Shania Twain", "status": "linked", "mbid": "faabb55d-3c9e-4c23-8779-732ac2ee2c0d", "rels": true}
+{"artist": "Shawn Mendes", "status": "linked", "mbid": "b7d92248-97e3-4450-8057-6fe06738f735", "rels": true}
+{"artist": "Shawnee Kish", "status": "linked", "mbid": "1ccca7a6-1055-4db2-b82f-5a9d5edb0c6c", "rels": true}
+{"artist": "Shred Kelly", "status": "none", "mbid": null, "rels": true}
+{"artist": "Silverstein", "status": "linked", "mbid": "d89de379-665d-425c-b2e9-41b95d1edb36", "rels": true}
+{"artist": "Simple Plan", "status": "linked", "mbid": "b345af35-205e-4eca-8006-029e5c20127e", "rels": true}
+{"artist": "Singlefoot", "status": "no-links", "mbid": "d97daa29-779f-410f-9bd5-4e304f53e2a3", "rels": true}
+{"artist": "Singleton", "status": "none", "mbid": null, "rels": true}
+{"artist": "Slangblossom", "status": "none", "mbid": null, "rels": true}
+{"artist": "Sloan", "status": "linked", "mbid": "5a63c831-5bdb-444d-a9db-974501e3317d", "rels": true}
+{"artist": "SNFU", "status": "linked", "mbid": "ca94290f-d456-4091-9fc4-fa83512f544f", "rels": true}
+{"artist": "Snow", "status": "linked", "mbid": "70cb4669-ad7a-4d5c-b99e-7582df393cc7", "rels": true}
+{"artist": "Socalled", "status": "linked", "mbid": "2867812b-4a04-45c2-9b74-a7d457fb84fd", "rels": true}
+{"artist": "Sol Guy", "status": "no-links", "mbid": "55850af7-4506-4b74-bc22-685e5a33063a", "rels": true}
+{"artist": "Souldia", "status": "none", "mbid": null, "rels": true}
+{"artist": "Spirit of the West", "status": "linked", "mbid": "1f3c32a0-0454-4ebc-9d85-27b52ae4154c", "rels": true}
+{"artist": "Spiritbox", "status": "linked", "mbid": "9c935736-7530-41e4-b776-1dbcf534c061", "rels": true}
+{"artist": "Split Personality", "status": "no-links", "mbid": "a0a8c062-4e7a-4afa-8fdd-444f31639b2f", "rels": true}
+{"artist": "Stan Rogers", "status": "linked", "mbid": "02f1b412-40be-49fa-85aa-677aa1cba7f0", "rels": true}
+{"artist": "Stars", "status": "none", "mbid": null, "rels": true}
+{"artist": "Stigg of the Dump", "status": "no-links", "mbid": "36315b71-642a-4d63-95db-7a45c5e4824a", "rels": true}
+{"artist": "Stompin' Tom Connors", "status": "none", "mbid": null, "rels": true}
+{"artist": "Strange Advance", "status": "linked", "mbid": "3fe2477b-604c-41d8-90c1-05b8f052ede5", "rels": true}
+{"artist": "Strapping Young Lad", "status": "linked", "mbid": "584b72a4-45f7-46ce-b440-e9ee579d71c4", "rels": true}
+{"artist": "Streetheart", "status": "linked", "mbid": "b6eae833-59ce-4932-9b23-04c908559039", "rels": true}
+{"artist": "Striker", "status": "linked", "mbid": "e2284273-8fef-4fff-bb45-a7df1bff196e", "rels": true}
+{"artist": "Subhumans", "status": "none", "mbid": null, "rels": true}
+{"artist": "Sum 41", "status": "linked", "mbid": "f2eef649-a6d5-4114-afba-e50ab26254d2", "rels": true}
+{"artist": "Sunset Rubdown", "status": "linked", "mbid": "9c0b1b7f-d63d-4e4f-bbec-1e7e7607dd22", "rels": true}
+{"artist": "Susan Aglukark", "status": "linked", "mbid": "28ca20ab-38c3-480c-9cb3-ccb7231ca263", "rels": true}
+{"artist": "Swamp Thing", "status": "linked", "mbid": "6f18242b-acdc-4cd9-8e48-d65ed6a8e53b", "rels": true}
+{"artist": "Sweatshop Union", "status": "linked", "mbid": "462168ba-2443-4d43-bccd-541b935b5c88", "rels": true}
+{"artist": "Swollen Members", "status": "linked", "mbid": "7ff86f63-f50b-45ca-8eb6-c391926e022d", "rels": true}
+{"artist": "T-Minus", "status": "none", "mbid": null, "rels": true}
+{"artist": "T.R.A.C.K.S.", "status": "none", "mbid": null, "rels": true}
+{"artist": "Tamia", "status": "linked", "mbid": "2de9f057-67d8-429d-b899-759be13131a9", "rels": true}
+{"artist": "Tanika Charles", "status": "linked", "mbid": "fe27a4d0-a7ff-4784-94e9-02d8363175af", "rels": true}
+{"artist": "Tanya Tagaq", "status": "linked", "mbid": "511b1817-5adc-49ea-96e7-41497fbf0b27", "rels": true}
+{"artist": "Tate McRae", "status": "linked", "mbid": "f9133869-f87c-459c-9aa7-2f176cda7e06", "rels": true}
+{"artist": "Teekay", "status": "linked", "mbid": "7697dc45-0a38-45cf-ab19-684195d46e45", "rels": true}
+{"artist": "Teenage Head", "status": "linked", "mbid": "b861073d-0bf1-49c7-875f-c884a26cc9bf", "rels": true}
+{"artist": "TEKE::TEKE", "status": "none", "mbid": null, "rels": true}
+{"artist": "Terra Lightfoot", "status": "linked", "mbid": "acc04c8e-6611-4490-a4e4-e803aa7905cc", "rels": true}
+{"artist": "Terri Clark", "status": "linked", "mbid": "58597daa-83ea-4eec-af60-f8437dfdf0e6", "rels": true}
+{"artist": "The Acorn", "status": "none", "mbid": null, "rels": true}
+{"artist": "The Barr Brothers", "status": "linked", "mbid": "e8c28ca7-c14d-4dff-86d6-06bfac138422", "rels": true}
+{"artist": "The Beaches", "status": "linked", "mbid": "cdf5b0a1-ce40-4bb8-92dc-baa602ff83c1", "rels": true}
+{"artist": "The Besnard Lakes", "status": "linked", "mbid": "520c81bd-e7b4-45c1-bd8f-976eba5b39e1", "rels": true}
+{"artist": "The Birthday Massacre", "status": "linked", "mbid": "83d8a06a-4145-444a-b4ae-49e1e986206f", "rels": true}
+{"artist": "The Blue Stones", "status": "linked", "mbid": "bff6b03f-c91b-4af9-a7f3-3dad6bc3165e", "rels": true}
+{"artist": "The Box", "status": "linked", "mbid": "7f8be127-c650-4b6b-a494-3b1c89a3cb5e", "rels": true}
+{"artist": "The Dead Indians", "status": "none", "mbid": null, "rels": true}
+{"artist": "The Dead South", "status": "none", "mbid": null, "rels": true}
+{"artist": "The Dears", "status": "linked", "mbid": "ca7ce20f-c735-4ad9-b664-d8d83b3c7948", "rels": true}
+{"artist": "The Deep Dark Woods", "status": "linked", "mbid": "160ac519-1bce-4a86-b6a2-731333a290d4", "rels": true}
+{"artist": "The Diodes", "status": "linked", "mbid": "fd6f9ae9-8f82-48db-beed-7f6e944ba22f", "rels": true}
+{"artist": "The Dirty Nil", "status": "linked", "mbid": "039ab342-efb8-472e-817c-5800d3a70493", "rels": true}
+{"artist": "The Flatliners", "status": "linked", "mbid": "e5b8c0f3-0752-4a76-987a-96098ce9d490", "rels": true}
+{"artist": "The Glorious Sons", "status": "linked", "mbid": "fe92d378-bfce-4bc1-a994-4e851583cac3", "rels": true}
+{"artist": "The Grapes of Wrath", "status": "linked", "mbid": "7ca7e56a-f73a-4ff1-ba62-da0ead496a3f", "rels": true}
+{"artist": "The Guess Who", "status": "ambiguous", "mbid": null, "rels": true}
+{"artist": "The Halluci Nation", "status": "linked", "mbid": "284ee768-2c9a-440a-be37-db926e90fc1c", "rels": true}
+{"artist": "The Inbreds", "status": "linked", "mbid": "19892173-8ac0-449d-b716-6860b7f8f4c9", "rels": true}
+{"artist": "The Irish Rovers", "status": "linked", "mbid": "500d2b10-b0fb-4615-a1a6-fa226a620d32", "rels": true}
+{"artist": "The New Pornographers", "status": "linked", "mbid": "25b75a66-ce83-4db3-b136-395a3c3784c4", "rels": true}
+{"artist": "The Nils", "status": "no-links", "mbid": "0e1e9df1-0a58-44c0-bbb9-37dd5758c71f", "rels": true}
+{"artist": "The Northern Pikes", "status": "linked", "mbid": "b9d6fbe8-2e33-4bb0-8900-7667d2832956", "rels": true}
+{"artist": "The Once", "status": "none", "mbid": null, "rels": true}
+{"artist": "The Pack A.D.", "status": "linked", "mbid": "b5289d82-4be0-47b6-97e6-340f3666d7d9", "rels": true}
+{"artist": "The Pursuit of Happiness", "status": "linked", "mbid": "b7bda9f5-041c-410b-8177-47880e1fbb41", "rels": true}
+{"artist": "The Rankin Family", "status": "linked", "mbid": "5bda7192-a859-4365-8c51-c77894f38212", "rels": true}
+{"artist": "The Rural Alberta Advantage", "status": "linked", "mbid": "e0647eee-82ce-40e6-af54-953395ad1c08", "rels": true}
+{"artist": "The Sadies", "status": "linked", "mbid": "72f7495f-d40f-4c96-93bb-7fe1c9b23cbb", "rels": true}
+{"artist": "The Sheepdogs", "status": "linked", "mbid": "5b03776b-6987-4ccb-81ed-1c5fe00f9dfa", "rels": true}
+{"artist": "The Souljazz Orchestra", "status": "linked", "mbid": "453dab0c-aa5f-4091-bf58-64dead0d06b8", "rels": true}
+{"artist": "The Stampeders", "status": "linked", "mbid": "51c30cee-2ba0-46c7-9715-adbcddcfe40b", "rels": true}
+{"artist": "The Stills", "status": "linked", "mbid": "e8eed2c6-269a-47c0-aed9-8517a304b02c", "rels": true}
+{"artist": "The Strumbellas", "status": "linked", "mbid": "2a9b17db-4f22-4ffa-a547-4fdfda1ce946", "rels": true}
+{"artist": "The Tea Party", "status": "linked", "mbid": "7ebc552b-71b2-47b7-9dc8-31ef08e20aec", "rels": true}
+{"artist": "The Tragically Hip", "status": "linked", "mbid": "e86ab653-bec8-46f3-b4b6-a1a866919ef6", "rels": true}
+{"artist": "The Trews", "status": "none", "mbid": null, "rels": true}
+{"artist": "The Twin Sisters", "status": "none", "mbid": null, "rels": true}
+{"artist": "The Unicorns", "status": "linked", "mbid": "603c5f9f-492a-4f21-9d6f-1642a5dbea2d", "rels": true}
+{"artist": "The Viletones", "status": "no-links", "mbid": "2d2b753e-4c67-4ac5-9ebc-5d70fe1d979c", "rels": true}
+{"artist": "The Weakerthans", "status": "linked", "mbid": "bc68928b-fbb5-4aac-baae-52ba49202372", "rels": true}
+{"artist": "The Weather Station", "status": "linked", "mbid": "eda7da10-0b65-41df-ac36-9c83b7017f7a", "rels": true}
+{"artist": "The Weeknd", "status": "linked", "mbid": "c8b03190-306c-4120-bb0b-6f2ebfc06ea9", "rels": true}
+{"artist": "The Wooden Sky", "status": "linked", "mbid": "20bd9df0-6009-415c-9f4c-be36d781c5d2", "rels": true}
+{"artist": "Thee Silver Mt. Zion Memorial Orchestra", "status": "none", "mbid": null, "rels": true}
+{"artist": "Theory of a Deadman", "status": "linked", "mbid": "183e636e-d41c-43fe-a428-8a034eb20c7b", "rels": true}
+{"artist": "Three Days Grace", "status": "linked", "mbid": "fabb37f8-eb2a-4cc1-a72a-b56935bbb72d", "rels": true}
+{"artist": "Thrush Hermit", "status": "no-links", "mbid": "39e8654b-4b01-4e62-bf50-9ad8485b5ba0", "rels": true}
+{"artist": "Tiga", "status": "linked", "mbid": "58e5332d-383e-414c-9917-776d7b1493a2", "rels": true}
+{"artist": "Timber Timbre", "status": "linked", "mbid": "89942abd-fdaa-48fc-a8cf-649746303c97", "rels": true}
+{"artist": "TNGHT", "status": "none", "mbid": null, "rels": true}
+{"artist": "TOBi", "status": "none", "mbid": null, "rels": true}
+{"artist": "Tokyo Police Club", "status": "linked", "mbid": "35a6a353-b186-4c13-a264-d18d5e2ce853", "rels": true}
+{"artist": "Toolshed", "status": "no-links", "mbid": "1df21221-744e-4a0a-81dc-546f0fc63180", "rels": true}
+{"artist": "TOPS", "status": "linked", "mbid": "2491939e-b112-4afd-8563-c1ab1ea27e1c", "rels": true}
+{"artist": "Toronto", "status": "linked", "mbid": "1cadcedf-1a72-4071-bf24-54b03fa36d2f", "rels": true}
+{"artist": "Tory Lanez", "status": "linked", "mbid": "5b8ec72b-9e39-4a06-a2bf-964166b92a71", "rels": true}
+{"artist": "TOUGH DUMPLIN'", "status": "none", "mbid": null, "rels": true}
+{"artist": "Treble Charger", "status": "linked", "mbid": "7bfd0b45-f559-4dbc-be8a-1cbf87015f00", "rels": true}
+{"artist": "Treizième Étage", "status": "none", "mbid": null, "rels": true}
+{"artist": "Triumph", "status": "linked", "mbid": "5ba43ff1-f124-4b94-aed8-6428bd90bdd4", "rels": true}
+{"artist": "Trooper", "status": "linked", "mbid": "5a85b5d9-5e6b-436c-9e13-a1cda395eb95", "rels": true}
+{"artist": "U.S. Girls", "status": "linked", "mbid": "036912f5-c717-498d-8958-6058de17bb70", "rels": true}
+{"artist": "Unleash the Archers", "status": "linked", "mbid": "a7c18d09-2197-4bff-98f2-cd87923be240", "rels": true}
+{"artist": "Valdy", "status": "linked", "mbid": "b265389c-32a8-4ad4-ae8e-69e5ff247d34", "rels": true}
+{"artist": "Valley", "status": "linked", "mbid": "6e91d65a-ab21-49b7-b81d-11c53c65601a", "rels": true}
+{"artist": "Virginia to Vegas", "status": "none", "mbid": null, "rels": true}
+{"artist": "Voivod", "status": "linked", "mbid": "66cb12f6-6502-486d-bf67-efd5bdaee6ac", "rels": true}
+{"artist": "Vulgaires Machins", "status": "linked", "mbid": "e5b1d871-be9f-46c9-a0d4-5e05399f379f", "rels": true}
+{"artist": "Walk off the Earth", "status": "linked", "mbid": "e2a5eaeb-7de7-4ffe-a519-e18e427a5060", "rels": true}
+{"artist": "Weaves", "status": "none", "mbid": null, "rels": true}
+{"artist": "White Lung", "status": "linked", "mbid": "b8034691-795a-44cd-8a62-2dca8819fd5c", "rels": true}
+{"artist": "Whitehorse", "status": "linked", "mbid": "958d3f9d-afe6-486e-820e-18ec7cdcb2ad", "rels": true}
+{"artist": "Wild Rivers", "status": "none", "mbid": null, "rels": true}
+{"artist": "Willie P. Bennett", "status": "no-links", "mbid": "8b1dfd45-46a9-4c0a-ad6b-e10139fd1950", "rels": true}
+{"artist": "Wintersleep", "status": "linked", "mbid": "cda8e877-fe39-4939-8b09-045d68617367", "rels": true}
+{"artist": "Wolf Parade", "status": "linked", "mbid": "b7ddce8b-9e5c-46bd-9d33-41b134ce1a7f", "rels": true}
+{"artist": "Yamantaka // Sonic Titan", "status": "none", "mbid": null, "rels": true}
+{"artist": "Yoo Doo Right", "status": "linked", "mbid": "23096007-0e5f-4ede-b9fa-ca7025501be3", "rels": true}
+{"artist": "Yukon Blonde", "status": "linked", "mbid": "0b653564-e2d9-41c9-a2bd-3cdda111dfd3", "rels": true}
+{"artist": "Zaki Ibrahim", "status": "none", "mbid": null, "rels": true}
+{"artist": "Zeds Dead", "status": "linked", "mbid": "f9fdca15-1bef-43a0-8213-758b6ee0aa91", "rels": true}
+{"artist": "Zeus", "status": "linked", "mbid": "c02c7b77-4276-42e5-997a-4232c2ec7a05", "rels": true}
+{"artist": "Zoon", "status": "none", "mbid": null, "rels": true}
+{"artist": "Kune", "status": "none", "mbid": null, "rels": true}
+{"artist": "Forever Dead", "status": "none", "mbid": null, "rels": true}
+{"artist": "Declan O’Donovan", "status": "none", "mbid": null, "rels": true}
+{"artist": "*Untitled*", "status": "none", "mbid": null, "rels": true}
+{"artist": "24-HOUR Church of Beer", "status": "none", "mbid": null, "rels": true}
+{"artist": "Eve", "status": "none", "mbid": null, "rels": true}
+{"artist": "Sussy", "status": "none", "mbid": null, "rels": true}
+{"artist": "Dakota Bear", "status": "linked", "mbid": "16b1e122-b351-4418-9a6b-15bd2609f1f1", "rels": true}
+{"artist": "Parlour Panther", "status": "none", "mbid": null, "rels": true}
+{"artist": "Maddie Storvold", "status": "none", "mbid": null, "rels": true}
+{"artist": "Emma Kade", "status": "none", "mbid": null, "rels": true}
+{"artist": "FKA Rayne", "status": "none", "mbid": null, "rels": true}
+{"artist": "TYA", "status": "none", "mbid": null, "rels": true}
+{"artist": "Semi Athletic", "status": "none", "mbid": null, "rels": true}
+{"artist": "Kid Filthy", "status": "none", "mbid": null, "rels": true}
+{"artist": "Jordel", "status": "none", "mbid": null, "rels": true}
+{"artist": "Kardias Quing", "status": "none", "mbid": null, "rels": true}
+{"artist": "Tiger Really", "status": "none", "mbid": null, "rels": true}
+{"artist": "Snowchild Edge", "status": "none", "mbid": null, "rels": true}
+{"artist": "Rebecca Sichon", "status": "none", "mbid": null, "rels": true}
+{"artist": "Fleetwood Huey", "status": "none", "mbid": null, "rels": true}
+{"artist": "Emma Alves", "status": "none", "mbid": null, "rels": true}
+{"artist": "Dawson Gool", "status": "none", "mbid": null, "rels": true}
+{"artist": "Connor Nelson", "status": "none", "mbid": null, "rels": true}
+{"artist": "Computer", "status": "none", "mbid": null, "rels": true}
+{"artist": "Bealby Point", "status": "none", "mbid": null, "rels": true}
+{"artist": "CHLO", "status": "none", "mbid": null, "rels": true}
+{"artist": "Maya Jade", "status": "none", "mbid": null, "rels": true}
+{"artist": "DOUR", "status": "none", "mbid": null, "rels": true}
+{"artist": "Revay", "status": "none", "mbid": null, "rels": true}
+{"artist": "Chopping Spree", "status": "none", "mbid": null, "rels": true}
+{"artist": "Felisha & The Jazz Rejects", "status": "none", "mbid": null, "rels": true}
+{"artist": "Seven Taviss", "status": "none", "mbid": null, "rels": true}
+{"artist": "Paris Pick", "status": "none", "mbid": null, "rels": true}
+{"artist": "Talel McBriar", "status": "none", "mbid": null, "rels": true}
+{"artist": "Francis Baptiste", "status": "none", "mbid": null, "rels": true}
+{"artist": "Dawson Forsey", "status": "none", "mbid": null, "rels": true}
+{"artist": "Triton", "status": "none", "mbid": null, "rels": true}
+{"artist": "Scarlet Fever", "status": "none", "mbid": null, "rels": true}
+{"artist": "BeeBomb", "status": "none", "mbid": null, "rels": true}
+{"artist": "Luella", "status": "none", "mbid": null, "rels": true}
+{"artist": "Elbow Kiss", "status": "none", "mbid": null, "rels": true}
+{"artist": "Couch Jams", "status": "none", "mbid": null, "rels": true}
+{"artist": "Rosita Alcantara", "status": "none", "mbid": null, "rels": true}
+{"artist": "Larisa Sanders", "status": "none", "mbid": null, "rels": true}
+{"artist": "Jenny Lea", "status": "none", "mbid": null, "rels": true}
+{"artist": "CISSE", "status": "none", "mbid": null, "rels": true}
+{"artist": "Antonio Larosa", "status": "none", "mbid": null, "rels": true}
+{"artist": "Bu Von Blume", "status": "none", "mbid": null, "rels": true}
+{"artist": "David Simard", "status": "none", "mbid": null, "rels": true}
+{"artist": "Emmett Jerome", "status": "none", "mbid": null, "rels": true}
+{"artist": "Genevieve Jaide", "status": "none", "mbid": null, "rels": true}
+{"artist": "LVL Collective", "status": "none", "mbid": null, "rels": true}
+{"artist": "Pants", "status": "none", "mbid": null, "rels": true}
+{"artist": "Spank Williams", "status": "none", "mbid": null, "rels": true}
+{"artist": "Trombonissimo", "status": "none", "mbid": null, "rels": true}
+{"artist": "Benjamin Hallman", "status": "none", "mbid": null, "rels": true}
+{"artist": "The Blind Spots", "status": "none", "mbid": null, "rels": true}
+{"artist": "Chad-E-Ose", "status": "none", "mbid": null, "rels": true}
+{"artist": "Devil’s Club", "status": "none", "mbid": null, "rels": true}
+{"artist": "EarthXStar", "status": "none", "mbid": null, "rels": true}
+{"artist": "Elijah Quinn", "status": "none", "mbid": null, "rels": true}
+{"artist": "Ezra Beaton", "status": "none", "mbid": null, "rels": true}
+{"artist": "The Hazeltones", "status": "none", "mbid": null, "rels": true}
+{"artist": "Highbush Caribou", "status": "none", "mbid": null, "rels": true}
+{"artist": "Hillbilly Scrabble", "status": "none", "mbid": null, "rels": true}
+{"artist": "iLLann", "status": "none", "mbid": null, "rels": true}
+{"artist": "The Infirmary", "status": "none", "mbid": null, "rels": true}
+{"artist": "Interstellar Jays", "status": "none", "mbid": null, "rels": true}
+{"artist": "Isaiah-John", "status": "none", "mbid": null, "rels": true}
+{"artist": "Los Gringos Salvajes", "status": "none", "mbid": null, "rels": true}
+{"artist": "LunaFlora", "status": "none", "mbid": null, "rels": true}
+{"artist": "Margot Kimmel", "status": "none", "mbid": null, "rels": true}
+{"artist": "The Moss Possums", "status": "none", "mbid": null, "rels": true}
+{"artist": "North of Nowhere", "status": "none", "mbid": null, "rels": true}
+{"artist": "Peace in Paradise", "status": "none", "mbid": null, "rels": true}
+{"artist": "Puddy Waters", "status": "none", "mbid": null, "rels": true}
+{"artist": "Scotty Dunbar", "status": "none", "mbid": null, "rels": true}
+{"artist": "Layla Marlaine", "status": "none", "mbid": null, "rels": true}
+{"artist": "Simba (Simbyez Wilson)", "status": "none", "mbid": null, "rels": true}
+{"artist": "The Swells", "status": "none", "mbid": null, "rels": true}
+{"artist": "SlyFire", "status": "none", "mbid": null, "rels": true}
+{"artist": "Zanna Unplugged", "status": "none", "mbid": null, "rels": true}
+{"artist": "The Grid Pickers", "status": "none", "mbid": null, "rels": true}
+{"artist": "Lou Kinglish", "status": "none", "mbid": null, "rels": true}
+{"artist": "Daniel Cryderman", "status": "none", "mbid": null, "rels": true}
+{"artist": "Lan Tung", "status": "none", "mbid": null, "rels": true}
+{"artist": "Dailin Hsieh", "status": "none", "mbid": null, "rels": true}
+{"artist": "Jonathan Bernard", "status": "none", "mbid": null, "rels": true}
+{"artist": "Freya Giles", "status": "none", "mbid": null, "rels": true}
+{"artist": "Cheryl Gatzke", "status": "none", "mbid": null, "rels": true}
+{"artist": "Jason Taylor", "status": "no-links", "mbid": "94acc1f6-59a0-485b-89a3-9cf94093941c", "rels": true}
+{"artist": "Ronan Nisbet", "status": "none", "mbid": null, "rels": true}
+{"artist": "Simon Stockner", "status": "none", "mbid": null, "rels": true}
+{"artist": "Sarah Burgess", "status": "none", "mbid": null, "rels": true}
+{"artist": "Lani Foster", "status": "none", "mbid": null, "rels": true}
+{"artist": "Frances Riley", "status": "none", "mbid": null, "rels": true}
+{"artist": "Chris Vick", "status": "none", "mbid": null, "rels": true}
+{"artist": "Julia Hill Sorochan", "status": "none", "mbid": null, "rels": true}
+{"artist": "Chris Barton", "status": "none", "mbid": null, "rels": true}
+{"artist": "Warren Gavronsky", "status": "none", "mbid": null, "rels": true}
+{"artist": "Carla Lennert", "status": "none", "mbid": null, "rels": true}
+{"artist": "Nicki Nattress", "status": "none", "mbid": null, "rels": true}
+{"artist": "Mike McKerracher", "status": "none", "mbid": null, "rels": true}
+{"artist": "Rachel McKerracher", "status": "none", "mbid": null, "rels": true}
+{"artist": "Audrey McKerracher", "status": "none", "mbid": null, "rels": true}
+{"artist": "Daniel Talstra", "status": "none", "mbid": null, "rels": true}
+{"artist": "Mark Fleming", "status": "none", "mbid": null, "rels": true}
+{"artist": "Lo Keynote", "status": "none", "mbid": null, "rels": true}
+{"artist": "Ndidi Cascade", "status": "none", "mbid": null, "rels": true}
+{"artist": "Autokrat", "status": "none", "mbid": null, "rels": true}
+{"artist": "Stroker DeLuca", "status": "none", "mbid": null, "rels": true}
+{"artist": "A-Ro", "status": "none", "mbid": null, "rels": true}
+{"artist": "Slippery Elm", "status": "none", "mbid": null, "rels": true}
+{"artist": "Free-D Ohm", "status": "none", "mbid": null, "rels": true}
+{"artist": "Elekwent Folk", "status": "none", "mbid": null, "rels": true}
+{"artist": "Anonymouz", "status": "none", "mbid": null, "rels": true}
+{"artist": "Dale Evans", "status": "none", "mbid": null, "rels": true}
+{"artist": "Daybi", "status": "no-links", "mbid": "2ddd52a6-636b-4bb6-ac0f-b7bfd78da7cf", "rels": true}
+{"artist": "SoS (Sauce)", "status": "none", "mbid": null, "rels": true}
+{"artist": "Big Koob", "status": "none", "mbid": null, "rels": true}
+{"artist": "Casta Troy", "status": "none", "mbid": null, "rels": true}
+{"artist": "Gold Kid", "status": "none", "mbid": null, "rels": true}
+{"artist": "OG Vega", "status": "none", "mbid": null, "rels": true}
+{"artist": "Kleen Prinz", "status": "none", "mbid": null, "rels": true}
+{"artist": "Poetikz", "status": "none", "mbid": null, "rels": true}
+{"artist": "DJ Denise", "status": "none", "mbid": null, "rels": true}
+{"artist": "Vic Vodka", "status": "none", "mbid": null, "rels": true}
+{"artist": "I.R.Evan", "status": "none", "mbid": null, "rels": true}
+{"artist": "iCON Hip-Hop", "status": "none", "mbid": null, "rels": true}
+{"artist": "Abby McCartney", "status": "none", "mbid": null, "rels": true}
+{"artist": "Eltata y Los Taqueros", "status": "none", "mbid": null, "rels": true}
+{"artist": "Jonathan Sonier", "status": "none", "mbid": null, "rels": true}
+{"artist": "Josh Bravener & The Hypochondriacs", "status": "none", "mbid": null, "rels": true}
+{"artist": "Kylie Fox", "status": "none", "mbid": null, "rels": true}
+{"artist": "Leandra LeBlanc", "status": "none", "mbid": null, "rels": true}
+{"artist": "Matt Boudreau", "status": "none", "mbid": null, "rels": true}
+{"artist": "One8tea", "status": "none", "mbid": null, "rels": true}
+{"artist": "Sam Mallais", "status": "none", "mbid": null, "rels": true}
+{"artist": "Tyler Hache", "status": "none", "mbid": null, "rels": true}
+{"artist": "Chris Belliveau", "status": "none", "mbid": null, "rels": true}
+{"artist": "LeBaron", "status": "none", "mbid": null, "rels": true}
+{"artist": "Maude Sonier", "status": "none", "mbid": null, "rels": true}
+{"artist": "Samuel Bourgeois", "status": "linked", "mbid": "9a14827d-a9da-43c2-ad43-bed009d814fa", "rels": true}
+{"artist": "Eddie Young", "status": "none", "mbid": null, "rels": true}
+{"artist": "Emma Chevarie", "status": "none", "mbid": null, "rels": true}
+{"artist": "Erin Bond", "status": "none", "mbid": null, "rels": true}
+{"artist": "Greg Webber", "status": "none", "mbid": null, "rels": true}
+{"artist": "Jan Martin", "status": "none", "mbid": null, "rels": true}
+{"artist": "Lucie Aounetse", "status": "none", "mbid": null, "rels": true}
+{"artist": "Max Bujold", "status": "none", "mbid": null, "rels": true}
+{"artist": "Patrick Martin", "status": "none", "mbid": null, "rels": true}
+{"artist": "Terry Whalen", "status": "none", "mbid": null, "rels": true}
+{"artist": "Beauxmont", "status": "none", "mbid": null, "rels": true}
+{"artist": "Écarlate", "status": "none", "mbid": null, "rels": true}
+{"artist": "Les Hay Babies", "status": "none", "mbid": null, "rels": true}
+{"artist": "Renz Rossi", "status": "none", "mbid": null, "rels": true}
+{"artist": "Yves Marchand", "status": "none", "mbid": null, "rels": true}
+{"artist": "Chillteens", "status": "none", "mbid": null, "rels": true}
+{"artist": "Jessica Rhaye", "status": "none", "mbid": null, "rels": true}
+{"artist": "Bill Preeper", "status": "none", "mbid": null, "rels": true}
+{"artist": "Sandy MacKay", "status": "none", "mbid": null, "rels": true}
+{"artist": "McKinley Morrison & Williams", "status": "linked", "mbid": "9892cbab-05c7-4fd3-abda-88d10e0ccce3", "rels": true}
+{"artist": "Motherhood", "status": "none", "mbid": null, "rels": true}
+{"artist": "Owen Steel", "status": "linked", "mbid": "675dc0f3-4c29-4b75-83bb-227935929c87", "rels": true}
+{"artist": "Before The Dinosaurs", "status": "linked", "mbid": "e485537b-e818-47f0-b00b-b1f73e342a5e", "rels": true}
+{"artist": "Apryll Aileen", "status": "none", "mbid": null, "rels": true}
+{"artist": "Aubin pi la S.C.B.", "status": "linked", "mbid": "eebf84e5-15e6-433d-8d63-bf223aa8d691", "rels": true}
+{"artist": "Ben Kunder", "status": "none", "mbid": null, "rels": true}
+{"artist": "Gizmo", "status": "none", "mbid": null, "rels": true}
+{"artist": "The Umbrella Collective", "status": "none", "mbid": null, "rels": true}
+{"artist": "Connor Nabuurs", "status": "none", "mbid": null, "rels": true}
+{"artist": "Spencer Swaine", "status": "none", "mbid": null, "rels": true}
+{"artist": "Paul Chiasson", "status": "none", "mbid": null, "rels": true}
+{"artist": "Emilea May", "status": "none", "mbid": null, "rels": true}
+{"artist": "Amy & Arwen", "status": "none", "mbid": null, "rels": true}
+{"artist": "Cameron Nickerson", "status": "linked", "mbid": "19911cc4-8b8e-48bd-80df-4e708f6f5cc5", "rels": true}
+{"artist": "Badi", "status": "none", "mbid": null, "rels": true}
+{"artist": "DJ Ubuntu", "status": "none", "mbid": null, "rels": true}
+{"artist": "PINEO & LOEB", "status": "linked", "mbid": "a4606c27-bfbe-411a-a6f7-8c250444dd41", "rels": true}
+{"artist": "Minus World", "status": "none", "mbid": null, "rels": true}
+{"artist": "HARMZ", "status": "linked", "mbid": "ab0fd05d-3157-4426-8f9d-7275c2c255a2", "rels": true}
+{"artist": "Acalus", "status": "no-links", "mbid": "d10c64d2-6af2-4e44-8035-5c36dc559ccb", "rels": true}
+{"artist": "Dusty Halos", "status": "none", "mbid": null, "rels": true}
+{"artist": "Gearl", "status": "none", "mbid": null, "rels": true}
+{"artist": "Ghettochild", "status": "none", "mbid": null, "rels": true}
+{"artist": "Corey Writes", "status": "none", "mbid": null, "rels": true}
+{"artist": "Mayaya", "status": "linked", "mbid": "be5c21b6-9a29-4b5d-b00e-a5119045f2d6", "rels": true}
+{"artist": "Snez", "status": "none", "mbid": null, "rels": true}
+{"artist": "Cherise Basque", "status": "none", "mbid": null, "rels": true}
+{"artist": "DeeDee Austin", "status": "linked", "mbid": "6fed12f2-5afe-4e06-8a35-29ada7f1993c", "rels": true}
+{"artist": "ANGEL GIRL", "status": "none", "mbid": null, "rels": true}
+{"artist": "Last Call Chernobyl", "status": "none", "mbid": null, "rels": true}
+{"artist": "Puffin", "status": "none", "mbid": null, "rels": true}
+{"artist": "Where Giants Once Stood", "status": "none", "mbid": null, "rels": true}
+{"artist": "Burry", "status": "none", "mbid": null, "rels": true}
+{"artist": "Customer Service", "status": "none", "mbid": null, "rels": true}
+{"artist": "Malcolm MacNeil", "status": "none", "mbid": null, "rels": true}
+{"artist": "Brett Matthews", "status": "none", "mbid": null, "rels": true}
+{"artist": "Mat Hughes", "status": "none", "mbid": null, "rels": true}
+{"artist": "La Jam Acadjen de Sylvie Marie", "status": "none", "mbid": null, "rels": true}
+{"artist": "Serena Wu", "status": "none", "mbid": null, "rels": true}
+{"artist": "Vickie Deveau", "status": "none", "mbid": null, "rels": true}
+{"artist": "Beauts", "status": "none", "mbid": null, "rels": true}
+{"artist": "Alex LeBlanc", "status": "none", "mbid": null, "rels": true}
+{"artist": "Alex Meade", "status": "none", "mbid": null, "rels": true}
+{"artist": "Owen Williams", "status": "none", "mbid": null, "rels": true}
+{"artist": "Derek Martin", "status": "none", "mbid": null, "rels": true}
+{"artist": "Dylan Mombourquette", "status": "none", "mbid": null, "rels": true}
+{"artist": "Leah Timmins", "status": "none", "mbid": null, "rels": true}
+{"artist": "Martin Maunder", "status": "none", "mbid": null, "rels": true}
+{"artist": "Patrick Coleman", "status": "none", "mbid": null, "rels": true}
+{"artist": "Bus People", "status": "none", "mbid": null, "rels": true}
+{"artist": "Jake Nicoll", "status": "none", "mbid": null, "rels": true}
+{"artist": "Selina Boland", "status": "none", "mbid": null, "rels": true}
+{"artist": "Swimming", "status": "none", "mbid": null, "rels": true}
+{"artist": "Robert Humber", "status": "none", "mbid": null, "rels": true}
+{"artist": "Mallory Johnson", "status": "none", "mbid": null, "rels": true}
+{"artist": "Rev. Dave and the Sin Eaters", "status": "none", "mbid": null, "rels": true}
+{"artist": "Andrew Gosse", "status": "none", "mbid": null, "rels": true}
+{"artist": "Ben Diamond", "status": "none", "mbid": null, "rels": true}
+{"artist": "DOEUX", "status": "none", "mbid": null, "rels": true}
+{"artist": "Medians", "status": "none", "mbid": null, "rels": true}
+{"artist": "STURNE", "status": "none", "mbid": null, "rels": true}
+{"artist": "R Sheaves", "status": "none", "mbid": null, "rels": true}
+{"artist": "Youngtree and Carole Bee", "status": "none", "mbid": null, "rels": true}
+{"artist": "ANIL", "status": "none", "mbid": null, "rels": true}
+{"artist": "Ben’s Ekman Spiral", "status": "none", "mbid": null, "rels": true}
+{"artist": "De la Paz Latin Music", "status": "none", "mbid": null, "rels": true}
+{"artist": "XIA-3", "status": "none", "mbid": null, "rels": true}
+{"artist": "Atlantic Jazz Collective", "status": "none", "mbid": null, "rels": true}
+{"artist": "Mick Davis and Thin Love", "status": "none", "mbid": null, "rels": true}
+{"artist": "Elizabeth Sheppard", "status": "none", "mbid": null, "rels": true}
+{"artist": "Duane Andrews And The Hot Club Of Conception Bay", "status": "none", "mbid": null, "rels": true}
+{"artist": "Wanderer Born", "status": "none", "mbid": null, "rels": true}
+{"artist": "Natasha Blackwood", "status": "none", "mbid": null, "rels": true}
+{"artist": "Kaspam Cult", "status": "none", "mbid": null, "rels": true}
+{"artist": "Paranoia", "status": "ambiguous", "mbid": null, "rels": true}
+{"artist": "Smoke Signals", "status": "none", "mbid": null, "rels": true}
+{"artist": "Wild Step", "status": "none", "mbid": null, "rels": true}
+{"artist": "Thandi Marie", "status": "none", "mbid": null, "rels": true}
+{"artist": "Evan Watts Smith", "status": "linked", "mbid": "2546c81b-8c73-416b-a6db-b349dcd95cfd", "rels": true}
+{"artist": "Ever Sweet", "status": "none", "mbid": null, "rels": true}
+{"artist": "The Lost & Found", "status": "none", "mbid": null, "rels": true}
+{"artist": "Zealya", "status": "none", "mbid": null, "rels": true}
+{"artist": "Mike Jenkins", "status": "none", "mbid": null, "rels": true}
+{"artist": "Jim Payne and Fergus O’Byrne", "status": "none", "mbid": null, "rels": true}
+{"artist": "Hunter Madden", "status": "none", "mbid": null, "rels": true}
+{"artist": "Jamie Moran", "status": "none", "mbid": null, "rels": true}
+{"artist": "Clint Curtis", "status": "none", "mbid": null, "rels": true}
+{"artist": "Daniel Adams", "status": "none", "mbid": null, "rels": true}
+{"artist": "Dean Stairs", "status": "none", "mbid": null, "rels": true}
+{"artist": "Lou McDonald", "status": "none", "mbid": null, "rels": true}
+{"artist": "Matt Dines", "status": "none", "mbid": null, "rels": true}
+{"artist": "Michelle LaCour", "status": "none", "mbid": null, "rels": true}
+{"artist": "Rob Power", "status": "none", "mbid": null, "rels": true}
+{"artist": "Ana Luisa Ramos", "status": "none", "mbid": null, "rels": true}
+{"artist": "Silver Wolf Band", "status": "linked", "mbid": "b59758c9-138f-450c-bb54-d607149cf7bc", "rels": true}
+{"artist": "Bill Brennan", "status": "linked", "mbid": "d74e0737-0bbb-4502-9dd1-891a1dc988da", "rels": true}
+{"artist": "Andy McNeill", "status": "no-links", "mbid": "2d12595c-520b-49c0-abb2-cc9e991c3b8c", "rels": true}
+{"artist": "Yes, Officer", "status": "none", "mbid": null, "rels": true}
+{"artist": "Nana Kwame Obese", "status": "none", "mbid": null, "rels": true}
+{"artist": "Irish Descendants", "status": "linked", "mbid": "af2e9239-1112-4eae-9d94-7670701b1dc8", "rels": true}
+{"artist": "Louis McDonald", "status": "none", "mbid": null, "rels": true}
+{"artist": "NiniJegz", "status": "none", "mbid": null, "rels": true}
+{"artist": "Rooky Kamiz", "status": "none", "mbid": null, "rels": true}
+{"artist": "VOFALOGO", "status": "none", "mbid": null, "rels": true}
+{"artist": "Emilio Del Canto", "status": "none", "mbid": null, "rels": true}
+{"artist": "FOOTWURK", "status": "none", "mbid": null, "rels": true}
+{"artist": "Theo Noble", "status": "linked", "mbid": "8a48ce05-3b8e-4a63-b219-1e929d2451ac", "rels": true}
+{"artist": "RaytheNihilist", "status": "none", "mbid": null, "rels": true}
+{"artist": "Skizza", "status": "none", "mbid": null, "rels": true}
+{"artist": "AK Productions", "status": "none", "mbid": null, "rels": true}
+{"artist": "Servant", "status": "none", "mbid": null, "rels": true}
+{"artist": "The Uplift Duo", "status": "none", "mbid": null, "rels": true}
+{"artist": "Ember Belladonna", "status": "linked", "mbid": "aad4a2a9-7048-4ee2-897d-37ad29d6f68e", "rels": true}
+{"artist": "Sean Bougie", "status": "none", "mbid": null, "rels": true}
+{"artist": "Grimelda", "status": "none", "mbid": null, "rels": true}
+{"artist": "Riversleem", "status": "none", "mbid": null, "rels": true}
+{"artist": "Roughsleeper", "status": "none", "mbid": null, "rels": true}
+{"artist": "Greg Orrē", "status": "none", "mbid": null, "rels": true}
+{"artist": "Halle Ponton", "status": "none", "mbid": null, "rels": true}
+{"artist": "TOVA", "status": "none", "mbid": null, "rels": true}
+{"artist": "vbnd", "status": "none", "mbid": null, "rels": true}
+{"artist": "GreenWing", "status": "none", "mbid": null, "rels": true}
+{"artist": "The Radiant", "status": "none", "mbid": null, "rels": true}
+{"artist": "Farideh", "status": "none", "mbid": null, "rels": true}
+{"artist": "Makari", "status": "none", "mbid": null, "rels": true}
+{"artist": "Aurora Bella", "status": "none", "mbid": null, "rels": true}
+{"artist": "The Gladstone", "status": "none", "mbid": null, "rels": true}
+{"artist": "Velvet Threads", "status": "none", "mbid": null, "rels": true}
+{"artist": "Cupid’s Heart", "status": "none", "mbid": null, "rels": true}
+{"artist": "Aspen Beveridge", "status": "none", "mbid": null, "rels": true}
+{"artist": "Bart McKay", "status": "none", "mbid": null, "rels": true}
+{"artist": "Chris Dimas", "status": "none", "mbid": null, "rels": true}
+{"artist": "Madison Nicol", "status": "none", "mbid": null, "rels": true}
+{"artist": "Matt Stinn", "status": "none", "mbid": null, "rels": true}
+{"artist": "Riley McLennan", "status": "none", "mbid": null, "rels": true}
+{"artist": "Walter Jeworski", "status": "none", "mbid": null, "rels": true}
+{"artist": "Cassandra Stinn", "status": "none", "mbid": null, "rels": true}
+{"artist": "Crowvenn", "status": "none", "mbid": null, "rels": true}
+{"artist": "Dreyspurpo", "status": "none", "mbid": null, "rels": true}
+{"artist": "MJ Meehan", "status": "none", "mbid": null, "rels": true}
+{"artist": "Nyle Segovia", "status": "none", "mbid": null, "rels": true}
+{"artist": "Patrick Hardy", "status": "none", "mbid": null, "rels": true}
+{"artist": "Sëdèzë", "status": "none", "mbid": null, "rels": true}
+{"artist": "Tracy Waters", "status": "none", "mbid": null, "rels": true}
+{"artist": "Yarbo", "status": "none", "mbid": null, "rels": true}
+{"artist": "Mama Cutsworth", "status": "none", "mbid": null, "rels": true}
+{"artist": "Alpha Toshineza", "status": "linked", "mbid": "bb4ead81-73d1-4404-b284-d4c1b1176fb6", "rels": true}
+{"artist": "Dominique Adams", "status": "none", "mbid": null, "rels": true}
+{"artist": "Doug McArthur", "status": "none", "mbid": null, "rels": true}
+{"artist": "Dr Henry Band", "status": "none", "mbid": null, "rels": true}
+{"artist": "Flora Luna", "status": "none", "mbid": null, "rels": true}
+{"artist": "Foxwell", "status": "none", "mbid": null, "rels": true}
+{"artist": "French Class", "status": "none", "mbid": null, "rels": true}
+{"artist": "Guilty Sleep", "status": "none", "mbid": null, "rels": true}
+{"artist": "Hello Fiasco", "status": "none", "mbid": null, "rels": true}
+{"artist": "James Culleton", "status": "none", "mbid": null, "rels": true}
+{"artist": "Jane & Kyle", "status": "none", "mbid": null, "rels": true}
+{"artist": "Jasmine Elyse", "status": "none", "mbid": null, "rels": true}
+{"artist": "JPQ", "status": "none", "mbid": null, "rels": true}
+{"artist": "Justin Lacroix Band", "status": "none", "mbid": null, "rels": true}
+{"artist": "Leaf Rapids", "status": "none", "mbid": null, "rels": true}
+{"artist": "Leon’s Getting Larger", "status": "none", "mbid": null, "rels": true}
+{"artist": "Lotai", "status": "none", "mbid": null, "rels": true}
+{"artist": "Micah!", "status": "none", "mbid": null, "rels": true}
+{"artist": "Neighbour Andy", "status": "none", "mbid": null, "rels": true}
+{"artist": "Orvis", "status": "none", "mbid": null, "rels": true}
+{"artist": "Raver Rouge", "status": "none", "mbid": null, "rels": true}
+{"artist": "Serge Paul", "status": "none", "mbid": null, "rels": true}
+{"artist": "Show Pony", "status": "linked", "mbid": "27c71448-e531-4448-af24-9182c05886ba", "rels": true}
+{"artist": "sundayclub", "status": "linked", "mbid": "4d1afd0e-103c-4d01-8199-48f1a25f0f5e", "rels": true}
+{"artist": "The Love Letters", "status": "none", "mbid": null, "rels": true}
+{"artist": "The Solutions", "status": "none", "mbid": null, "rels": true}
+{"artist": "ZRADA", "status": "none", "mbid": null, "rels": true}
+{"artist": "Robyn Ashley", "status": "none", "mbid": null, "rels": true}
+{"artist": "Kiarrah Ireland", "status": "none", "mbid": null, "rels": true}
+{"artist": "Tea Fannie", "status": "none", "mbid": null, "rels": true}
+{"artist": "Laur Elle", "status": "none", "mbid": null, "rels": true}
+{"artist": "Justin Sutton & North of 49", "status": "none", "mbid": null, "rels": true}
+{"artist": "DEKR", "status": "none", "mbid": null, "rels": true}
+{"artist": "Robert Walsh", "status": "none", "mbid": null, "rels": true}
+{"artist": "Evie Marsten", "status": "none", "mbid": null, "rels": true}
+{"artist": "Aveya", "status": "none", "mbid": null, "rels": true}
+{"artist": "Mariel Buckley", "status": "linked", "mbid": "01e0f1b3-2bf2-41f1-8f28-4eab3dca66c0", "rels": true}
+{"artist": "Ken Stead", "status": "none", "mbid": null, "rels": true}
+{"artist": "Marcus Trummer", "status": "none", "mbid": null, "rels": true}
+{"artist": "Cheyanne Summer", "status": "none", "mbid": null, "rels": true}
+{"artist": "Swallow Sorrow", "status": "none", "mbid": null, "rels": true}
+{"artist": "Brayden Lowe", "status": "none", "mbid": null, "rels": true}
+{"artist": "Buddy Elliot", "status": "none", "mbid": null, "rels": true}
+{"artist": "Aqeel John", "status": "none", "mbid": null, "rels": true}
+{"artist": "Bijaan", "status": "none", "mbid": null, "rels": true}
+{"artist": "Cody Hall", "status": "none", "mbid": null, "rels": true}
+{"artist": "Mbira Renaissance Band", "status": "none", "mbid": null, "rels": true}
+{"artist": "Joelle Rose", "status": "none", "mbid": null, "rels": true}
+{"artist": "Mistaken for Wayne", "status": "none", "mbid": null, "rels": true}
+{"artist": "Wade Montpellier", "status": "none", "mbid": null, "rels": true}
+{"artist": "Moonriivr", "status": "none", "mbid": null, "rels": true}
+{"artist": "Angelique Francis Band", "status": "none", "mbid": null, "rels": true}
+{"artist": "Lifers", "status": "none", "mbid": null, "rels": true}
+{"artist": "The Vaudevillian", "status": "none", "mbid": null, "rels": true}
+{"artist": "Willem James Cowan", "status": "none", "mbid": null, "rels": true}
+{"artist": "YASSiN & Sean Terrio", "status": "none", "mbid": null, "rels": true}
+{"artist": "John Fellner", "status": "none", "mbid": null, "rels": true}
+{"artist": "Jennarie", "status": "none", "mbid": null, "rels": true}
+{"artist": "Cam Brown", "status": "none", "mbid": null, "rels": true}
+{"artist": "Afternoon Bike Ride", "status": "none", "mbid": null, "rels": true}
+{"artist": "Original Gros Bonnet", "status": "none", "mbid": null, "rels": true}
+{"artist": "Chiara Savasta", "status": "none", "mbid": null, "rels": true}
+{"artist": "Fine Food Market", "status": "none", "mbid": null, "rels": true}
+{"artist": "Rachel Bobbitt", "status": "none", "mbid": null, "rels": true}
+{"artist": "Bangerz Brass", "status": "none", "mbid": null, "rels": true}
+{"artist": "Jesse Ryan", "status": "no-links", "mbid": "e45a857a-cb1e-40ea-b7ec-3e271abe3e3a", "rels": true}
+{"artist": "Annie-Claude Deschênes", "status": "none", "mbid": null, "rels": true}
+{"artist": "BéLi", "status": "none", "mbid": null, "rels": true}
+{"artist": "Bouvier Normal", "status": "none", "mbid": null, "rels": true}
+{"artist": "distraction4ever", "status": "linked", "mbid": "ac4a6977-cc1e-4a4e-a1f2-5e6dd39aa4a6", "rels": true}
+{"artist": "Fernie", "status": "none", "mbid": null, "rels": true}
+{"artist": "Hologramme", "status": "none", "mbid": null, "rels": true}
+{"artist": "JASHIM", "status": "none", "mbid": null, "rels": true}
+{"artist": "Koko Love", "status": "none", "mbid": null, "rels": true}
+{"artist": "Léonie Gray", "status": "none", "mbid": null, "rels": true}
+{"artist": "Patche", "status": "none", "mbid": null, "rels": true}
+{"artist": "Virginie B", "status": "none", "mbid": null, "rels": true}
+{"artist": "Zale Seck", "status": "none", "mbid": null, "rels": true}
+{"artist": "Lenny Fabian", "status": "none", "mbid": null, "rels": true}
+{"artist": "Munya Mataruse", "status": "none", "mbid": null, "rels": true}
+{"artist": "Agony of the Leaves", "status": "none", "mbid": null, "rels": true}
+{"artist": "Abe Drennan", "status": "none", "mbid": null, "rels": true}
+{"artist": "Marie MacDonald", "status": "none", "mbid": null, "rels": true}
+{"artist": "Crook The Kid", "status": "none", "mbid": null, "rels": true}
+{"artist": "Yellowknives Dene Drummers", "status": "none", "mbid": null, "rels": true}
+{"artist": "Payton Vogt", "status": "none", "mbid": null, "rels": true}
+{"artist": "Priscilla’s Revenge", "status": "none", "mbid": null, "rels": true}
+{"artist": "The Housemen", "status": "none", "mbid": null, "rels": true}
+{"artist": "Johnny Landry", "status": "none", "mbid": null, "rels": true}
+{"artist": "Vincent McLeod", "status": "none", "mbid": null, "rels": true}
+{"artist": "Lois Ray McInnis", "status": "none", "mbid": null, "rels": true}
+{"artist": "Angela Bernarde", "status": "none", "mbid": null, "rels": true}
+{"artist": "Sukh Kairon", "status": "none", "mbid": null, "rels": true}
+{"artist": "Refrijerater", "status": "none", "mbid": null, "rels": true}
+{"artist": "Tony Castillo", "status": "none", "mbid": null, "rels": true}
+{"artist": "Pat Braden", "status": "none", "mbid": null, "rels": true}
+{"artist": "Graeme Peters", "status": "none", "mbid": null, "rels": true}
+{"artist": "Robert Van Lieshout", "status": "none", "mbid": null, "rels": true}
+{"artist": "Ellorie McKnight", "status": "none", "mbid": null, "rels": true}
+{"artist": "Joshua Quamariaq", "status": "none", "mbid": null, "rels": true}
+{"artist": "Lance Dobinson", "status": "none", "mbid": null, "rels": true}
+{"artist": "Cam Galloway", "status": "none", "mbid": null, "rels": true}
+{"artist": "Johnny Anderson", "status": "none", "mbid": null, "rels": true}
+{"artist": "B.Knox", "status": "none", "mbid": null, "rels": true}
+{"artist": "Jolie Anastasia", "status": "none", "mbid": null, "rels": true}
+{"artist": "Noah Ruttan", "status": "none", "mbid": null, "rels": true}
+{"artist": "Barstool Confession", "status": "none", "mbid": null, "rels": true}
+{"artist": "Dayna Reid", "status": "none", "mbid": null, "rels": true}
+{"artist": "Catherine Little and Gregory Myra", "status": "none", "mbid": null, "rels": true}
+{"artist": "Collateral", "status": "none", "mbid": null, "rels": true}
+{"artist": "Nathan Trentelman", "status": "none", "mbid": null, "rels": true}
+{"artist": "Hieropunk", "status": "none", "mbid": null, "rels": true}
+{"artist": "DJ Hotcue", "status": "none", "mbid": null, "rels": true}
+{"artist": "Adrianna Ciccone & Ellen Gibling", "status": "none", "mbid": null, "rels": true}
+{"artist": "Cassie Mann", "status": "none", "mbid": null, "rels": true}
+{"artist": "Connor Booth", "status": "none", "mbid": null, "rels": true}
+{"artist": "JR Smith", "status": "none", "mbid": null, "rels": true}
+{"artist": "Siobhan Martin", "status": "none", "mbid": null, "rels": true}
+{"artist": "Victoria Cameron", "status": "none", "mbid": null, "rels": true}
+{"artist": "Future Dad (John Mullane)", "status": "none", "mbid": null, "rels": true}
+{"artist": "Jordan “Tempo” Farmer", "status": "none", "mbid": null, "rels": true}
+{"artist": "Devin Farrell", "status": "none", "mbid": null, "rels": true}
+{"artist": "Mike “Sheppy” Shepherd", "status": "none", "mbid": null, "rels": true}
+{"artist": "Richard “Nulo” McNeil", "status": "none", "mbid": null, "rels": true}
+{"artist": "Sara Martin", "status": "none", "mbid": null, "rels": true}
+{"artist": "Skizza & AK Productions", "status": "none", "mbid": null, "rels": true}
+{"artist": "Catie St. Germain", "status": "none", "mbid": null, "rels": true}
+{"artist": "Desiree Dorion", "status": "none", "mbid": null, "rels": true}
+{"artist": "JR Charron", "status": "none", "mbid": null, "rels": true}
+{"artist": "Petric", "status": "none", "mbid": null, "rels": true}
+{"artist": "The Sean Taylor Band", "status": "none", "mbid": null, "rels": true}
+{"artist": "Clinton Giesbrecht", "status": "none", "mbid": null, "rels": true}
+{"artist": "Lachlan McLean", "status": "none", "mbid": null, "rels": true}
+{"artist": "Levi Winters", "status": "none", "mbid": null, "rels": true}
+{"artist": "Rylan Knaggs", "status": "none", "mbid": null, "rels": true}
+{"artist": "Sean Borton", "status": "none", "mbid": null, "rels": true}
+{"artist": "Troy Flamand", "status": "none", "mbid": null, "rels": true}
+{"artist": "Dan Poperechny", "status": "none", "mbid": null, "rels": true}
+{"artist": "Greg Dunstan", "status": "none", "mbid": null, "rels": true}
+{"artist": "Josh Gareau", "status": "none", "mbid": null, "rels": true}
+{"artist": "Leroy Constant", "status": "none", "mbid": null, "rels": true}
+{"artist": "Meg Dolovich", "status": "no-links", "mbid": "62e00aaf-5eb2-4a11-aa70-2eb713727529", "rels": true}
+{"artist": "Doug Yuel", "status": "none", "mbid": null, "rels": true}
+{"artist": "Jeff Kula", "status": "none", "mbid": null, "rels": true}
+{"artist": "Jonathan Peters", "status": "none", "mbid": null, "rels": true}
+{"artist": "Josh Ayers", "status": "none", "mbid": null, "rels": true}
+{"artist": "Stephen Broadhurst", "status": "none", "mbid": null, "rels": true}
+{"artist": "Tyler Martens", "status": "none", "mbid": null, "rels": true}
+{"artist": "Blaine Badiuk", "status": "none", "mbid": null, "rels": true}
+{"artist": "Brad Moggie", "status": "none", "mbid": null, "rels": true}
+{"artist": "James Klassen", "status": "none", "mbid": null, "rels": true}
+{"artist": "Michael Audette", "status": "none", "mbid": null, "rels": true}
+{"artist": "Real Comeault", "status": "none", "mbid": null, "rels": true}
+{"artist": "Luminos Ensemble", "status": "none", "mbid": null, "rels": true}
+{"artist": "PEI Symphony Orchestra", "status": "none", "mbid": null, "rels": true}
+{"artist": "Andrew A. Melzer", "status": "none", "mbid": null, "rels": true}
+{"artist": "Carlie Howell", "status": "none", "mbid": null, "rels": true}
+{"artist": "Dan Rowswell", "status": "none", "mbid": null, "rels": true}
+{"artist": "Aaron Comeau", "status": "none", "mbid": null, "rels": true}
+{"artist": "Todd MacLean", "status": "none", "mbid": null, "rels": true}
+{"artist": "BraedenV", "status": "none", "mbid": null, "rels": true}
+{"artist": "Diddyturner", "status": "none", "mbid": null, "rels": true}
+{"artist": "Cavy", "status": "none", "mbid": null, "rels": true}
+{"artist": "DEMIXX", "status": "none", "mbid": null, "rels": true}
+{"artist": "Norm Strangely", "status": "none", "mbid": null, "rels": true}
+{"artist": "Bettii", "status": "none", "mbid": null, "rels": true}
+{"artist": "Luisa Güiza", "status": "none", "mbid": null, "rels": true}
+{"artist": "Pearly Gates", "status": "none", "mbid": null, "rels": true}
+{"artist": "KINLEY", "status": "ambiguous", "mbid": null, "rels": true}
+{"artist": "Maya Márquez", "status": "none", "mbid": null, "rels": true}
+{"artist": "Mat MacEachern", "status": "none", "mbid": null, "rels": true}
+{"artist": "Keelin Wedge", "status": "none", "mbid": null, "rels": true}
+{"artist": "Brad Milligan", "status": "none", "mbid": null, "rels": true}
+{"artist": "Elsie", "status": "none", "mbid": null, "rels": true}
+{"artist": "Phase II", "status": "none", "mbid": null, "rels": true}
+{"artist": "Sirène et Matelot", "status": "none", "mbid": null, "rels": true}
+{"artist": "Vishtèn Connexions", "status": "none", "mbid": null, "rels": true}
+{"artist": "Lefunk", "status": "none", "mbid": null, "rels": true}
+{"artist": "20 Eyes", "status": "none", "mbid": null, "rels": true}
+{"artist": "Heather", "status": "none", "mbid": null, "rels": true}
+{"artist": "Oakdrive", "status": "none", "mbid": null, "rels": true}
+{"artist": "Adam Gallant", "status": "none", "mbid": null, "rels": true}
+{"artist": "Colin Buchanan", "status": "none", "mbid": null, "rels": true}
+{"artist": "Jon Matthews (The Sound Mill)", "status": "none", "mbid": null, "rels": true}
+{"artist": "Craig Fair", "status": "none", "mbid": null, "rels": true}
+{"artist": "Chris Knox", "status": "none", "mbid": null, "rels": true}
+{"artist": "Shawna Picard", "status": "none", "mbid": null, "rels": true}
+{"artist": "Atlantic Jazz Collective feat. Norma Winstone and Joe La Barbera", "status": "none", "mbid": null, "rels": true}
+{"artist": "Cleo Leigh", "status": "none", "mbid": null, "rels": true}
+{"artist": "Nancy Music", "status": "none", "mbid": null, "rels": true}
+{"artist": "QUIN", "status": "none", "mbid": null, "rels": true}
+{"artist": "Book Club", "status": "none", "mbid": null, "rels": true}
+{"artist": "Hangyourhead", "status": "none", "mbid": null, "rels": true}
+{"artist": "Life Crisis", "status": "none", "mbid": null, "rels": true}
+{"artist": "Little Fauna", "status": "none", "mbid": null, "rels": true}
+{"artist": "Rad Gushue", "status": "none", "mbid": null, "rels": true}
+{"artist": "Rat & Ratt", "status": "none", "mbid": null, "rels": true}
+{"artist": "Snitfit", "status": "none", "mbid": null, "rels": true}
+{"artist": "Steel Toe", "status": "none", "mbid": null, "rels": true}
+{"artist": "Jack Etchegary", "status": "none", "mbid": null, "rels": true}
+{"artist": "Janet Cull", "status": "none", "mbid": null, "rels": true}
+{"artist": "Cell Deth", "status": "none", "mbid": null, "rels": true}
+{"artist": "Liftkit", "status": "none", "mbid": null, "rels": true}
+{"artist": "Andy and the Dannys", "status": "none", "mbid": null, "rels": true}
+{"artist": "Beverly Elizabeth and Glenn-Copeland", "status": "none", "mbid": null, "rels": true}
+{"artist": "Durex", "status": "none", "mbid": null, "rels": true}
+{"artist": "Frankie Teardrop", "status": "none", "mbid": null, "rels": true}
+{"artist": "Fraud Perry", "status": "none", "mbid": null, "rels": true}
+{"artist": "Laughing", "status": "none", "mbid": null, "rels": true}
+{"artist": "Mantourage", "status": "none", "mbid": null, "rels": true}
+{"artist": "Marleana Moore", "status": "none", "mbid": null, "rels": true}
+{"artist": "Miesha and the Spanks", "status": "none", "mbid": null, "rels": true}
+{"artist": "Marc McLaughlin", "status": "none", "mbid": null, "rels": true}
+{"artist": "Dehcho", "status": "none", "mbid": null, "rels": true}
+{"artist": "Hendrika", "status": "none", "mbid": null, "rels": true}
+{"artist": "Ruby Singh’s Vox. Infold II", "status": "none", "mbid": null, "rels": true}
+{"artist": "Peggy Lee & Cole Schmidt", "status": "none", "mbid": null, "rels": true}
+{"artist": "David Ziehr", "status": "none", "mbid": null, "rels": true}
+{"artist": "Kevvy", "status": "none", "mbid": null, "rels": true}
+{"artist": "Ryan Worsley", "status": "none", "mbid": null, "rels": true}
+{"artist": "Andy Schichter", "status": "none", "mbid": null, "rels": true}
+{"artist": "Jamie Kuse", "status": "none", "mbid": null, "rels": true}
+{"artist": "Neil James Cooke-Dallin", "status": "none", "mbid": null, "rels": true}
+{"artist": "BLVRS", "status": "none", "mbid": null, "rels": true}
+{"artist": "King Thief", "status": "none", "mbid": null, "rels": true}
+{"artist": "MARGØ", "status": "none", "mbid": null, "rels": true}
+{"artist": "The Hearts", "status": "none", "mbid": null, "rels": true}
+{"artist": "Aladean Kheroufi & Jyin-ting Ying", "status": "none", "mbid": null, "rels": true}
+{"artist": "Sam Drysdale", "status": "linked", "mbid": "2d63a2ba-c265-42b0-b255-37f3aacbd6b9", "rels": true}
+{"artist": "Savannah Shea", "status": "none", "mbid": null, "rels": true}
+{"artist": "Jessica Pearson and the East Wind", "status": "none", "mbid": null, "rels": true}
+{"artist": "Steven Taetz", "status": "none", "mbid": null, "rels": true}
+{"artist": "Tragedy Ann", "status": "none", "mbid": null, "rels": true}
+{"artist": "Bruno Capinan", "status": "none", "mbid": null, "rels": true}
+{"artist": "Gal George Gjurin", "status": "none", "mbid": null, "rels": true}
+{"artist": "Irish Millie", "status": "none", "mbid": null, "rels": true}
+{"artist": "Tennyson King", "status": "linked", "mbid": "8c05c63a-ea95-4a49-a6cb-f3d5d5d6b82e", "rels": true}
+{"artist": "Willowbrook", "status": "none", "mbid": null, "rels": true}
+{"artist": "Ahmed Moneka", "status": "none", "mbid": null, "rels": true}
+{"artist": "Tyler James Ellis", "status": "none", "mbid": null, "rels": true}
+{"artist": "Blair Michael Hogan", "status": "none", "mbid": null, "rels": true}
+{"artist": "Ally Sou", "status": "none", "mbid": null, "rels": true}
+{"artist": "Tal Vaisman", "status": "none", "mbid": null, "rels": true}
+{"artist": "Kiran Francis", "status": "none", "mbid": null, "rels": true}
+{"artist": "The Redhill Valleys", "status": "none", "mbid": null, "rels": true}
+{"artist": "Mackenzie Leigh Meyer", "status": "none", "mbid": null, "rels": true}
+{"artist": "Sully Burrows", "status": "none", "mbid": null, "rels": true}
+{"artist": "Adam Newcomb", "status": "no-links", "mbid": "a86da62e-869e-46fb-8de8-703bd8efaefb", "rels": true}
+{"artist": "Jeff Brown", "status": "none", "mbid": null, "rels": true}
+{"artist": "Shawn Moore", "status": "none", "mbid": null, "rels": true}
+{"artist": "Shane Guse", "status": "none", "mbid": null, "rels": true}
+{"artist": "Walter Nowakowski", "status": "none", "mbid": null, "rels": true}
+{"artist": "Karen Kosowski", "status": "linked", "mbid": "5ce39ecd-90d3-400c-bbd4-b1e616522ec5", "rels": true}
+{"artist": "Amanda Lyn Parker", "status": "none", "mbid": null, "rels": true}
+{"artist": "Caleb", "status": "none", "mbid": null, "rels": true}
+{"artist": "Junyor", "status": "none", "mbid": null, "rels": true}
+{"artist": "Kathryn Sinopoli", "status": "none", "mbid": null, "rels": true}
+{"artist": "mel monaco", "status": "none", "mbid": null, "rels": true}
+{"artist": "Permilla", "status": "none", "mbid": null, "rels": true}
+{"artist": "vibi", "status": "none", "mbid": null, "rels": true}
+{"artist": "Dialect Sosa", "status": "none", "mbid": null, "rels": true}
+{"artist": "Evan Rotella", "status": "none", "mbid": null, "rels": true}
+{"artist": "moe killed my cool", "status": "none", "mbid": null, "rels": true}
+{"artist": "Otherwives", "status": "none", "mbid": null, "rels": true}
+{"artist": "Sea of Gold and Burgundy", "status": "none", "mbid": null, "rels": true}
+{"artist": "danny boy phelan", "status": "none", "mbid": null, "rels": true}
+{"artist": "Davis Hall and the Green Lanterns", "status": "none", "mbid": null, "rels": true}
+{"artist": "gil hicks", "status": "none", "mbid": null, "rels": true}
+{"artist": "terry K3tl", "status": "none", "mbid": null, "rels": true}
+{"artist": "Samantha Ava", "status": "none", "mbid": null, "rels": true}
+{"artist": "Marty Hopkins", "status": "none", "mbid": null, "rels": true}
+{"artist": "Dean Young", "status": "none", "mbid": null, "rels": true}
+{"artist": "Errunhrd", "status": "linked", "mbid": "cf463461-742a-4e12-9261-87d014dd8e14", "rels": true}
+{"artist": "Kavai", "status": "none", "mbid": null, "rels": true}
+{"artist": "Jeff Beadle", "status": "linked", "mbid": "f85cc8f1-a6f2-446b-a6d3-bd8c25a1e890", "rels": true}
+{"artist": "Fallen Leaves", "status": "none", "mbid": null, "rels": true}
+{"artist": "Tribe 369", "status": "none", "mbid": null, "rels": true}
+{"artist": "Shadow of the Fallen", "status": "none", "mbid": null, "rels": true}
+{"artist": "Over It", "status": "none", "mbid": null, "rels": true}
+{"artist": "Midnight Tripper", "status": "none", "mbid": null, "rels": true}
+{"artist": "Sunnycide", "status": "none", "mbid": null, "rels": true}
+{"artist": "Stuck in Neutral", "status": "none", "mbid": null, "rels": true}
+{"artist": "Duskwalker", "status": "none", "mbid": null, "rels": true}
+{"artist": "Gutter Crowns", "status": "none", "mbid": null, "rels": true}
+{"artist": "P8E", "status": "none", "mbid": null, "rels": true}
+{"artist": "Shiver", "status": "none", "mbid": null, "rels": true}
+{"artist": "NT 1078", "status": "none", "mbid": null, "rels": true}
+{"artist": "M.U.L.L.E.Y", "status": "none", "mbid": null, "rels": true}
+{"artist": "Shatterscript", "status": "none", "mbid": null, "rels": true}
+{"artist": "Stone Blind", "status": "none", "mbid": null, "rels": true}
+{"artist": "Lastlii", "status": "none", "mbid": null, "rels": true}
+{"artist": "Sunshine Express", "status": "none", "mbid": null, "rels": true}
+{"artist": "UFI", "status": "none", "mbid": null, "rels": true}
+{"artist": "Days on Parade", "status": "none", "mbid": null, "rels": true}
+{"artist": "Saint Paul", "status": "none", "mbid": null, "rels": true}
+{"artist": "Maybe May", "status": "none", "mbid": null, "rels": true}
+{"artist": "Playing With Fire", "status": "none", "mbid": null, "rels": true}
+{"artist": "Mushroom Valley", "status": "none", "mbid": null, "rels": true}
+{"artist": "Feverish Lemons", "status": "none", "mbid": null, "rels": true}
+{"artist": "Galaxy Drive", "status": "none", "mbid": null, "rels": true}
+{"artist": "Codesis", "status": "none", "mbid": null, "rels": true}
+{"artist": "Thunderclap", "status": "none", "mbid": null, "rels": true}
+{"artist": "Anthony Botting", "status": "none", "mbid": null, "rels": true}
+{"artist": "Sensorium Angels", "status": "none", "mbid": null, "rels": true}
+{"artist": "Eric Laurent", "status": "linked", "mbid": "ca5bb205-00a0-476a-b008-12edd1e0e7cb", "rels": true}
+{"artist": "The Maysides", "status": "none", "mbid": null, "rels": true}
+{"artist": "Daze Away", "status": "none", "mbid": null, "rels": true}
+{"artist": "Chub No Sleeves", "status": "none", "mbid": null, "rels": true}
+{"artist": "Welland Wasted", "status": "none", "mbid": null, "rels": true}
+{"artist": "Go Ogopogo", "status": "none", "mbid": null, "rels": true}
+{"artist": "Nitro Girl", "status": "none", "mbid": null, "rels": true}
+{"artist": "Dan Boyko", "status": "none", "mbid": null, "rels": true}
+{"artist": "Suicide Star", "status": "none", "mbid": null, "rels": true}
+{"artist": "Cocktails", "status": "none", "mbid": null, "rels": true}
+{"artist": "Dark City Panik", "status": "none", "mbid": null, "rels": true}
+{"artist": "Breaking Still", "status": "none", "mbid": null, "rels": true}
+{"artist": "Revive the Rose", "status": "none", "mbid": null, "rels": true}
+{"artist": "Matt Keighan", "status": "none", "mbid": null, "rels": true}
+{"artist": "Rob Repovs", "status": "none", "mbid": null, "rels": true}
+{"artist": "Peter Havercamp", "status": "none", "mbid": null, "rels": true}
+{"artist": "Daniel Belasco", "status": "none", "mbid": null, "rels": true}
+{"artist": "Joe Lipinski", "status": "none", "mbid": null, "rels": true}
+{"artist": "Lucas Rezza", "status": "none", "mbid": null, "rels": true}
+{"artist": "Steve Goldberger", "status": "no-links", "mbid": "b8446d2a-79af-4372-b3fa-36622ee8c2b8", "rels": true}
+{"artist": "Ezza of Choom Gang", "status": "none", "mbid": null, "rels": true}
+{"artist": "BeePax", "status": "none", "mbid": null, "rels": true}
+{"artist": "Pluto Hann", "status": "none", "mbid": null, "rels": true}
+{"artist": "Lil Rom", "status": "none", "mbid": null, "rels": true}
+{"artist": "Ase Mor", "status": "none", "mbid": null, "rels": true}
+{"artist": "Swish Styles", "status": "none", "mbid": null, "rels": true}
+{"artist": "Rakeh3ll", "status": "none", "mbid": null, "rels": true}
+{"artist": "905patch", "status": "none", "mbid": null, "rels": true}
+{"artist": "Lavish Beatz", "status": "none", "mbid": null, "rels": true}
+{"artist": "MC 333", "status": "none", "mbid": null, "rels": true}
+{"artist": "Dialogue", "status": "none", "mbid": null, "rels": true}
+{"artist": "Nawlege", "status": "none", "mbid": null, "rels": true}
+{"artist": "UBZ Entertainment", "status": "none", "mbid": null, "rels": true}
+{"artist": "Brandon Agnew", "status": "none", "mbid": null, "rels": true}
+{"artist": "The Night Shadows", "status": "none", "mbid": null, "rels": true}
+{"artist": "The Euchre Party", "status": "none", "mbid": null, "rels": true}
+{"artist": "Almost Through April", "status": "none", "mbid": null, "rels": true}
+{"artist": "Eve Atoms", "status": "none", "mbid": null, "rels": true}
+{"artist": "MMBris", "status": "none", "mbid": null, "rels": true}
+{"artist": "Paolo Di Carlo", "status": "none", "mbid": null, "rels": true}
+{"artist": "The Spinz", "status": "none", "mbid": null, "rels": true}
+{"artist": "Hey McFly", "status": "none", "mbid": null, "rels": true}
+{"artist": "Bellows", "status": "none", "mbid": null, "rels": true}
+{"artist": "Brody Smith", "status": "none", "mbid": null, "rels": true}
+{"artist": "Davy Walker", "status": "none", "mbid": null, "rels": true}
+{"artist": "Jay Diem Band", "status": "none", "mbid": null, "rels": true}
+{"artist": "Avenue Inn", "status": "none", "mbid": null, "rels": true}
+{"artist": "John Romanelli Jr.", "status": "none", "mbid": null, "rels": true}
+{"artist": "Eternal Dawn", "status": "none", "mbid": null, "rels": true}
+{"artist": "Paul Everton", "status": "none", "mbid": null, "rels": true}
+{"artist": "Green White Checkered", "status": "none", "mbid": null, "rels": true}
+{"artist": "Slooky", "status": "none", "mbid": null, "rels": true}
+{"artist": "Canisbay", "status": "none", "mbid": null, "rels": true}
+{"artist": "Jeff MacKinnon", "status": "none", "mbid": null, "rels": true}
+{"artist": "Joe Torbett", "status": "none", "mbid": null, "rels": true}
+{"artist": "Legendary Lightfoot", "status": "none", "mbid": null, "rels": true}
+{"artist": "Chris Scott", "status": "none", "mbid": null, "rels": true}
+{"artist": "Ryan Smelle", "status": "none", "mbid": null, "rels": true}
+{"artist": "Agatha Faye Thorne", "status": "none", "mbid": null, "rels": true}
+{"artist": "Tiny Cat", "status": "none", "mbid": null, "rels": true}
+{"artist": "Rafik Guirguis", "status": "none", "mbid": null, "rels": true}
+{"artist": "Mad Seedling", "status": "none", "mbid": null, "rels": true}
+{"artist": "Riley Michaels", "status": "none", "mbid": null, "rels": true}
+{"artist": "Kevin Richard Hotte", "status": "none", "mbid": null, "rels": true}
+{"artist": "Grant Brotherz", "status": "none", "mbid": null, "rels": true}
+{"artist": "GUH", "status": "no-links", "mbid": "167aad2c-c66c-47a8-9ca6-def7234f0eea", "rels": true}
+{"artist": "GUY MBAYO GROUP", "status": "none", "mbid": null, "rels": true}
+{"artist": "Haliyah Hales", "status": "none", "mbid": null, "rels": true}
+{"artist": "Hallowed Keys", "status": "none", "mbid": null, "rels": true}
+{"artist": "Harley Olivia", "status": "none", "mbid": null, "rels": true}
+{"artist": "Justin Birco", "status": "none", "mbid": null, "rels": true}
+{"artist": "Kairange", "status": "none", "mbid": null, "rels": true}
+{"artist": "Kali Horse", "status": "none", "mbid": null, "rels": true}
+{"artist": "Kalya Ramu", "status": "none", "mbid": null, "rels": true}
+{"artist": "kaiyel", "status": "none", "mbid": null, "rels": true}
+{"artist": "KALYE LUNA", "status": "none", "mbid": null, "rels": true}
+{"artist": "Kan Boy", "status": "none", "mbid": null, "rels": true}
+{"artist": "Karena", "status": "none", "mbid": null, "rels": true}
+{"artist": "Kari Lyn", "status": "none", "mbid": null, "rels": true}
+{"artist": "Karl Silveira", "status": "no-links", "mbid": "97c3a27e-d1eb-4368-b34d-6dc8ed230d3a", "rels": true}
+{"artist": "Karen Elstone", "status": "none", "mbid": null, "rels": true}
+{"artist": "Karla García", "status": "none", "mbid": null, "rels": true}
+{"artist": "Katie Harvey", "status": "none", "mbid": null, "rels": true}
+{"artist": "Katrina Anastasia", "status": "none", "mbid": null, "rels": true}
+{"artist": "KAYZEI", "status": "none", "mbid": null, "rels": true}
+{"artist": "Kazi", "status": "none", "mbid": null, "rels": true}
+{"artist": "Kelecia", "status": "none", "mbid": null, "rels": true}
+{"artist": "Kelvin Wetherell", "status": "none", "mbid": null, "rels": true}
+{"artist": "Kerry Matthews", "status": "none", "mbid": null, "rels": true}
+{"artist": "Marito Marques Quartet", "status": "none", "mbid": null, "rels": true}
+{"artist": "Marshall Dane", "status": "no-links", "mbid": "2fb40e18-308f-408d-93a8-8cc76d8c66bb", "rels": true}
+{"artist": "Mary K", "status": "none", "mbid": null, "rels": true}
+{"artist": "Marzio Pelù", "status": "none", "mbid": null, "rels": true}
+{"artist": "Mathieu Alepin", "status": "none", "mbid": null, "rels": true}
+{"artist": "Matt Von", "status": "none", "mbid": null, "rels": true}
+{"artist": "Maxh", "status": "none", "mbid": null, "rels": true}
+{"artist": "Meagan De Lima", "status": "linked", "mbid": "273dc912-07db-4e9c-beed-a40c94290d6e", "rels": true}
+{"artist": "Medusa", "status": "no-links", "mbid": "6f25036a-adf1-4bd3-befa-1f0b52296c63", "rels": true}
+{"artist": "Meep Moop", "status": "none", "mbid": null, "rels": true}
+{"artist": "Melanie Peterson", "status": "linked", "mbid": "f56ef322-ee88-47ca-bc8e-e54f0b95adad", "rels": true}
+{"artist": "Melissa Kadas", "status": "none", "mbid": null, "rels": true}
+{"artist": "Melohdy", "status": "none", "mbid": null, "rels": true}
+{"artist": "Memblem", "status": "none", "mbid": null, "rels": true}
+{"artist": "Mermaid Rue", "status": "none", "mbid": null, "rels": true}
+{"artist": "Mexi", "status": "none", "mbid": null, "rels": true}
+{"artist": "Mia Sanchez", "status": "none", "mbid": null, "rels": true}
+{"artist": "Michael Peter Olsen", "status": "none", "mbid": null, "rels": true}
+{"artist": "Michel Neray & Jacques Russell Trio", "status": "none", "mbid": null, "rels": true}
+{"artist": "Michel Neray", "status": "none", "mbid": null, "rels": true}
+{"artist": "Mike Nagoda and the Spectrum Blues Band", "status": "none", "mbid": null, "rels": true}
+{"artist": "MizTrizz", "status": "none", "mbid": null, "rels": true}
+{"artist": "Randolf Jimenez Band", "status": "none", "mbid": null, "rels": true}
+{"artist": "Ramy Zhang", "status": "none", "mbid": null, "rels": true}
+{"artist": "Rambler", "status": "none", "mbid": null, "rels": true}
+{"artist": "Rat Grenade", "status": "none", "mbid": null, "rels": true}
+{"artist": "RAWMNY WILDCAT", "status": "none", "mbid": null, "rels": true}
+{"artist": "RAXX", "status": "none", "mbid": null, "rels": true}
+{"artist": "Rea Samples", "status": "none", "mbid": null, "rels": true}
+{"artist": "Riha", "status": "none", "mbid": null, "rels": true}
+{"artist": "RJ Blizzard", "status": "none", "mbid": null, "rels": true}
+{"artist": "Soulish", "status": "none", "mbid": null, "rels": true}
+{"artist": "Spiral Palace", "status": "none", "mbid": null, "rels": true}
+{"artist": "sseven five", "status": "none", "mbid": null, "rels": true}
