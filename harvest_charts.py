@@ -14,7 +14,10 @@ Usage:   python3 harvest_charts.py fetch    # ~150 pages, 1.5 s apart (a few min
 Output:  charts_local.jsonl   one line per chart table row (raw, with legend)
          charts_tracks.jsonl  one line per harvested track that charted:
            {yt, artist, title, years, chart, peak, year_end, ckoi_year_end,
-            juno, sources}
+            juno, us_peak, us_year_end, vancouver_peak, vancouver_year_end, sources}
+         peak / year_end = national Canadian chart named in `chart`.
+         us_* = U.S. Billboard Hot 100 (2019+ pages). vancouver_* = regional
+         "Sounds of Vancouver" lists 1979–86. ckoi_year_end = Québec CKOI Top 50.
 Matching is exact artist (an artists.txt name, also inside "A/B", "A & B",
 "A feat. B") + same title once brackets, "(Remastered…)", and "Artist - "
 prefixes are stripped. No fuzzy matching.
@@ -128,21 +131,26 @@ SPLIT = re.compile(r"\s*(?:/|&|,|\+|\bx\b|\band\b|\bet\b|\bfeat\.?|\bfeaturing\b
 def classify(row):
     """-> dict of normalized fields from this row, using the page's own codes."""
     m, sec, out = row["metrics"], row["section"].upper(), {}
+    regional = "sounds-of-vancouver" in row["source_url"]  # CFUN/CKLG-era Vancouver lists, not national
     for code, v in m.items():
         meaning = row["legend"].get(code, "").lower()
         n = as_int(v)
-        if "juno" in sec or code in ("N", "W") and "juno" in meaning:
-            out["juno"] = "won" if (v.strip().upper().startswith("W") or code == "W") else "nominated"
-        elif n is None:
+        if code == "JUNO" or "JUNO" in sec:
+            out["juno"] = "won" if v.strip().upper().startswith("W") else "nominated"
+        elif n is None or code in ("DATE", "CANCON RANK"):
             continue
-        elif "ckoi" in meaning or (code == "CY" and not meaning):
+        elif code in ("BW", "BY"):  # U.S. Billboard Hot 100 — kept apart from Canadian positions
+            out["us_peak" if code == "BW" else "us_year_end"] = n
+        elif regional:
+            out["vancouver_peak" if code == "PEAK" else "vancouver_year_end"] = n
+        elif row["year"] < 1964:  # pre-national lists (no Canadian chart yet)
+            continue
+        elif code == "CY" or "ckoi" in meaning:
             out["ckoi_year_end"] = n
-        elif code in ("WP", "HW") or "weekly" in meaning or "peak" in meaning:
+        elif code in ("WP", "HW", "PEAK") or "weekly" in meaning:
             out["peak"] = n
-        elif code in ("YE", "HY", "RANK", "POS", "#") or "year-end" in meaning or row["kind"] == "year_end":
+        elif code in ("YE", "HY", "RANK", "POS", "") or "year-end" in meaning or row["kind"] == "year_end":
             out["year_end"] = n
-    if "JUNO" in sec and "juno" not in out:
-        out["juno"] = "won" if "WON" in sec or "WINNER" in sec else "nominated"
     return out
 
 def match():
@@ -176,7 +184,8 @@ def match():
         if hits: matched_songs += 1
         for yt in hits:
             rec = {"yt": yt, "artist": s["artist"], "title": s["title"], "years": sorted(s["years"]),
-                   **{k: s[k] for k in ("chart", "peak", "year_end", "ckoi_year_end", "juno") if k in s},
+                   **{k: s[k] for k in ("chart", "peak", "year_end", "ckoi_year_end", "juno", "us_peak",
+                                         "us_year_end", "vancouver_peak", "vancouver_year_end") if k in s},
                    "sources": sorted(s["sources"])}
             old = out.get(yt)
             if not old or rec.get("peak", 999) < old.get("peak", 999): out[yt] = rec
