@@ -113,6 +113,29 @@ artist, AND at least one release marked Canada.
 - Bandcamp search can't be used: it serves scripts an anti-bot challenge.
   Don't try to get around it.
 
+## Chart history (`harvest_charts.py`)
+
+Source: Canadian Music Blog (musiccanada.wordpress.com/charts) — per year
+1964–2019 every Canadian-artist single that peaked in the national Top 40,
+plus year-end charts 1967–2025, CKOI Franco year-end Top 50, JUNO Single of
+the Year nominees/winners. Each page's own legend is kept with every number.
+
+- `python3 harvest_charts.py fetch` — ~150 pages, rebuilds `charts_local.jsonl`.
+  Run rarely (the blog updates yearly).
+- `python3 harvest_charts.py match` — links chart songs to harvested tracks
+  (tracks_local + tracks_discogs) -> `charts_tracks.jsonl`. Exact artist name
+  (also inside "A/B", "A feat. B") + exact title after stripping brackets,
+  "Artist - " prefixes, " - 1977"/remaster suffixes, leading articles; double
+  A-sides split on " / ". No fuzzy matching. `push-results.sh` re-runs it.
+- Field meanings: `peak`/`year_end` = national Canadian chart named in `chart`
+  (RPM ≤2000, Canadian Singles Chart 2001–06, Billboard Canadian Hot 100 2007+).
+  `us_peak`/`us_year_end` = U.S. Billboard Hot 100 (only on 2019+ pages —
+  never mix with Canadian). `vancouver_*` = regional 1979–86 lists.
+  `ckoi_year_end` = Québec CKOI. `juno` = nominated|won.
+- Pre-1964 pages (no national chart) and RPM scans are not parsed. The RPM
+  magazine scans (worldradiohistory.com, 1,748 issues) have a text layer but
+  multi-column OCR — a possible later project with layout-aware parsing.
+
 ## Adding artists
 
 `artists.txt` is read once at start. To add artists from a new site export

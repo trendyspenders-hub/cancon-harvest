@@ -259,6 +259,32 @@ own domain/host; see 5.5.)*
   previously directory-only artists like Banned from Atlantis play, clearly
   labelled.
 
+### 3.8 Chart history filters
+- **Data:** `charts_tracks.jsonl` — one line per harvested track that charted:
+  `{yt, artist, title, years, chart, peak, year_end, ckoi_year_end, juno,
+  us_peak, us_year_end, vancouver_peak, vancouver_year_end, sources}`.
+  `peak`/`year_end` are national Canadian positions on the chart named in
+  `chart` (RPM to 2000, Canadian Singles Chart 2001–06, Billboard Canadian
+  Hot 100 2007+). `us_*` are U.S. Billboard — show separately, never as
+  Canadian. `vancouver_*` are regional (1979–86). `ckoi_year_end` = Québec
+  CKOI Top 50. `juno` = nominated / won Single of the Year. `sources` = the
+  page each number came from. Grows every time the harvest is pushed.
+- **What:**
+  1. A **"Chart history" dial** next to Era/Mood: `ALL · CHARTED · TOP 40 ·
+     TOP 10 · #1 HITS · DEEP CUTS (never charted)`. Plus `FRANCO HITS (CKOI)`
+     and `JUNO SINGLES` toggles.
+  2. **Presets:** "Number Ones" (every Canadian #1), "RPM Gold" (RPM Top 10,
+     1964–2000), "Hot 100 Era" (2007+ Top 20), "Palmarès CKOI", "JUNO
+     Singles", "One-Hit Wonders" (artists with exactly one Top 40 hit).
+  3. **Badges** on track cards and in the player: `#1 RPM 1972`,
+     `PEAK #7 · HOT 100 2015`, `CKOI #5`, `JUNO WINNER`. Tap a badge → the
+     source page.
+  4. **Discover sorting:** "Biggest hits first" (by best peak, then year-end).
+  5. **Artist pages:** a "Chart history" list — year, title, peak, chart.
+  6. Pair it with the Era dial: "1985 · Top 10" should just work.
+- **Done when:** choosing "#1 HITS" plays only tracks with `peak = 1`, every
+  badge links to its source, and U.S. positions never appear as Canadian.
+
 ---
 
 ## Phase 4 — Unmistakably Canadian

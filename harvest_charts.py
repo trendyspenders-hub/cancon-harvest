@@ -126,6 +126,24 @@ def norm_title(s, artist=""):
     s = re.sub(r"\s+-\s+(remaster|live|single|radio|edit|version|mono|stereo).*$", "", s, flags=re.I)
     return norm(s)
 
+ARTICLE = re.compile(r"^(the|a|an|le|la|les|l')\s*")
+
+def title_keys(s, artist=""):
+    """Exact-match keys for one title: handles double A-sides ("A / B"),
+    "Artist - Title - 1977", bracketed words ("[Make Me Do] Anything…") and a
+    leading article ("The Real Thing" = "Real Thing"). Still exact, not fuzzy."""
+    keys = set()
+    for part in dict.fromkeys([s or ""] + (s or "").split(" / ")):
+        if artist and " - " in part:
+            a, b = part.split(" - ", 1)
+            if norm(a) == norm(artist): part = b
+        part = re.sub(r"\s+-\s+(\d{4}|remaster|live|single|radio|edit|version|mono|stereo)\b.*$", "", part, flags=re.I)
+        for v in (re.sub(r"[\(\[].*?[\)\]]", " ", part), re.sub(r"[\(\)\[\]]", " ", part)):
+            k = norm(v)
+            for key in (k, ARTICLE.sub("", k)):
+                if key: keys.add(key)
+    return keys
+
 SPLIT = re.compile(r"\s*(?:/|&|,|\+|\bx\b|\band\b|\bet\b|\bfeat\.?|\bfeaturing\b|\bft\.?|\bwith\b|\bavec\b)\s*", re.I)
 
 def classify(row):
@@ -172,7 +190,8 @@ def match():
         for a in dict.fromkeys(norm(p) for p in parts if p.strip()):
             if a not in names: continue
             key = (a, norm_title(row["title"]))
-            s = songs.setdefault(key, {"artist": names[a], "title": row["title"], "years": set(), "sources": set()})
+            s = songs.setdefault(key, {"artist": names[a], "title": row["title"], "years": set(), "sources": set(),
+                                       "keys": title_keys(row["title"])})
             s["years"].add(row["year"]); s["sources"].add(row["source_url"])
             for k, v in info.items():
                 if k == "juno": s[k] = "won" if "won" in (s.get(k), v) else v
@@ -180,7 +199,7 @@ def match():
             if "peak" in info or "year_end" in info: s["chart"] = chart_name(row["year"])
     out, matched_songs = {}, 0
     for (a, t), s in songs.items():
-        hits = [yt for yt, title, artist in tracks.get(a, []) if norm_title(title, artist) == t]
+        hits = [yt for yt, title, artist in tracks.get(a, []) if s["keys"] & title_keys(title, artist)]
         if hits: matched_songs += 1
         for yt in hits:
             rec = {"yt": yt, "artist": s["artist"], "title": s["title"], "years": sorted(s["years"]),
